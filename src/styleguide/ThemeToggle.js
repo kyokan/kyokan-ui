@@ -14,7 +14,7 @@ const Link = styled.a`
   font-family     : sans-serif;
   text-decoration : none;
   cursor          : pointer;
-
+  color           : #1978c8;
 `;
 
 const themes = [
