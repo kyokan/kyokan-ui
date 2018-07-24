@@ -1,8 +1,12 @@
 # Kyokan UI
 
+## Motivation
+
+Primary concern: pleasurable authoring experience
+
 ```shell
-npx styleguidist server # to start a style guide dev server.
-npx styleguidist build  # to build a static version.
+yarn start # to start a style guide dev server.
+yarn build  # to build a static version.
 ```
 
 BrandHeader (g1)
@@ -146,3 +150,14 @@ CurrencyTag (d47)
     DML
 CurrencyBalance (d47)
 CurrencyLimitControl (d47)
+
+## Philosophies
+
+* Michael Chan: https://www.youtube.com/watch?v=gNeavlJ7lNY
+  * "depend on our own API"
+* Glen Maddern: https://www.youtube.com/watch?v=qu4U7lwZTRI
+  * build around your own desired API
+  * using `styled-components` gives us all the power of JavaScript while solving the issue of global styles from CSS and the arbitrary class names from CSS modules
+* Max Stoiber: https://www.youtube.com/watch?v=2j9rSur_mnk
+  * "[best practices] are completely useless if they're not enforced"
+  * no one is going to adhere to best practice that block you from getting things done
