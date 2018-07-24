@@ -23,4 +23,5 @@ Text.propTypes = {
   children: PropTypes.any.isRequired,
 };
 
+/** @component */
 export default Text;
