@@ -5,8 +5,9 @@
 Primary concern: pleasurable authoring experience
 
 ```shell
-yarn start # to start a style guide dev server.
-yarn build  # to build a static version.
+yarn start                    # to start a style guide dev server.
+yarn build                    # to build a static version.
+yarn generate [ComponentName] # to generate a scaffold for a new component
 ```
 
 BrandHeader (g1)

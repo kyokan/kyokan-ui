@@ -14,7 +14,8 @@
     "r-start": "react-scripts start",
     "test": "react-scripts test --env=jsdom",
     "build": "styleguidist build",
-    "start": "styleguidist server"
+    "start": "styleguidist server",
+    "generate": "node generate.js"
   },
   "devDependencies": {
     "enzyme": "^3.3.0",
