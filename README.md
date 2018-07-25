@@ -2,7 +2,7 @@
 
 ## To Do
 
-* [x] compile for distribution
+* [ ] give feedback to know which theme they're running
 * [ ] Rollup?
 * [ ] bundle
 * [ ] minify
