@@ -22,10 +22,10 @@ const themes = [
     name  : 'Default',
     value : 'default',
   },
-{
-  name  : 'DML',
-  value : 'dml',
-},
+  {
+    name  : 'DML',
+    value : 'dml',
+  },
 ].map((theme) => {
   return (
     <Link

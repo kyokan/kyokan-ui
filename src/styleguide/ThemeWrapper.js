@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { ThemeProvider } from 'styled-components';
 
-import DefaultTheme from '../themes/default';
-import DMLTheme from '../themes/DML';
+import DefaultTheme from '../themes/DefaultTheme';
+import DMLTheme from '../themes/DMLTheme';
 
 const themes = {
   default : DefaultTheme,

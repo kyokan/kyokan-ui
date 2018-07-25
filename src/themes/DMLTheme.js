@@ -1,4 +1,4 @@
-import DefaultTheme from './default';
+import DefaultTheme from './DefaultTheme';
 
 const theme = {
   primaryColor   : 'blue',
