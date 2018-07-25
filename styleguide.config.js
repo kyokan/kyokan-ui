@@ -12,7 +12,6 @@ module.exports = {
 
   getComponentPathLine (componentPath) {
     const name = path.basename(componentPath, '.jsx')
-    const dir = path.dirname(componentPath)
-    return `import ${name} from '${dir}';`
+    return `import ${name} from 'kyokan-ui';`
   },
 };
