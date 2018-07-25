@@ -1,4 +1,5 @@
 TO SPIN UP SERVER         : yarn start
 TO GENERATE NEW COMPONENT : yarn generate [ComponentName]
 
+TO GENERATE DIST FILES    : yarn dist
 TO BUILD STYLEGUIDE       : yarn build

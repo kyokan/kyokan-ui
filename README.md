@@ -13,6 +13,7 @@
 yarn start                    # to start a style guide dev server
 yarn generate [ComponentName] # to generate a scaffold for a new component
 
+yarn dist                     # build out component dist files for use as a module
 yarn build                    # to build a static version of the styleguide
 ```
 
