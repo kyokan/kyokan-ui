@@ -1,5 +1,12 @@
 # Kyokan UI
 
+## To Do
+
+* [x] compile for distribution
+* [ ] Rollup?
+* [ ] bundle
+* [ ] minify
+
 ## Commands
 
 ```shell

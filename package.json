@@ -1,7 +1,7 @@
 {
   "name": "kyokan-ui",
   "version": "0.1.0",
-  "private": true,
+  "main": "dist/index.js",
   "dependencies": {
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
@@ -14,9 +14,13 @@
     "test": "react-scripts test --env=jsdom",
     "build": "styleguidist build",
     "start": "styleguidist server",
-    "generate": "node generate.js"
+    "generate": "node generate.js",
+    "dist": "rm -rf dist && NODE_ENV=production babel src/components src/themes --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,.md,__snapshots__"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-react": "^6.24.1",
+    "create-index": "^2.3.0",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "react-styleguidist": "^7.0.20",

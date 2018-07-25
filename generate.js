@@ -1,4 +1,5 @@
-const fs = require('fs');
+const fs       = require('fs');
+const execSync = require('child_process').execSync;
 
 function downFirst (string) {
   return string.charAt(0).toLowerCase() + string.substr(1, string.length);
@@ -103,5 +104,10 @@ function validateInput (input) {
   }
 }
 
+function updateIndex () {
+  execSync('npx create-index ./src/components');
+}
+
 validateInput(process.argv);
 generateComponent(process.argv[2]);
+updateIndex();
