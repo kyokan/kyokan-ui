@@ -5,7 +5,28 @@ function downFirst (string) {
   return string.charAt(0).toLowerCase() + string.substr(1, string.length);
 }
 
-function generateComponent (componentName) {
+function renderImages (images) {
+  return images.map((image) => {
+    return `<img src="${image.src}" alt="${image.alt}" style="max-width: 100%;" /><br />`;
+  }).join('\n\n');
+}
+
+function renderProps (props, numOfSpaces) {
+  return Object.keys(props).filter((propName) => propName !== 'children').map((propName) => {
+    return `${' '.repeat(numOfSpaces)}${propName}=""`;
+  }).join('\n');
+}
+
+function renderPropTypes (props, numOfSpaces) {
+  return Object.keys(props).map((propName) => {
+    return `${' '.repeat(numOfSpaces)}/** ${props[propName] ? props[propName] : '[prop description]'} */
+${' '.repeat(numOfSpaces)}${propName}: PropTypes.any,`;
+  }).join('\n\n');
+}
+
+function generateComponent (componentName, jsonMetadata) {
+  const metadata = jsonMetadata ? JSON.parse(jsonMetadata) : {};
+
   const targetDirectory = 'src/components';
   const outputDirectory = `src/components/${componentName}`;
 
@@ -19,7 +40,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 /**
-* [Description]
+* ${metadata.notes ? metadata.notes : '[Description]'}
 */
 const ${componentName} = (props) => {
   const Styled${componentName} = styled.div\`
@@ -27,25 +48,30 @@ const ${componentName} = (props) => {
   \`;
 
   return (
-    <Styled${componentName}>
-      {props.children}
+    <Styled${componentName}
+${metadata.attributes ? renderProps(metadata.attributes, 6) : ''}
+    >
+      ${(metadata.attributes && metadata.attributes.children) ? '{props.children}' : ''}
     </Styled${componentName}>
   );
 };
 
 ${componentName}.propTypes = {
-  /** [Prop description] */
-  children: PropTypes.any.isRequired,
+${metadata.attributes ? renderPropTypes(metadata.attributes, 2) : ''}
 };
 
 /** @component */
 export default ${componentName};
 `;
 
-    const documentationTemplate = `[Description]
+    const documentationTemplate = `[Markdown writeup]
+
+${metadata.images ? renderImages(metadata.images) : ''}
 
 \`\`\`jsx
-<${componentName}>
+<${componentName}
+${metadata.attributes ? renderProps(metadata.attributes, 2) : ''}
+>
   Children
 </${componentName}>
 \`\`\`
@@ -60,24 +86,24 @@ import ${componentName} from './${componentName}';
 configure({ adapter: new Adapter() });
 
 describe('${componentName}', () => {
-    let mounted${componentName};
-    const content = 'Test ${componentName}';
-    const ${downFirst(componentName)} = () => {
-        if (!mounted${componentName}) {
-            mounted${componentName} = mount(
-                <${componentName}>{content}</${componentName}>
-            );
-        }
-
-        return mounted${componentName};
+  let mounted${componentName};
+  const content = 'Test ${componentName}';
+  const ${downFirst(componentName)} = () => {
+    if (!mounted${componentName}) {
+      mounted${componentName} = mount(
+        <${componentName}>{content}</${componentName}>
+      );
     }
 
-    beforeEach(() => {});
+    return mounted${componentName};
+  }
 
-    it('always renders a div', () => {
-        const divs = ${downFirst(componentName)}().find('div');
-        expect(divs.length).toBeGreaterThan(0);
-    });
+  beforeEach(() => {});
+
+  it('always renders a div', () => {
+    const divs = ${downFirst(componentName)}().find('div');
+    expect(divs.length).toBeGreaterThan(0);
+  });
 });
 `;
 
@@ -95,11 +121,9 @@ describe('${componentName}', () => {
 function validateInput (input) {
   if (input.length < 3) {
     console.error('Missing component name.');
-  } else if (input.length > 3) {
+    process.exit(1);
+  } else if (input.length > 4) {
     console.error('Too many arguments passed in.');
-  }
-
-  if (input.length !== 3) {
     process.exit(1);
   }
 }
@@ -108,6 +132,12 @@ function updateIndex () {
   execSync('npx create-index ./src/components');
 }
 
-validateInput(process.argv);
-generateComponent(process.argv[2]);
+if (process.argv.length === 3) {
+  generateComponent(process.argv[2]);
+} else if (process.argv.length === 4) {
+  generateComponent(process.argv[2], process.argv[3]);
+} else {
+  validateInput(process.argv);
+}
+
 updateIndex();
