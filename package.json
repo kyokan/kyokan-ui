@@ -17,7 +17,8 @@
     "build": "styleguidist build",
     "start": "styleguidist server",
     "generate": "node generate.js",
-    "dist": "rm -rf dist && NODE_ENV=production babel src/components src/themes --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,.md,__snapshots__"
+    "dist": "rm -rf dist && NODE_ENV=production babel src/components src/themes --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,.md,__snapshots__",
+    "import-rs": "node importFromRegionSelector.js"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
