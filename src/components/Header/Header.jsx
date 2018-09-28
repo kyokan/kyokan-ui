@@ -7,14 +7,12 @@ import styled from 'styled-components';
 */
 const Header = (props) => {
   const StyledHeader = styled.div`
-    fontFamily: ${ (props) => props.theme.fontFamily };
+    font-family: ${ (props) => props.theme.fontFamily };
     color: ${ (props) => props.theme.primaryColor };
   `;
 
   return (
-    <StyledHeader
-
-    >
+    <StyledHeader>
       {props.children}
     </StyledHeader>
   );

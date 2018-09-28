@@ -7,7 +7,7 @@ import styled from 'styled-components';
 */
 const Status = (props) => {
   const StyledStatus = styled.div`
-    fontFamily: ${ (props) => props.theme.fontFamily };
+    font-family: ${ (props) => props.theme.fontFamily };
     color: ${ (props) => props.theme.primaryColor };
   `;
 
@@ -20,7 +20,7 @@ const Status = (props) => {
       warning=""
       info=""
     >
-      
+
     </StyledStatus>
   );
 };

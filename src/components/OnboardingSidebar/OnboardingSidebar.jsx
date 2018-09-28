@@ -7,7 +7,7 @@ import styled from 'styled-components';
 */
 const OnboardingSidebar = (props) => {
   const StyledOnboardingSidebar = styled.div`
-    fontFamily: ${ (props) => props.theme.fontFamily };
+    font-family: ${ (props) => props.theme.fontFamily };
     color: ${ (props) => props.theme.primaryColor };
   `;
 
@@ -15,7 +15,7 @@ const OnboardingSidebar = (props) => {
     <StyledOnboardingSidebar
 
     >
-      
+
     </StyledOnboardingSidebar>
   );
 };

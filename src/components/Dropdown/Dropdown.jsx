@@ -7,7 +7,7 @@ import styled from 'styled-components';
 */
 const Dropdown = (props) => {
   const StyledDropdown = styled.div`
-    fontFamily: ${ (props) => props.theme.fontFamily };
+    font-family: ${ (props) => props.theme.fontFamily };
     color: ${ (props) => props.theme.primaryColor };
   `;
 

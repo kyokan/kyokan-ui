@@ -7,7 +7,7 @@ import styled from 'styled-components';
 */
 const Title = (props) => {
   const StyledTitle = styled.div`
-    fontFamily: ${ (props) => props.theme.fontFamily };
+    font-family: ${ (props) => props.theme.fontFamily };
     color: ${ (props) => props.theme.primaryColor };
   `;
 

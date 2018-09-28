@@ -7,7 +7,7 @@ import styled from 'styled-components';
 */
 const EmptyState = (props) => {
   const StyledEmptyState = styled.div`
-    fontFamily: ${ (props) => props.theme.fontFamily };
+    font-family: ${ (props) => props.theme.fontFamily };
     color: ${ (props) => props.theme.primaryColor };
   `;
 
@@ -16,7 +16,7 @@ const EmptyState = (props) => {
       title=""
       description=""
     >
-      
+
     </StyledEmptyState>
   );
 };

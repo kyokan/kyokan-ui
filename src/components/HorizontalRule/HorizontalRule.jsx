@@ -7,7 +7,7 @@ import styled from 'styled-components';
 */
 const HorizontalRule = (props) => {
   const StyledHorizontalRule = styled.div`
-    fontFamily: ${ (props) => props.theme.fontFamily };
+    font-family: ${ (props) => props.theme.fontFamily };
     color: ${ (props) => props.theme.primaryColor };
   `;
 
@@ -15,7 +15,7 @@ const HorizontalRule = (props) => {
     <StyledHorizontalRule
 
     >
-      
+
     </StyledHorizontalRule>
   );
 };

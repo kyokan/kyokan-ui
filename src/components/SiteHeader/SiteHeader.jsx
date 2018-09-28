@@ -7,7 +7,7 @@ import styled from 'styled-components';
 */
 const SiteHeader = (props) => {
   const StyledSiteHeader = styled.div`
-    fontFamily: ${ (props) => props.theme.fontFamily };
+    font-family: ${ (props) => props.theme.fontFamily };
     color: ${ (props) => props.theme.primaryColor };
   `;
 

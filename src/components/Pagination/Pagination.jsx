@@ -7,7 +7,7 @@ import styled from 'styled-components';
 */
 const Pagination = (props) => {
   const StyledPagination = styled.div`
-    fontFamily: ${ (props) => props.theme.fontFamily };
+    font-family: ${ (props) => props.theme.fontFamily };
     color: ${ (props) => props.theme.primaryColor };
   `;
 
@@ -16,7 +16,7 @@ const Pagination = (props) => {
       currentPage=""
       totalCount=""
     >
-      
+
     </StyledPagination>
   );
 };

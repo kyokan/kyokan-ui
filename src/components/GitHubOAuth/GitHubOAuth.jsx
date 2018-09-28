@@ -7,7 +7,7 @@ import styled from 'styled-components';
 */
 const GitHubOAuth = (props) => {
   const StyledGitHubOAuth = styled.div`
-    fontFamily: ${ (props) => props.theme.fontFamily };
+    font-family: ${ (props) => props.theme.fontFamily };
     color: ${ (props) => props.theme.primaryColor };
   `;
 
@@ -18,7 +18,7 @@ const GitHubOAuth = (props) => {
       username=""
       onCancel=""
     >
-      
+
     </StyledGitHubOAuth>
   );
 };
