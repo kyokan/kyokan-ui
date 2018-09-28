@@ -44,6 +44,7 @@ import styled from 'styled-components';
 */
 const ${componentName} = (props) => {
   const Styled${componentName} = styled.div\`
+    fontFamily: \$\{ (props) => props.theme.fontFamily \};
     color: \$\{ (props) => props.theme.primaryColor \};
   \`;
 
