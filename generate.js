@@ -119,7 +119,7 @@ describe('${componentName}', () => {
   }
 }
 
-function validateInput (input) {
+function invalidateInput (input) {
   if (input.length < 3) {
     console.error('Missing component name.');
     process.exit(1);
@@ -138,7 +138,7 @@ if (process.argv.length === 3) {
 } else if (process.argv.length === 4) {
   generateComponent(process.argv[2], process.argv[3]);
 } else {
-  validateInput(process.argv);
+  invalidateInput(process.argv);
 }
 
 updateIndex();
