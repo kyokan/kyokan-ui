@@ -8,7 +8,7 @@ const mkdirp            = require('mkdirp');
 
 // CONFIG
 const FILEPATH          = '/Users/rramphal/Projects/region-selector/public/data.json';
-const COLLECTION_NAME   = '2018.09.05_dml_gladius_mocks';
+const COLLECTION_NAME   = '2018.09.27_dml_gladius_mocks';
 const INPUT_IMAGES_DIR  = '/Users/rramphal/Projects/region-selector/public';
 const OUTPUT_IMAGES_DIR = '/Users/rramphal/Projects/_KYOKAN/kyokan-ui/public/images/components';
 
