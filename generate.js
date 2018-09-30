@@ -7,7 +7,7 @@ function downFirst (string) {
 
 function renderImages (images) {
   return images.map((image) => {
-    return `<img src="${image.src}" alt="${image.alt}" style="max-width: 100%;" /><br />`;
+    return `  <div class="example"><img src="${image.src}" alt="${image.alt}" /></div>`;
   }).join('\n\n');
 }
 
@@ -67,7 +67,9 @@ export default ${componentName};
 
     const documentationTemplate = `[Markdown writeup]
 
+<div class="examples">
 ${metadata.images ? renderImages(metadata.images) : ''}
+</div>
 
 \`\`\`jsx
 <${componentName}

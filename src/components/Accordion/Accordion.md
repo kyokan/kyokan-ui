@@ -1,8 +1,9 @@
 [Markdown writeup]
 
-<img src="public/images/components/Accordion/1.png" alt="Accordion 1" style="max-width: 100%;" /><br />
-
-<img src="public/images/components/Accordion/2.png" alt="Accordion 2" style="max-width: 100%;" /><br />
+<div class="examples">
+  <div class="example"><img src="public/images/components/Accordion/1.png" alt="Accordion 1"/></div>
+  <div class="example"><img src="public/images/components/Accordion/2.png" alt="Accordion 2"/></div>
+</div>
 
 ```jsx
 <Accordion

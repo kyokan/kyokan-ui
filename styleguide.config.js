@@ -10,6 +10,17 @@ module.exports = {
 
   components: 'src/components/**/[A-Z]*.jsx',
 
+  template: {
+    head: {
+      links: [
+        {
+          rel: 'stylesheet',
+          href: 'public/styles.css',
+        },
+      ],
+    },
+  },
+
   getComponentPathLine (componentPath) {
     const name = path.basename(componentPath, '.jsx')
     return `import ${name} from 'kyokan-ui';`
