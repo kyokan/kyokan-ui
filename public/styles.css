@@ -1,11 +1,39 @@
 .references {
   display: flex;
   align-content: center;
+  position: relative;
+  margin-top: -12px;
+  margin-bottom: 50px;
+}
+
+.references::before,
+.references::after {
+  display: block;
+  position: absolute;
+  left: 0px;
+
+  /* copied styles from usage button */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  border-bottom: 2px #f28a25 solid;
+  padding: 8px 0;
+  font-size: 15px;
+  color: #767676;
+  text-transform: uppercase;
+}
+
+.references::before {
+  content: 'References';
+  top: -36px;
+}
+
+.references::after {
+  content: 'Example';
+  bottom: -50px;
 }
 
 .references .reference {
   flex: 1;
-  border: 1px solid gray;
+  border: 1px dotted gray;
   padding: 10px;
   margin-right: 10px;
   text-align: center;
@@ -13,4 +41,8 @@
 
 .references .reference img {
   max-width: 100%;
+}
+
+footer[class^="rsg--"] {
+  display: none;
 }
