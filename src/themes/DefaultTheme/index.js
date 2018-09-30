@@ -1,5 +1,5 @@
-import BUTTON from './Default/button';
-import TEXT   from './Default/text';
+import BUTTON from './sections/button';
+import TEXT   from './sections/text';
 
 const DefaultTheme = {
   // general

@@ -1,7 +1,7 @@
-import DefaultTheme from './DefaultTheme';
+import DefaultTheme from '../DefaultTheme';
 
-import BUTTON from './DML/button';
-import TEXT   from './DML/text';
+import BUTTON from './sections/button';
+import TEXT   from './sections/text';
 
 const DMLTheme = {
   // general
