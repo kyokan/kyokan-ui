@@ -23,10 +23,10 @@ TabbedRadioGroupOption.propTypes = {
   icon: PropTypes.string,
 
   /** The form value of the option */
-  value: PropTypes.string,
+  value: PropTypes.string.isRequired,
 
   /** The text that displays as the option */
-  children: PropTypes.string,
+  children: PropTypes.string.isRequired,
 
   /** Whether or not the component receives active styles */
   selected: PropTypes.bool

@@ -20,10 +20,10 @@ const Accordion = props => {
 
 Accordion.propTypes = {
   /** The text shown on the toggle header */
-  title: PropTypes.string,
+  title: PropTypes.string.isRequired,
 
   /** The content revealed when the accordion is expanded */
-  children: PropTypes.any,
+  children: PropTypes.any.isRequired,
 
   /** Whether or not the accordion to be open by default */
   expanded: PropTypes.bool,

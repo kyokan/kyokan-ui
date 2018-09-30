@@ -16,7 +16,7 @@ const Tag = props => {
 
 Tag.propTypes = {
   /** The name of the tag */
-  name: PropTypes.string,
+  name: PropTypes.string.isRequired,
 
   /** Whether or not the tag is active */
   isActive: PropTypes.bool

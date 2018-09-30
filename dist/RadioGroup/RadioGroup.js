@@ -19,7 +19,7 @@ RadioGroup.propTypes = {
   checked: PropTypes.string,
 
   /** The name */
-  name: PropTypes.string,
+  name: PropTypes.string.isRequired,
 
   /** Fired on radio group selection change */
   onChange: PropTypes.func

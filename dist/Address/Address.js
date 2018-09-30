@@ -16,7 +16,7 @@ const Address = props => {
 
 Address.propTypes = {
   /** The address */
-  value: PropTypes.string,
+  value: PropTypes.string.isRequired,
 
   /** A callback function to fire on click */
   onClick: PropTypes.func

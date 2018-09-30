@@ -20,7 +20,7 @@ const TabbedRadioGroup = props => {
 
 TabbedRadioGroup.propTypes = {
   /** The tabs to be displayed */
-  children: PropTypes.any,
+  children: PropTypes.any.isRequired,
 
   /** A unique identifier for which of the tabs will be active */
   activeKey: PropTypes.string

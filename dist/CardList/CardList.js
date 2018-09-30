@@ -20,7 +20,7 @@ const CardList = props => {
 
 CardList.propTypes = {
   /** The cards to be shown */
-  children: PropTypes.any
+  children: PropTypes.any.isRequired
 };
 
 /** @component */

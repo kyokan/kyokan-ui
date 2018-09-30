@@ -16,10 +16,10 @@ const CountMetric = props => {
 
 CountMetric.propTypes = {
   /** The number to be displayed */
-  metricValue: PropTypes.number,
+  metricValue: PropTypes.number.isRequired,
 
   /** The icon to be displayed */
-  icon: PropTypes.string
+  icon: PropTypes.string.isRequired
 };
 
 /** @component */

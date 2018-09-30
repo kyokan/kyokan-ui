@@ -23,7 +23,7 @@ RadioButton.propTypes = {
   checked: PropTypes.string,
 
   /** A unique identifier */
-  id: PropTypes.string,
+  id: PropTypes.string.isRequired,
 
   /** The label */
   children: PropTypes.any,

@@ -20,10 +20,10 @@ const Dropdown = props => {
 
 Dropdown.propTypes = {
   /** Content to show in the header */
-  header: PropTypes.any,
+  header: PropTypes.any.isRequired,
 
   /** Content to show in the dropdown */
-  children: PropTypes.any,
+  children: PropTypes.any.isRequired,
 
   /** Placeholder text */
   placeholder: PropTypes.string,

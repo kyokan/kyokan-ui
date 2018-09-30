@@ -23,10 +23,10 @@ AccountDropdown.propTypes = {
   avatar: PropTypes.string,
 
   /** The name of the user */
-  name: PropTypes.string,
+  name: PropTypes.string.isRequired,
 
   /** The content in the dropdown */
-  children: PropTypes.any,
+  children: PropTypes.any.isRequired,
 
   /** A callback function which is fired on dropdown open/close */
   onChange: PropTypes.func

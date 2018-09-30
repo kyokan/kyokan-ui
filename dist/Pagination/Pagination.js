@@ -16,10 +16,10 @@ const Pagination = props => {
 
 Pagination.propTypes = {
   /** The current page index */
-  currentPage: PropTypes.number,
+  currentPage: PropTypes.number.isRequired,
 
   /** The total count of pages */
-  totalCount: PropTypes.number
+  totalCount: PropTypes.number.isRequired
 };
 
 /** @component */

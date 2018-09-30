@@ -16,7 +16,7 @@ const Status = props => {
 
 Status.propTypes = {
   /** A string of text to be displayed within the status */
-  text: PropTypes.string,
+  text: PropTypes.string.isRequired,
 
   /** An icon to display before the status text */
   icon: PropTypes.string,

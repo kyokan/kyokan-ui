@@ -20,7 +20,7 @@ const Description = props => {
 
 Description.propTypes = {
   /** The description text to be displayed */
-  children: PropTypes.string
+  children: PropTypes.string.isRequired
 };
 
 /** @component */

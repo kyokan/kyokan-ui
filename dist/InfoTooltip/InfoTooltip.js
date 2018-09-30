@@ -16,7 +16,7 @@ const InfoTooltip = props => {
 
 InfoTooltip.propTypes = {
   /** A string of text to display on tooltip hover */
-  tooltipText: PropTypes.string
+  tooltipText: PropTypes.string.isRequired
 };
 
 /** @component */

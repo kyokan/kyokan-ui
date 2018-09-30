@@ -16,10 +16,10 @@ const Sorter = props => {
 
 Sorter.propTypes = {
   /** Text that signals sorting (shown before the selected option) */
-  prefix: PropTypes.string,
+  prefix: PropTypes.string.isRequired,
 
   /** An array of strings containing sort options */
-  sortOptions: PropTypes.array,
+  sortOptions: PropTypes.array.isRequired,
 
   /** Fired on sort selection change */
   onChange: PropTypes.func

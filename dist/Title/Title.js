@@ -20,7 +20,7 @@ const Title = props => {
 
 Title.propTypes = {
   /** The text to be displayed */
-  children: PropTypes.string
+  children: PropTypes.string.isRequired
 };
 
 /** @component */

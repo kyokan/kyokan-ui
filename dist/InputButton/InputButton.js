@@ -16,7 +16,7 @@ const InputButton = props => {
 
 InputButton.propTypes = {
   /** The button text */
-  buttonText: PropTypes.string,
+  buttonText: PropTypes.string.isRequired,
 
   /** A callback function to fire on button click */
   onClick: PropTypes.string

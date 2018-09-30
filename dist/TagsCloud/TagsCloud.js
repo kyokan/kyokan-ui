@@ -16,7 +16,7 @@ const TagsCloud = props => {
 
 TagsCloud.propTypes = {
   /** An array of tag strings to display */
-  tags: PropTypes.array
+  tags: PropTypes.array.isRequired
 };
 
 /** @component */

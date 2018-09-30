@@ -20,7 +20,7 @@ const SiteHeader = props => {
 
 SiteHeader.propTypes = {
   /** Any content */
-  children: PropTypes.any
+  children: PropTypes.any.isRequired
 };
 
 /** @component */

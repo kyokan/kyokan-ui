@@ -16,7 +16,7 @@ const TagsInput = props => {
 
 TagsInput.propTypes = {
   /** An array of tag strings */
-  tags: PropTypes.array,
+  tags: PropTypes.array.isRequired,
 
   /** An array of selected tag strings */
   selectedTags: PropTypes.array,

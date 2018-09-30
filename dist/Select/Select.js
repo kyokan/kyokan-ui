@@ -16,7 +16,7 @@ const Select = props => {
 
 Select.propTypes = {
   /** An array of objects which have the following keys: 'key' and 'displayName' */
-  options: PropTypes.array,
+  options: PropTypes.array.isRequired,
 
   /** Whether or not the select is open */
   open: PropTypes.bool,

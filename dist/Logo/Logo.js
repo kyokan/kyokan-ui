@@ -16,7 +16,7 @@ const Logo = props => {
 
 Logo.propTypes = {
   /** The name of the logo */
-  name: PropTypes.string,
+  name: PropTypes.string.isRequired,
 
   /** Whether or not the logo is dark-styled */
   dark: PropTypes.bool

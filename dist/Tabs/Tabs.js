@@ -20,7 +20,7 @@ const Tabs = props => {
 
 Tabs.propTypes = {
   /** A set of tab components to display */
-  children: PropTypes.any,
+  children: PropTypes.any.isRequired,
 
   /** A unique identifier for which of the tab components will be active */
   activeKey: PropTypes.string

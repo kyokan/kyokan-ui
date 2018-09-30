@@ -16,7 +16,7 @@ const MetaMaskButton = props => {
 
 MetaMaskButton.propTypes = {
   /** A callback function which is fired on button click */
-  onClick: PropTypes.func
+  onClick: PropTypes.func.isRequired
 };
 
 /** @component */

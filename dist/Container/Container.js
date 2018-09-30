@@ -20,7 +20,7 @@ const Container = props => {
 
 Container.propTypes = {
   /** Any content */
-  children: PropTypes.any
+  children: PropTypes.any.isRequired
 };
 
 /** @component */

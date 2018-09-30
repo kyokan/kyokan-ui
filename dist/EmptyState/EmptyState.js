@@ -16,7 +16,7 @@ const EmptyState = props => {
 
 EmptyState.propTypes = {
   /** Title text */
-  title: PropTypes.string,
+  title: PropTypes.string.isRequired,
 
   /** Description text */
   description: PropTypes.string

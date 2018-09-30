@@ -20,7 +20,7 @@ const Text = props => {
 
 Text.propTypes = {
   /** Text to display */
-  children: PropTypes.string
+  children: PropTypes.string.isRequired
 };
 
 /** @component */

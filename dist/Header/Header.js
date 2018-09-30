@@ -20,7 +20,7 @@ const Header = props => {
 
 Header.propTypes = {
   /** The header text to be displayed */
-  children: PropTypes.string
+  children: PropTypes.string.isRequired
 };
 
 /** @component */

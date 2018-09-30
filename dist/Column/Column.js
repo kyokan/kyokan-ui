@@ -20,7 +20,7 @@ const Column = props => {
 
 Column.propTypes = {
   /** Any content */
-  children: PropTypes.any,
+  children: PropTypes.any.isRequired,
 
   /** Column width */
   width: PropTypes.number

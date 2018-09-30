@@ -16,7 +16,7 @@ const Button = props => {
 
 Button.propTypes = {
   /** Text to display within the button */
-  text: PropTypes.string,
+  text: PropTypes.string.isRequired,
 
   /** Whether or not the button is displaying a loading state */
   loading: PropTypes.bool,
@@ -40,7 +40,7 @@ Button.propTypes = {
   light: PropTypes.bool,
 
   /** A callback function which is fired on button click */
-  onClick: PropTypes.func
+  onClick: PropTypes.func.isRequired
 };
 
 /** @component */

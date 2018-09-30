@@ -16,7 +16,7 @@ const StarRating = props => {
 
 StarRating.propTypes = {
   /** The total number of stars */
-  totalNumberOfStars: PropTypes.number,
+  totalNumberOfStars: PropTypes.number.isRequired,
 
   /** The total number of stars checked */
   starredCount: PropTypes.number,

@@ -16,13 +16,13 @@ const TokenAction = props => {
 
 TokenAction.propTypes = {
   /** The amount */
-  amount: PropTypes.number,
+  amount: PropTypes.number.isRequired,
 
   /** The name of the token */
-  token: PropTypes.string,
+  token: PropTypes.string.isRequired,
 
   /** Text to show as the button text */
-  buttonText: PropTypes.string,
+  buttonText: PropTypes.string.isRequired,
 
   /** A callback function to fire on button click */
   onClick: PropTypes.func

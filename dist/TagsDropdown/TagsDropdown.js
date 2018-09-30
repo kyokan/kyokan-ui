@@ -16,7 +16,7 @@ const TagsDropdown = props => {
 
 TagsDropdown.propTypes = {
   /** An array of tags to display */
-  tags: PropTypes.array,
+  tags: PropTypes.array.isRequired,
 
   /** A callback to fire on dropdown open */
   onClick: PropTypes.func,

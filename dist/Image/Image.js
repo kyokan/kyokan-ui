@@ -16,7 +16,7 @@ const Image = props => {
 
 Image.propTypes = {
   /** A string with the url of the image */
-  url: PropTypes.string
+  url: PropTypes.string.isRequired
 };
 
 /** @component */

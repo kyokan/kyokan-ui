@@ -16,7 +16,7 @@ const MultiSelect = props => {
 
 MultiSelect.propTypes = {
   /** An array of objects which have the following keys: 'key', 'displayName', and 'selected'. */
-  options: PropTypes.array,
+  options: PropTypes.array.isRequired,
 
   /** Whether or not the select is open */
   open: PropTypes.bool,

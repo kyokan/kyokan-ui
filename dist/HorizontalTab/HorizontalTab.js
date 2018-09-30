@@ -20,7 +20,7 @@ const HorizontalTab = props => {
 
 HorizontalTab.propTypes = {
   /** The content of the tab */
-  children: PropTypes.any,
+  children: PropTypes.any.isRequired,
 
   /** A boolean which triggers the application of the active styles */
   active: PropTypes.bool
