@@ -7,7 +7,7 @@ function ready(callback) {
 }
 
 function initializeLuminous () {
-  new LuminousGallery(document.querySelectorAll('.example a'));
+  new LuminousGallery(document.querySelectorAll('.reference a'));
 }
 
 function main () {

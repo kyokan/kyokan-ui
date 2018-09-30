@@ -1,15 +1,15 @@
-<div class="examples">
-  <div class="example">
+<div class="references">
+  <div class="reference">
     <a href="public/images/components/Select/1.png">
       <img src="public/images/components/Select/1.png" alt="Select 1" />
     </a>
   </div>
-  <div class="example">
+  <div class="reference">
     <a href="public/images/components/Select/2.png">
       <img src="public/images/components/Select/2.png" alt="Select 2" />
     </a>
   </div>
-  <div class="example">
+  <div class="reference">
     <a href="public/images/components/Select/3.png">
       <img src="public/images/components/Select/3.png" alt="Select 3" />
     </a>
