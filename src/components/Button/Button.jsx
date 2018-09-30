@@ -13,7 +13,7 @@ const Button = (props) => {
 
   return (
     <StyledButton>
-      
+      {props.text}
     </StyledButton>
   );
 };
