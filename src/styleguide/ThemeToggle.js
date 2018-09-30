@@ -24,7 +24,7 @@ const THEMES = [
     value : 'dml',
   },
 ];
-const DEFAULT_THEME = THEMES[1];
+const DEFAULT_THEME = THEMES[0];
 
 class ThemeToggle extends Component {
   constructor (props) {
