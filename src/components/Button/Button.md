@@ -38,7 +38,6 @@
 
 ```jsx
 <Button
-  text=""
   loading={false}
   loadingText=""
   disabled={false}
@@ -47,5 +46,7 @@
   leftIcon=""
   light={false}
   onClick={() => {}}
-/>
+>
+  CHILDREN
+</Button>
 ```

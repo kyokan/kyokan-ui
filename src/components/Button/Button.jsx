@@ -8,21 +8,27 @@ import styled from 'styled-components';
 const Button = (props) => {
   const StyledButton = styled.div`
     font-family: ${ (props) => props.theme.textFontFamily };
-    color: ${ (props) => props.theme.textColor };
+    color: white;
+    display: inline-block;
+    background-color: gray;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
   `;
 
   return (
     <StyledButton
       onClick={props.onClick}
     >
-      {props.text}
+      {props.children}
     </StyledButton>
   );
 };
 
 Button.propTypes = {
   /** Text to display within the button */
-  text: PropTypes.string.isRequired,
+  children: PropTypes.string.isRequired,
 
   /** Whether or not the button is displaying a loading state */
   loading: PropTypes.bool,
