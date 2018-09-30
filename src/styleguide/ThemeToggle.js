@@ -8,7 +8,7 @@ const Title = styled.div`
   text-align  : center;
 `;
 
-const Link = styled.a`
+const Link = styled.div`
   display         : inline-block;
   padding         : 10px 5px 0 5px;
   font-family     : sans-serif;
@@ -63,7 +63,6 @@ class ThemeToggle extends Component {
           <Link
             className={classes}
             key={theme.value}
-            href="#"
             onClick={() => {
               this.setTheme(theme.value);
             }}
