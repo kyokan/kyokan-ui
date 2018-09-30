@@ -65,7 +65,7 @@ ${metadata.attributes ? renderPropTypes(metadata.attributes, 2) : ''}
 export default ${componentName};
 `;
 
-    const documentationTemplate = `${metadata.notes}
+    const documentationTemplate = `${(metadata.notes && metadata.notes.length) ? metadata.notes : '[Component description]'}
 
 <div class="examples">
 ${metadata.images ? renderImages(metadata.images) : ''}
