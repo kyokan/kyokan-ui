@@ -3,30 +3,27 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 /**
-* [Description]
+* A branding logo.
 */
 const Logo = (props) => {
   const StyledLogo = styled.div`
-    font-family: ${ (props) => props.theme.fontFamily };
-    color: ${ (props) => props.theme.primaryColor };
+    font-family: ${ (props) => props.theme.textFontFamily };
+    color: ${ (props) => props.theme.textColor };
   `;
 
   return (
-    <StyledLogo
-      imgsrc=""
-      dark=""
-    >
-
+    <StyledLogo>
+      
     </StyledLogo>
   );
 };
 
 Logo.propTypes = {
-  /** The url for the logo image */
-  imgsrc: PropTypes.any,
+  /** The name of the logo */
+  name: PropTypes.string.isRequired,
 
-  /** A boolean which triggers the dark styling of the logo */
-  dark: PropTypes.any,
+  /** Whether or not the logo is dark-styled */
+  dark: PropTypes.bool,
 };
 
 /** @component */

@@ -3,30 +3,30 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 /**
-* [Description]
+* A dropdown that allows the user to sort a list by a selected option.
 */
 const Sorter = (props) => {
   const StyledSorter = styled.div`
-    font-family: ${ (props) => props.theme.fontFamily };
-    color: ${ (props) => props.theme.primaryColor };
+    font-family: ${ (props) => props.theme.textFontFamily };
+    color: ${ (props) => props.theme.textColor };
   `;
 
   return (
-    <StyledSorter
-      prefix=""
-      sortOptions=""
-    >
-
+    <StyledSorter>
+      
     </StyledSorter>
   );
 };
 
 Sorter.propTypes = {
-  /** The string of text that signals sorting */
-  prefix: PropTypes.any,
+  /** Text that signals sorting (shown before the selected option) */
+  prefix: PropTypes.string.isRequired,
 
   /** An array of strings containing sort options */
-  sortOptions: PropTypes.any,
+  sortOptions: PropTypes.array.isRequired,
+
+  /** Fired on sort selection change */
+  onChange: PropTypes.func,
 };
 
 /** @component */

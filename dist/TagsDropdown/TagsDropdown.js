@@ -3,24 +3,26 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 /**
-* [Description]
+* A small widget to condense tags.
 */
 const TagsDropdown = props => {
   const StyledTagsDropdown = styled.div`
-    font-family: ${props => props.theme.fontFamily};
-    color: ${props => props.theme.primaryColor};
+    font-family: ${props => props.theme.textFontFamily};
+    color: ${props => props.theme.textColor};
   `;
 
-  return React.createElement(
-    StyledTagsDropdown,
-    null,
-    props.children
-  );
+  return React.createElement(StyledTagsDropdown, null);
 };
 
 TagsDropdown.propTypes = {
-  /** Tags */
-  children: PropTypes.any
+  /** An array of tags to display */
+  tags: PropTypes.array,
+
+  /** A callback to fire on dropdown open */
+  onClick: PropTypes.func,
+
+  /** A callback to fire on tag click */
+  onTagClick: PropTypes.func
 };
 
 /** @component */

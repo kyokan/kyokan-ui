@@ -3,26 +3,23 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 /**
-* [Description]
+* A snippet of text to serve as a tag.
 */
 const Tag = props => {
   const StyledTag = styled.div`
-    font-family: ${props => props.theme.fontFamily};
-    color: ${props => props.theme.primaryColor};
+    font-family: ${props => props.theme.textFontFamily};
+    color: ${props => props.theme.textColor};
   `;
 
-  return React.createElement(StyledTag, {
-    name: '',
-    isActive: ''
-  });
+  return React.createElement(StyledTag, null);
 };
 
 Tag.propTypes = {
-  /** A string with the name of the tag */
-  name: PropTypes.any,
+  /** The name of the tag */
+  name: PropTypes.string,
 
-  /** A boolean representing whether or not the tag is active */
-  isActive: PropTypes.any
+  /** Whether or not the tag is active */
+  isActive: PropTypes.bool
 };
 
 /** @component */

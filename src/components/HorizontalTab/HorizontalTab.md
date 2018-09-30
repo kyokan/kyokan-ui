@@ -1,10 +1,12 @@
-[Markdown writeup]
+A tab that will be toggled from a horizontal control.
 
+<div class="examples">
 
+</div>
 
 ```jsx
 <HorizontalTab
-  isActive=""
+  active={false}
 >
   Children
 </HorizontalTab>

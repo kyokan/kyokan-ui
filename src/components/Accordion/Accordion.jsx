@@ -3,19 +3,16 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 /**
-* [Description]
+* A block element that hides and shows content below a header.
 */
 const Accordion = (props) => {
   const StyledAccordion = styled.div`
-    font-family: ${ (props) => props.theme.fontFamily };
-    color: ${ (props) => props.theme.primaryColor };
+    font-family: ${ (props) => props.theme.textFontFamily };
+    color: ${ (props) => props.theme.textColor };
   `;
 
   return (
-    <StyledAccordion
-      title=""
-      isExpanded=""
-    >
+    <StyledAccordion>
       {props.children}
     </StyledAccordion>
   );
@@ -23,13 +20,16 @@ const Accordion = (props) => {
 
 Accordion.propTypes = {
   /** The text shown on the toggle header */
-  title: PropTypes.any,
+  title: PropTypes.string.isRequired,
 
   /** The content revealed when the accordion is expanded */
-  children: PropTypes.any,
+  children: PropTypes.any.isRequired,
 
-  /** A boolean that allows an accordion to be open by default */
-  isExpanded: PropTypes.any,
+  /** Whether or not the accordion to be open by default */
+  expanded: PropTypes.bool,
+
+  /** Fired on accordion open/close */
+  onChange: PropTypes.func,
 };
 
 /** @component */

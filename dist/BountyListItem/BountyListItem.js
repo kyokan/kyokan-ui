@@ -3,46 +3,38 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 /**
-* [Description]
+* A bounty entity.
 */
 const BountyListItem = props => {
   const StyledBountyListItem = styled.div`
-    font-family: ${props => props.theme.fontFamily};
-    color: ${props => props.theme.primaryColor};
+    font-family: ${props => props.theme.textFontFamily};
+    color: ${props => props.theme.textColor};
   `;
 
-  return React.createElement(StyledBountyListItem, {
-    title: '',
-    description: '',
-    isSubmitted: '',
-    submissionCloseDate: '',
-    metricValue: '',
-    authorName: '',
-    authorAvatar: ''
-  });
+  return React.createElement(StyledBountyListItem, null);
 };
 
 BountyListItem.propTypes = {
   /** The text shown on the item header */
-  title: PropTypes.any,
+  title: PropTypes.string,
 
   /** The description text to be displayed */
-  description: PropTypes.any,
+  description: PropTypes.string,
 
   /** A boolean that allows submission information to be displayed by default */
-  isSubmitted: PropTypes.any,
+  submitted: PropTypes.bool,
 
   /** The date that a submission closes - the color of the status is determined by proximity to today's date */
-  submissionCloseDate: PropTypes.any,
+  submissionCloseDate: PropTypes.string,
 
   /** A number that is shown as the metric */
-  metricValue: PropTypes.any,
+  metricValue: PropTypes.number,
 
   /** A string with the author's name */
-  authorName: PropTypes.any,
+  authorName: PropTypes.string,
 
   /** A string with the URL to the author's avatar */
-  authorAvatar: PropTypes.any
+  authorAvatar: PropTypes.string
 };
 
 /** @component */

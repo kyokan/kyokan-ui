@@ -3,26 +3,24 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 /**
-* [Description]
+* An orange button used to connect to Metamask.
 */
 const MetaMaskButton = (props) => {
   const StyledMetaMaskButton = styled.div`
-    font-family: ${ (props) => props.theme.fontFamily };
-    color: ${ (props) => props.theme.primaryColor };
+    font-family: ${ (props) => props.theme.textFontFamily };
+    color: ${ (props) => props.theme.textColor };
   `;
 
   return (
-    <StyledMetaMaskButton
-      onClick=""
-    >
-
+    <StyledMetaMaskButton>
+      
     </StyledMetaMaskButton>
   );
 };
 
 MetaMaskButton.propTypes = {
   /** A callback function which is fired on button click */
-  onClick: PropTypes.any,
+  onClick: PropTypes.func.isRequired,
 };
 
 /** @component */

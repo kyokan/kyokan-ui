@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 /**
@@ -7,15 +6,13 @@ import styled from 'styled-components';
 */
 const OnboardingSidebar = (props) => {
   const StyledOnboardingSidebar = styled.div`
-    font-family: ${ (props) => props.theme.fontFamily };
-    color: ${ (props) => props.theme.primaryColor };
+    font-family: ${ (props) => props.theme.textFontFamily };
+    color: ${ (props) => props.theme.textColor };
   `;
 
   return (
-    <StyledOnboardingSidebar
-
-    >
-
+    <StyledOnboardingSidebar>
+      
     </StyledOnboardingSidebar>
   );
 };

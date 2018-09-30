@@ -3,33 +3,33 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 /**
-* [Description]
+* A dropdown that allows a user to select one of many options.
 */
 const Select = (props) => {
   const StyledSelect = styled.div`
-    font-family: ${ (props) => props.theme.fontFamily };
-    color: ${ (props) => props.theme.primaryColor };
+    font-family: ${ (props) => props.theme.textFontFamily };
+    color: ${ (props) => props.theme.textColor };
   `;
 
   return (
-    <StyledSelect
-      isExpanded=""
-      placeholder=""
-    >
-      {props.children}
+    <StyledSelect>
+      
     </StyledSelect>
   );
 };
 
 Select.propTypes = {
-  /** The dropdown options to be displayed */
-  children: PropTypes.any,
+  /** An array of objects which have the following keys: 'key' and 'displayName' */
+  options: PropTypes.array.isRequired,
 
-  /** A boolean which defaults to false for closed dropdown */
-  isExpanded: PropTypes.any,
+  /** Whether or not the select is open */
+  open: PropTypes.bool,
 
-  /** The text to be displayed in closed Dropdown */
-  placeholder: PropTypes.any,
+  /** The text to be displayed in closed select */
+  placeholder: PropTypes.string,
+
+  /** Fired on select option change */
+  onChange: PropTypes.func,
 };
 
 /** @component */

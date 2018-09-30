@@ -1,11 +1,15 @@
-[Markdown writeup]
+An info icon which reveals a tooltip on hover.
 
-<img src="public/images/components/InfoTooltip/1.png" alt="InfoTooltip 1" style="max-width: 100%;" /><br />
+<div class="examples">
+  <div class="example">
+    <a href="public/images/components/InfoTooltip/1.png">
+      <img src="public/images/components/InfoTooltip/1.png" alt="InfoTooltip 1" />
+    </a>
+  </div>
+</div>
 
 ```jsx
 <InfoTooltip
   tooltipText=""
->
-  Children
-</InfoTooltip>
+/>
 ```

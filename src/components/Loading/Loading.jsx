@@ -3,30 +3,27 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 /**
-* [Description]
+* A module to show while loading page elements.
 */
 const Loading = (props) => {
   const StyledLoading = styled.div`
-    font-family: ${ (props) => props.theme.fontFamily };
-    color: ${ (props) => props.theme.primaryColor };
+    font-family: ${ (props) => props.theme.textFontFamily };
+    color: ${ (props) => props.theme.textColor };
   `;
 
   return (
-    <StyledLoading
-      text=""
-      icon=""
-    >
-
+    <StyledLoading>
+      
     </StyledLoading>
   );
 };
 
 Loading.propTypes = {
   /** The text to display while loading */
-  text: PropTypes.any,
+  text: PropTypes.string,
 
   /** An icon to display while loading */
-  icon: PropTypes.any,
+  icon: PropTypes.string,
 };
 
 /** @component */

@@ -1,6 +1,12 @@
-[Markdown writeup]
+Text that serves as a description.
 
-<img src="public/images/components/Description/1.png" alt="Description 1" style="max-width: 100%;" /><br />
+<div class="examples">
+  <div class="example">
+    <a href="public/images/components/Description/1.png">
+      <img src="public/images/components/Description/1.png" alt="Description 1" />
+    </a>
+  </div>
+</div>
 
 ```jsx
 <Description

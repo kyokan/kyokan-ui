@@ -3,46 +3,39 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 /**
-* [Description]
+* A message styled as a notification for the user.
 */
 const Status = (props) => {
   const StyledStatus = styled.div`
-    font-family: ${ (props) => props.theme.fontFamily };
-    color: ${ (props) => props.theme.primaryColor };
+    font-family: ${ (props) => props.theme.textFontFamily };
+    color: ${ (props) => props.theme.textColor };
   `;
 
   return (
-    <StyledStatus
-      text=""
-      icon=""
-      success=""
-      error=""
-      warning=""
-      info=""
-    >
-
+    <StyledStatus>
+      
     </StyledStatus>
   );
 };
 
 Status.propTypes = {
   /** A string of text to be displayed within the status */
-  text: PropTypes.any,
+  text: PropTypes.string.isRequired,
 
   /** An icon to display before the status text */
-  icon: PropTypes.any,
+  icon: PropTypes.string,
 
-  /** A boolean which triggers success styles */
-  success: PropTypes.any,
+  /** Whether or not the Status is a success status */
+  success: PropTypes.bool,
 
-  /** A boolean which triggers error styles */
-  error: PropTypes.any,
+  /** Whether or not the Status is a error status */
+  error: PropTypes.bool,
 
-  /** A boolean which triggers warning styles */
-  warning: PropTypes.any,
+  /** Whether or not the Status is a warning status */
+  warning: PropTypes.bool,
 
-  /** A boolean which triggers info styles */
-  info: PropTypes.any,
+  /** Whether or not the Status is a info status */
+  info: PropTypes.bool,
 };
 
 /** @component */

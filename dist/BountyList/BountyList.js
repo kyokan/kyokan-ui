@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 /**
-* [Description]
+* A collection of BountyListItem components.
 */
 const BountyList = props => {
   const StyledBountyList = styled.div`
-    font-family: ${props => props.theme.fontFamily};
-    color: ${props => props.theme.primaryColor};
+    font-family: ${props => props.theme.textFontFamily};
+    color: ${props => props.theme.textColor};
   `;
 
   return React.createElement(
@@ -19,7 +19,7 @@ const BountyList = props => {
 };
 
 BountyList.propTypes = {
-  /** The items to be displayed by the bounty list */
+  /** The BountyListItem components to be displayed by the bounty list */
   children: PropTypes.any
 };
 

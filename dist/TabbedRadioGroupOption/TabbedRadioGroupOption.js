@@ -3,37 +3,33 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 /**
-* [Description]
+* An option within a TabbedRadioGroup.
 */
 const TabbedRadioGroupOption = props => {
   const StyledTabbedRadioGroupOption = styled.div`
-    font-family: ${props => props.theme.fontFamily};
-    color: ${props => props.theme.primaryColor};
+    font-family: ${props => props.theme.textFontFamily};
+    color: ${props => props.theme.textColor};
   `;
 
   return React.createElement(
     StyledTabbedRadioGroupOption,
-    {
-      icon: '',
-      value: '',
-      isSelected: ''
-    },
+    null,
     props.children
   );
 };
 
 TabbedRadioGroupOption.propTypes = {
   /** The icon that shows up to the left of the text */
-  icon: PropTypes.any,
+  icon: PropTypes.string,
 
   /** The form value of the option */
-  value: PropTypes.any,
+  value: PropTypes.string,
 
   /** The text that displays as the option */
-  children: PropTypes.any,
+  children: PropTypes.string,
 
-  /** A boolean which triggers the application of active styles */
-  isSelected: PropTypes.any
+  /** Whether or not the component receives active styles */
+  selected: PropTypes.bool
 };
 
 /** @component */

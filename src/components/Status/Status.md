@@ -1,22 +1,35 @@
-[Markdown writeup]
+A message styled as a notification for the user.
 
-<img src="public/images/components/Status/1.png" alt="Status 1" style="max-width: 100%;" /><br />
-
-<img src="public/images/components/Status/2.png" alt="Status 2" style="max-width: 100%;" /><br />
-
-<img src="public/images/components/Status/3.png" alt="Status 3" style="max-width: 100%;" /><br />
-
-<img src="public/images/components/Status/4.png" alt="Status 4" style="max-width: 100%;" /><br />
+<div class="examples">
+  <div class="example">
+    <a href="public/images/components/Status/1.png">
+      <img src="public/images/components/Status/1.png" alt="Status 1" />
+    </a>
+  </div>
+  <div class="example">
+    <a href="public/images/components/Status/2.png">
+      <img src="public/images/components/Status/2.png" alt="Status 2" />
+    </a>
+  </div>
+  <div class="example">
+    <a href="public/images/components/Status/3.png">
+      <img src="public/images/components/Status/3.png" alt="Status 3" />
+    </a>
+  </div>
+  <div class="example">
+    <a href="public/images/components/Status/4.png">
+      <img src="public/images/components/Status/4.png" alt="Status 4" />
+    </a>
+  </div>
+</div>
 
 ```jsx
 <Status
   text=""
   icon=""
-  success=""
-  error=""
-  warning=""
-  info=""
->
-  Children
-</Status>
+  success={false}
+  error={false}
+  warning={false}
+  info={false}
+/>
 ```

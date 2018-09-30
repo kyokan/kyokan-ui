@@ -3,30 +3,27 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 /**
-* [Description]
+* An address.
 */
 const Address = (props) => {
   const StyledAddress = styled.div`
-    font-family: ${ (props) => props.theme.fontFamily };
-    color: ${ (props) => props.theme.primaryColor };
+    font-family: ${ (props) => props.theme.textFontFamily };
+    color: ${ (props) => props.theme.textColor };
   `;
 
   return (
-    <StyledAddress
-      value=""
-      onClick=""
-    >
-
+    <StyledAddress>
+      
     </StyledAddress>
   );
 };
 
 Address.propTypes = {
-  /** A string with the address */
-  value: PropTypes.any,
+  /** The address */
+  value: PropTypes.string.isRequired,
 
   /** A callback function to fire on click */
-  onClick: PropTypes.any,
+  onClick: PropTypes.func,
 };
 
 /** @component */

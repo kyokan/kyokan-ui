@@ -3,38 +3,33 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 /**
-* [Description]
+* A composed component of a TokenAmount and a Button.
 */
 const TokenAction = (props) => {
   const StyledTokenAction = styled.div`
-    font-family: ${ (props) => props.theme.fontFamily };
-    color: ${ (props) => props.theme.primaryColor };
+    font-family: ${ (props) => props.theme.textFontFamily };
+    color: ${ (props) => props.theme.textColor };
   `;
 
   return (
-    <StyledTokenAction
-      amount=""
-      token=""
-      buttonText=""
-      onClick=""
-    >
-
+    <StyledTokenAction>
+      
     </StyledTokenAction>
   );
 };
 
 TokenAction.propTypes = {
-  /** A number with the amount */
-  amount: PropTypes.any,
+  /** The amount */
+  amount: PropTypes.number.isRequired,
 
-  /** A string with the name of the token */
-  token: PropTypes.any,
+  /** The name of the token */
+  token: PropTypes.string.isRequired,
 
-  /** A string with the text to show as the button text */
-  buttonText: PropTypes.any,
+  /** Text to show as the button text */
+  buttonText: PropTypes.string.isRequired,
 
   /** A callback function to fire on button click */
-  onClick: PropTypes.any,
+  onClick: PropTypes.func,
 };
 
 /** @component */

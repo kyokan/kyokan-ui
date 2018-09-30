@@ -1,12 +1,16 @@
-[Markdown writeup]
+A module to show while loading page elements.
 
-<img src="public/images/components/Loading/1.png" alt="Loading 1" style="max-width: 100%;" /><br />
+<div class="examples">
+  <div class="example">
+    <a href="public/images/components/Loading/1.png">
+      <img src="public/images/components/Loading/1.png" alt="Loading 1" />
+    </a>
+  </div>
+</div>
 
 ```jsx
 <Loading
   text=""
   icon=""
->
-  Children
-</Loading>
+/>
 ```

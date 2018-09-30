@@ -3,24 +3,20 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 /**
-* [Description]
+* A 'cloud' of tags - a freeform way of expressing Tags.
 */
 const TagsCloud = props => {
   const StyledTagsCloud = styled.div`
-    font-family: ${props => props.theme.fontFamily};
-    color: ${props => props.theme.primaryColor};
+    font-family: ${props => props.theme.textFontFamily};
+    color: ${props => props.theme.textColor};
   `;
 
-  return React.createElement(
-    StyledTagsCloud,
-    null,
-    props.children
-  );
+  return React.createElement(StyledTagsCloud, null);
 };
 
 TagsCloud.propTypes = {
-  /** The tags to be displayed */
-  children: PropTypes.any
+  /** An array of tag strings to display */
+  tags: PropTypes.array
 };
 
 /** @component */

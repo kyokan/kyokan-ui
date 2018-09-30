@@ -3,18 +3,16 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 /**
-* [Description]
+* Text that serves as a description.
 */
 const Description = (props) => {
   const StyledDescription = styled.div`
-    font-family: ${ (props) => props.theme.fontFamily };
-    color: ${ (props) => props.theme.primaryColor };
+    font-family: ${ (props) => props.theme.textFontFamily };
+    color: ${ (props) => props.theme.textColor };
   `;
 
   return (
-    <StyledDescription
-
-    >
+    <StyledDescription>
       {props.children}
     </StyledDescription>
   );
@@ -22,7 +20,7 @@ const Description = (props) => {
 
 Description.propTypes = {
   /** The description text to be displayed */
-  children: PropTypes.any,
+  children: PropTypes.string.isRequired,
 };
 
 /** @component */

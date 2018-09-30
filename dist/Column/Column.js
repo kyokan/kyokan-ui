@@ -3,19 +3,17 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 /**
-* [Description]
+* A layout component that encapsulates vertical content.
 */
 const Column = props => {
   const StyledColumn = styled.div`
-    font-family: ${props => props.theme.fontFamily};
-    color: ${props => props.theme.primaryColor};
+    font-family: ${props => props.theme.textFontFamily};
+    color: ${props => props.theme.textColor};
   `;
 
   return React.createElement(
     StyledColumn,
-    {
-      width: ''
-    },
+    null,
     props.children
   );
 };
@@ -24,8 +22,8 @@ Column.propTypes = {
   /** Any content */
   children: PropTypes.any,
 
-  /** A number representing column width */
-  width: PropTypes.any
+  /** Column width */
+  width: PropTypes.number
 };
 
 /** @component */

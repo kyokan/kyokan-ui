@@ -3,26 +3,23 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 /**
-* [Description]
+* A standardized empty state.
 */
 const EmptyState = props => {
   const StyledEmptyState = styled.div`
-    font-family: ${props => props.theme.fontFamily};
-    color: ${props => props.theme.primaryColor};
+    font-family: ${props => props.theme.textFontFamily};
+    color: ${props => props.theme.textColor};
   `;
 
-  return React.createElement(StyledEmptyState, {
-    title: '',
-    description: ''
-  });
+  return React.createElement(StyledEmptyState, null);
 };
 
 EmptyState.propTypes = {
-  /** A string of title text */
-  title: PropTypes.any,
+  /** Title text */
+  title: PropTypes.string,
 
-  /** A string of description text */
-  description: PropTypes.any
+  /** Description text */
+  description: PropTypes.string
 };
 
 /** @component */

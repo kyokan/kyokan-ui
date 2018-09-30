@@ -3,26 +3,24 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 /**
-* [Description]
+* Text.
 */
 const Text = (props) => {
   const StyledText = styled.div`
-    font-family: ${ (props) => props.theme.fontFamily };
-    color: ${ (props) => props.theme.primaryColor };
+    font-family: ${ (props) => props.theme.textFontFamily };
+    color: ${ (props) => props.theme.textColor };
   `;
 
   return (
-    <StyledText
-
-    >
+    <StyledText>
       {props.children}
     </StyledText>
   );
 };
 
 Text.propTypes = {
-  /** The text to encapsulate */
-  children: PropTypes.any,
+  /** Text to display */
+  children: PropTypes.string.isRequired,
 };
 
 /** @component */

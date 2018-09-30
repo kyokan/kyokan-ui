@@ -1,15 +1,27 @@
-[Markdown writeup]
+An input field that allows the user to select tags from a dropdown.
 
-<img src="public/images/components/TagsInput/1.png" alt="TagsInput 1" style="max-width: 100%;" /><br />
-
-<img src="public/images/components/TagsInput/2.png" alt="TagsInput 2" style="max-width: 100%;" /><br />
-
-<img src="public/images/components/TagsInput/3.png" alt="TagsInput 3" style="max-width: 100%;" /><br />
+<div class="examples">
+  <div class="example">
+    <a href="public/images/components/TagsInput/1.png">
+      <img src="public/images/components/TagsInput/1.png" alt="TagsInput 1" />
+    </a>
+  </div>
+  <div class="example">
+    <a href="public/images/components/TagsInput/2.png">
+      <img src="public/images/components/TagsInput/2.png" alt="TagsInput 2" />
+    </a>
+  </div>
+  <div class="example">
+    <a href="public/images/components/TagsInput/3.png">
+      <img src="public/images/components/TagsInput/3.png" alt="TagsInput 3" />
+    </a>
+  </div>
+</div>
 
 ```jsx
 <TagsInput
-  tags=""
->
-  Children
-</TagsInput>
+  tags={[]}
+  selectedTags={[]}
+  onChange={() => {}}
+/>
 ```

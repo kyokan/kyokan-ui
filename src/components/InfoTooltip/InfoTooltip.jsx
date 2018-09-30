@@ -3,26 +3,24 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 /**
-* [Description]
+* An info icon which reveals a tooltip on hover.
 */
 const InfoTooltip = (props) => {
   const StyledInfoTooltip = styled.div`
-    font-family: ${ (props) => props.theme.fontFamily };
-    color: ${ (props) => props.theme.primaryColor };
+    font-family: ${ (props) => props.theme.textFontFamily };
+    color: ${ (props) => props.theme.textColor };
   `;
 
   return (
-    <StyledInfoTooltip
-      tooltipText=""
-    >
-
+    <StyledInfoTooltip>
+      
     </StyledInfoTooltip>
   );
 };
 
 InfoTooltip.propTypes = {
   /** A string of text to display on tooltip hover */
-  tooltipText: PropTypes.any,
+  tooltipText: PropTypes.string.isRequired,
 };
 
 /** @component */

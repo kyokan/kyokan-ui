@@ -3,18 +3,16 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 /**
-* [Description]
+* Content (usually as opposed to SiteHeader).
 */
 const Content = (props) => {
   const StyledContent = styled.div`
-    font-family: ${ (props) => props.theme.fontFamily };
-    color: ${ (props) => props.theme.primaryColor };
+    font-family: ${ (props) => props.theme.textFontFamily };
+    color: ${ (props) => props.theme.textColor };
   `;
 
   return (
-    <StyledContent
-
-    >
+    <StyledContent>
       {props.children}
     </StyledContent>
   );
@@ -22,7 +20,7 @@ const Content = (props) => {
 
 Content.propTypes = {
   /** Any content */
-  children: PropTypes.any,
+  children: PropTypes.any.isRequired,
 };
 
 /** @component */

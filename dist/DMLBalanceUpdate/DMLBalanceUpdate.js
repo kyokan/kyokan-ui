@@ -3,26 +3,23 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 /**
-* [Description]
+* A block where one can update their DML Limit.
 */
 const DMLBalanceUpdate = props => {
   const StyledDMLBalanceUpdate = styled.div`
-    font-family: ${props => props.theme.fontFamily};
-    color: ${props => props.theme.primaryColor};
+    font-family: ${props => props.theme.textFontFamily};
+    color: ${props => props.theme.textColor};
   `;
 
-  return React.createElement(StyledDMLBalanceUpdate, {
-    onUpdate: '',
-    currentBalance: ''
-  });
+  return React.createElement(StyledDMLBalanceUpdate, null);
 };
 
 DMLBalanceUpdate.propTypes = {
-  /** A callback function to fire on update */
-  onUpdate: PropTypes.any,
+  /** A callback to fire on update */
+  onUpdate: PropTypes.func,
 
   /** A number with the current balance */
-  currentBalance: PropTypes.any
+  currentBalance: PropTypes.number
 };
 
 /** @component */

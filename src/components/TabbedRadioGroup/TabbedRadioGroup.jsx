@@ -3,18 +3,16 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 /**
-* [Description]
+* A radio group that is displayed as vertical tabs.
 */
 const TabbedRadioGroup = (props) => {
   const StyledTabbedRadioGroup = styled.div`
-    font-family: ${ (props) => props.theme.fontFamily };
-    color: ${ (props) => props.theme.primaryColor };
+    font-family: ${ (props) => props.theme.textFontFamily };
+    color: ${ (props) => props.theme.textColor };
   `;
 
   return (
-    <StyledTabbedRadioGroup
-      activeKey=""
-    >
+    <StyledTabbedRadioGroup>
       {props.children}
     </StyledTabbedRadioGroup>
   );
@@ -22,10 +20,10 @@ const TabbedRadioGroup = (props) => {
 
 TabbedRadioGroup.propTypes = {
   /** The tabs to be displayed */
-  children: PropTypes.any,
+  children: PropTypes.any.isRequired,
 
-  /** A string which stores which tab is selected */
-  activeKey: PropTypes.any,
+  /** A unique identifier for which of the tabs will be active */
+  activeKey: PropTypes.string,
 };
 
 /** @component */

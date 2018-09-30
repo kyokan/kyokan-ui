@@ -7,18 +7,16 @@ import styled from 'styled-components';
 */
 const AvatarControl = props => {
   const StyledAvatarControl = styled.div`
-    font-family: ${props => props.theme.fontFamily};
-    color: ${props => props.theme.primaryColor};
+    font-family: ${props => props.theme.textFontFamily};
+    color: ${props => props.theme.textColor};
   `;
 
-  return React.createElement(StyledAvatarControl, {
-    avatar: ''
-  });
+  return React.createElement(StyledAvatarControl, null);
 };
 
 AvatarControl.propTypes = {
   /** A URL to the avatar image */
-  avatar: PropTypes.any
+  avatar: PropTypes.string
 };
 
 /** @component */

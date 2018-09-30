@@ -3,30 +3,27 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 /**
-* [Description]
+* An input field with a joined submit button.
 */
 const InputButton = (props) => {
   const StyledInputButton = styled.div`
-    font-family: ${ (props) => props.theme.fontFamily };
-    color: ${ (props) => props.theme.primaryColor };
+    font-family: ${ (props) => props.theme.textFontFamily };
+    color: ${ (props) => props.theme.textColor };
   `;
 
   return (
-    <StyledInputButton
-      buttonText=""
-      onClick=""
-    >
-
+    <StyledInputButton>
+      
     </StyledInputButton>
   );
 };
 
 InputButton.propTypes = {
-  /** A string of button text */
-  buttonText: PropTypes.any,
+  /** The button text */
+  buttonText: PropTypes.string.isRequired,
 
   /** A callback function to fire on button click */
-  onClick: PropTypes.any,
+  onClick: PropTypes.string,
 };
 
 /** @component */

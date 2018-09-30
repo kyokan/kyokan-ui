@@ -62,7 +62,7 @@ images.forEach((image) => {
 
       const command = `convert "${filepath}" -crop ${regionWidth}x${regionHeight}+${regionX}+${regionY} "${folderName}/${regionGroupCounts[regionGroupName]}.png"`;
 
-      execSync(command);
+      // execSync(command);
     });
   });
 });

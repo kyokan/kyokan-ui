@@ -3,19 +3,16 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 /**
-* [Description]
+* An input control that toggles state.
 */
 const Checkbox = (props) => {
   const StyledCheckbox = styled.div`
-    font-family: ${ (props) => props.theme.fontFamily };
-    color: ${ (props) => props.theme.primaryColor };
+    font-family: ${ (props) => props.theme.textFontFamily };
+    color: ${ (props) => props.theme.textColor };
   `;
 
   return (
-    <StyledCheckbox
-      isChecked=""
-      errorMessage=""
-    >
+    <StyledCheckbox>
       {props.children}
     </StyledCheckbox>
   );
@@ -25,11 +22,14 @@ Checkbox.propTypes = {
   /** The label of the checkbox */
   children: PropTypes.any,
 
-  /** A boolean representing whether or not the checkbox is checked */
-  isChecked: PropTypes.any,
+  /** Whether or not the checkbox is checked */
+  checked: PropTypes.bool,
 
-  /** A string of error message */
-  errorMessage: PropTypes.any,
+  /** The message to show on error */
+  errorMessage: PropTypes.string,
+
+  /** Fired on checkbox change */
+  onChange: PropTypes.func,
 };
 
 /** @component */

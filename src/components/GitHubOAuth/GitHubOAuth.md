@@ -1,16 +1,23 @@
-[Markdown writeup]
+A module that allows the user to connect/disconnect to their GitHub account.
 
-<img src="public/images/components/GitHubOAuth/1.png" alt="GitHubOAuth 1" style="max-width: 100%;" /><br />
-
-<img src="public/images/components/GitHubOAuth/2.png" alt="GitHubOAuth 2" style="max-width: 100%;" /><br />
+<div class="examples">
+  <div class="example">
+    <a href="public/images/components/GitHubOAuth/1.png">
+      <img src="public/images/components/GitHubOAuth/1.png" alt="GitHubOAuth 1" />
+    </a>
+  </div>
+  <div class="example">
+    <a href="public/images/components/GitHubOAuth/2.png">
+      <img src="public/images/components/GitHubOAuth/2.png" alt="GitHubOAuth 2" />
+    </a>
+  </div>
+</div>
 
 ```jsx
 <GitHubOAuth
-  isLoggedIn=""
+  isLoggedIn={false}
   avatar=""
   username=""
-  onCancel=""
->
-  Children
-</GitHubOAuth>
+  onCancel={() => {}}
+/>
 ```

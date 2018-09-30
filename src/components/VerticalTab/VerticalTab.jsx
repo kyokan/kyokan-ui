@@ -3,18 +3,16 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 /**
-* [Description]
+* A tab that will be toggled from a vertical control.
 */
 const VerticalTab = (props) => {
   const StyledVerticalTab = styled.div`
-    font-family: ${ (props) => props.theme.fontFamily };
-    color: ${ (props) => props.theme.primaryColor };
+    font-family: ${ (props) => props.theme.textFontFamily };
+    color: ${ (props) => props.theme.textColor };
   `;
 
   return (
-    <StyledVerticalTab
-      isActive=""
-    >
+    <StyledVerticalTab>
       {props.children}
     </StyledVerticalTab>
   );
@@ -22,10 +20,10 @@ const VerticalTab = (props) => {
 
 VerticalTab.propTypes = {
   /** The content of the tab */
-  children: PropTypes.any,
+  children: PropTypes.any.isRequired,
 
   /** A boolean which triggers the application of the active styles */
-  isActive: PropTypes.any,
+  active: PropTypes.bool,
 };
 
 /** @component */

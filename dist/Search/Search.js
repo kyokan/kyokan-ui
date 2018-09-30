@@ -3,26 +3,23 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 /**
-* [Description]
+* An input search bar.
 */
 const Search = props => {
   const StyledSearch = styled.div`
-    font-family: ${props => props.theme.fontFamily};
-    color: ${props => props.theme.primaryColor};
+    font-family: ${props => props.theme.textFontFamily};
+    color: ${props => props.theme.textColor};
   `;
 
-  return React.createElement(StyledSearch, {
-    placeholder: '',
-    onKeyUp: ''
-  });
+  return React.createElement(StyledSearch, null);
 };
 
 Search.propTypes = {
   /** The text to be displayed when nothing has been typed into search bar */
-  placeholder: PropTypes.any,
+  placeholder: PropTypes.string,
 
-  /** A callback function to execute while the user is typing */
-  onKeyUp: PropTypes.any
+  /** A callback to execute while the user is typing */
+  onKeyUp: PropTypes.func
 };
 
 /** @component */

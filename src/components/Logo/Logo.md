@@ -1,12 +1,16 @@
-[Markdown writeup]
+A branding logo.
 
-<img src="public/images/components/Logo/1.png" alt="Logo 1" style="max-width: 100%;" /><br />
+<div class="examples">
+  <div class="example">
+    <a href="public/images/components/Logo/1.png">
+      <img src="public/images/components/Logo/1.png" alt="Logo 1" />
+    </a>
+  </div>
+</div>
 
 ```jsx
 <Logo
-  imgsrc=""
-  dark=""
->
-  Children
-</Logo>
+  name=""
+  dark={false}
+/>
 ```

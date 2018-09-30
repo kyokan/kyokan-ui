@@ -3,30 +3,27 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 /**
-* [Description]
+* A textarea for the user to input text
 */
 const TextArea = (props) => {
   const StyledTextArea = styled.div`
-    font-family: ${ (props) => props.theme.fontFamily };
-    color: ${ (props) => props.theme.primaryColor };
+    font-family: ${ (props) => props.theme.textFontFamily };
+    color: ${ (props) => props.theme.textColor };
   `;
 
   return (
-    <StyledTextArea
-      onKeyUp=""
-      placeholder=""
-    >
-
+    <StyledTextArea>
+      
     </StyledTextArea>
   );
 };
 
 TextArea.propTypes = {
   /** A callback function to fire when user is typing */
-  onKeyUp: PropTypes.any,
+  onKeyUp: PropTypes.func,
 
   /** A string of placeholder text */
-  placeholder: PropTypes.any,
+  placeholder: PropTypes.string,
 };
 
 /** @component */

@@ -1,13 +1,20 @@
-[Markdown writeup]
+A 'cloud' of tags - a freeform way of expressing Tags.
 
-<img src="public/images/components/TagsCloud/1.png" alt="TagsCloud 1" style="max-width: 100%;" /><br />
-
-<img src="public/images/components/TagsCloud/2.png" alt="TagsCloud 2" style="max-width: 100%;" /><br />
+<div class="examples">
+  <div class="example">
+    <a href="public/images/components/TagsCloud/1.png">
+      <img src="public/images/components/TagsCloud/1.png" alt="TagsCloud 1" />
+    </a>
+  </div>
+  <div class="example">
+    <a href="public/images/components/TagsCloud/2.png">
+      <img src="public/images/components/TagsCloud/2.png" alt="TagsCloud 2" />
+    </a>
+  </div>
+</div>
 
 ```jsx
 <TagsCloud
-
->
-  Children
-</TagsCloud>
+  tags={[]}
+/>
 ```

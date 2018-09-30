@@ -3,30 +3,27 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 /**
-* [Description]
+* A small module to show a metric next to an icon.
 */
 const CountMetric = (props) => {
   const StyledCountMetric = styled.div`
-    font-family: ${ (props) => props.theme.fontFamily };
-    color: ${ (props) => props.theme.primaryColor };
+    font-family: ${ (props) => props.theme.textFontFamily };
+    color: ${ (props) => props.theme.textColor };
   `;
 
   return (
-    <StyledCountMetric
-      metricValue=""
-      icon=""
-    >
-
+    <StyledCountMetric>
+      
     </StyledCountMetric>
   );
 };
 
 CountMetric.propTypes = {
   /** The number to be displayed */
-  metricValue: PropTypes.any,
+  metricValue: PropTypes.number.isRequired,
 
-  /** A string representing the icon to be displayed */
-  icon: PropTypes.any,
+  /** The icon to be displayed */
+  icon: PropTypes.string.isRequired,
 };
 
 /** @component */

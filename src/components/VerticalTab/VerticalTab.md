@@ -1,12 +1,21 @@
-[Markdown writeup]
+A tab that will be toggled from a vertical control.
 
-<img src="public/images/components/VerticalTab/1.png" alt="VerticalTab 1" style="max-width: 100%;" /><br />
-
-<img src="public/images/components/VerticalTab/2.png" alt="VerticalTab 2" style="max-width: 100%;" /><br />
+<div class="examples">
+  <div class="example">
+    <a href="public/images/components/VerticalTab/1.png">
+      <img src="public/images/components/VerticalTab/1.png" alt="VerticalTab 1" />
+    </a>
+  </div>
+  <div class="example">
+    <a href="public/images/components/VerticalTab/2.png">
+      <img src="public/images/components/VerticalTab/2.png" alt="VerticalTab 2" />
+    </a>
+  </div>
+</div>
 
 ```jsx
 <VerticalTab
-  isActive=""
+  active={false}
 >
   Children
 </VerticalTab>

@@ -3,34 +3,30 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 /**
-* [Description]
+* A star representation of a number rating.
 */
 const StarRating = (props) => {
   const StyledStarRating = styled.div`
-    font-family: ${ (props) => props.theme.fontFamily };
-    color: ${ (props) => props.theme.primaryColor };
+    font-family: ${ (props) => props.theme.textFontFamily };
+    color: ${ (props) => props.theme.textColor };
   `;
 
   return (
-    <StyledStarRating
-      totalNumberOfStars=""
-      starredCount=""
-      averageCount=""
-    >
-
+    <StyledStarRating>
+      
     </StyledStarRating>
   );
 };
 
 StarRating.propTypes = {
-  /** Variable number of stars */
-  totalNumberOfStars: PropTypes.any,
+  /** The total number of stars */
+  totalNumberOfStars: PropTypes.number.isRequired,
 
-  /** Enforces whole stars */
-  starredCount: PropTypes.any,
+  /** The total number of stars checked */
+  starredCount: PropTypes.number,
 
-  /** Allows for partial stars */
-  averageCount: PropTypes.any,
+  /** A decimal number of the stars checked (allows partial stars); this setting overrides 'starredCount' */
+  averageCount: PropTypes.number,
 };
 
 /** @component */

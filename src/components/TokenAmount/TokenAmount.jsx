@@ -3,30 +3,27 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 /**
-* [Description]
+* A display with a number and a token symbol.
 */
 const TokenAmount = (props) => {
   const StyledTokenAmount = styled.div`
-    font-family: ${ (props) => props.theme.fontFamily };
-    color: ${ (props) => props.theme.primaryColor };
+    font-family: ${ (props) => props.theme.textFontFamily };
+    color: ${ (props) => props.theme.textColor };
   `;
 
   return (
-    <StyledTokenAmount
-      amount=""
-      token=""
-    >
-
+    <StyledTokenAmount>
+      
     </StyledTokenAmount>
   );
 };
 
 TokenAmount.propTypes = {
   /** A number with the amount */
-  amount: PropTypes.any,
+  amount: PropTypes.string,
 
   /** A string with the name of the token */
-  token: PropTypes.any,
+  token: PropTypes.string,
 };
 
 /** @component */

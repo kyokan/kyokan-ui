@@ -1,12 +1,16 @@
-[Markdown writeup]
+A textarea for the user to input text
 
-<img src="public/images/components/TextArea/1.png" alt="TextArea 1" style="max-width: 100%;" /><br />
+<div class="examples">
+  <div class="example">
+    <a href="public/images/components/TextArea/1.png">
+      <img src="public/images/components/TextArea/1.png" alt="TextArea 1" />
+    </a>
+  </div>
+</div>
 
 ```jsx
 <TextArea
-  onKeyUp=""
+  onKeyUp={() => {}}
   placeholder=""
->
-  Children
-</TextArea>
+/>
 ```

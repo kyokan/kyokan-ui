@@ -1,21 +1,18 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 /**
-* [Description]
+* A horizontal rule.
 */
 const HorizontalRule = (props) => {
   const StyledHorizontalRule = styled.div`
-    font-family: ${ (props) => props.theme.fontFamily };
-    color: ${ (props) => props.theme.primaryColor };
+    font-family: ${ (props) => props.theme.textFontFamily };
+    color: ${ (props) => props.theme.textColor };
   `;
 
   return (
-    <StyledHorizontalRule
-
-    >
-
+    <StyledHorizontalRule>
+      
     </StyledHorizontalRule>
   );
 };

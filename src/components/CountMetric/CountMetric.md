@@ -1,12 +1,16 @@
-[Markdown writeup]
+A small module to show a metric next to an icon.
 
-<img src="public/images/components/CountMetric/1.png" alt="CountMetric 1" style="max-width: 100%;" /><br />
+<div class="examples">
+  <div class="example">
+    <a href="public/images/components/CountMetric/1.png">
+      <img src="public/images/components/CountMetric/1.png" alt="CountMetric 1" />
+    </a>
+  </div>
+</div>
 
 ```jsx
 <CountMetric
-  metricValue=""
+  metricValue={0}
   icon=""
->
-  Children
-</CountMetric>
+/>
 ```

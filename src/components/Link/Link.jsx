@@ -3,34 +3,30 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 /**
-* [Description]
+* An anchor link. Supports either an 'href', an 'onClick' callback, or both.
 */
 const Link = (props) => {
   const StyledLink = styled.div`
-    font-family: ${ (props) => props.theme.fontFamily };
-    color: ${ (props) => props.theme.primaryColor };
+    font-family: ${ (props) => props.theme.textFontFamily };
+    color: ${ (props) => props.theme.textColor };
   `;
 
   return (
-    <StyledLink
-      text=""
-      onClick=""
-      href=""
-    >
-
+    <StyledLink>
+      
     </StyledLink>
   );
 };
 
 Link.propTypes = {
   /** A string of link text */
-  text: PropTypes.any,
+  text: PropTypes.string,
 
   /** A callback function to fire on Link click */
-  onClick: PropTypes.any,
+  onClick: PropTypes.func,
 
   /** A string with a URL to go to on click */
-  href: PropTypes.any,
+  href: PropTypes.string,
 };
 
 /** @component */

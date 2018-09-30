@@ -7,42 +7,34 @@ import styled from 'styled-components';
 */
 const DMLAlgorithm = props => {
   const StyledDMLAlgorithm = styled.div`
-    font-family: ${props => props.theme.fontFamily};
-    color: ${props => props.theme.primaryColor};
+    font-family: ${props => props.theme.textFontFamily};
+    color: ${props => props.theme.textColor};
   `;
 
-  return React.createElement(StyledDMLAlgorithm, {
-    title: '',
-    description: '',
-    starRating: '',
-    authorAvatar: '',
-    authorName: '',
-    metricValue: '',
-    tokenPrice: ''
-  });
+  return React.createElement(StyledDMLAlgorithm, null);
 };
 
 DMLAlgorithm.propTypes = {
   /** The title heading for the card */
-  title: PropTypes.any,
+  title: PropTypes.string,
 
   /** The description text to be displayed */
-  description: PropTypes.any,
+  description: PropTypes.string,
 
   /** A number representing the star rating */
-  starRating: PropTypes.any,
+  starRating: PropTypes.string,
 
   /** The url of the author's avatar to be displayed */
-  authorAvatar: PropTypes.any,
+  authorAvatar: PropTypes.string,
 
   /** A string with the author's name */
-  authorName: PropTypes.any,
+  authorName: PropTypes.string,
 
   /** The value to displayed as the metric */
-  metricValue: PropTypes.any,
+  metricValue: PropTypes.string,
 
   /** A number representing the price of the algorithm */
-  tokenPrice: PropTypes.any
+  tokenPrice: PropTypes.string
 };
 
 /** @component */

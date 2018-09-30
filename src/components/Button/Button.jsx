@@ -3,54 +3,48 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 /**
-* Loading buttons should be disabled while loading.
+* A block element that fires an action on click. Loading buttons should be disabled while loading.
 */
 const Button = (props) => {
   const StyledButton = styled.div`
-    font-family: ${ (props) => props.theme.fontFamily };
-    color: ${ (props) => props.theme.primaryColor };
+    font-family: ${ (props) => props.theme.textFontFamily };
+    color: ${ (props) => props.theme.textColor };
   `;
 
   return (
-    <StyledButton
-      text=""
-      isLoading=""
-      loadingText=""
-      disabled=""
-      type=""
-      rightIcon=""
-      leftIcon=""
-      light=""
-    >
-
+    <StyledButton>
+      
     </StyledButton>
   );
 };
 
 Button.propTypes = {
-  /** The Button text */
-  text: PropTypes.any,
+  /** Text to display within the button */
+  text: PropTypes.string.isRequired,
 
-  /** A boolean of whether or not the button is displaying a loading state */
-  isLoading: PropTypes.any,
+  /** Whether or not the button is displaying a loading state */
+  loading: PropTypes.bool,
 
-  /** A string of text to display as the Button text when isLoading is set to true */
-  loadingText: PropTypes.any,
+  /** The text to show as button text while 'isLoading' is true */
+  loadingText: PropTypes.string,
 
-  /** A boolean of whether or not a button is disabled */
-  disabled: PropTypes.any,
+  /** Whether or not a button is disabled */
+  disabled: PropTypes.bool,
 
   /** One of the following: 'base', 'neutral', 'brand', 'brand-outline', 'destructive', 'success' */
-  type: PropTypes.any,
+  type: PropTypes.string,
 
-  /** The icon shown to the right of the Button text */
-  rightIcon: PropTypes.any,
+  /** The icon shown to the right of the button text */
+  rightIcon: PropTypes.string,
 
-  /** The icon shown to the left of the Button text */
-  leftIcon: PropTypes.any,
+  /** The icon shown to the left of the button text */
+  leftIcon: PropTypes.string,
 
-  /** Boolean to apply light styles */
-  light: PropTypes.any,
+  /** Whether or not to apply light styles */
+  light: PropTypes.bool,
+
+  /** A callback function which is fired on button click */
+  onClick: PropTypes.func.isRequired,
 };
 
 /** @component */

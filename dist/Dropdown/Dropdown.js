@@ -3,20 +3,17 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 /**
-* [Description]
+* A generic component that is used when there is header and toggleable content.
 */
 const Dropdown = props => {
   const StyledDropdown = styled.div`
-    font-family: ${props => props.theme.fontFamily};
-    color: ${props => props.theme.primaryColor};
+    font-family: ${props => props.theme.textFontFamily};
+    color: ${props => props.theme.textColor};
   `;
 
   return React.createElement(
     StyledDropdown,
-    {
-      header: '',
-      placeholder: ''
-    },
+    null,
     props.children
   );
 };
@@ -25,11 +22,14 @@ Dropdown.propTypes = {
   /** Content to show in the header */
   header: PropTypes.any,
 
-  /** Any content to show in the dropdown */
+  /** Content to show in the dropdown */
   children: PropTypes.any,
 
-  /** A string of placeholder text */
-  placeholder: PropTypes.any
+  /** Placeholder text */
+  placeholder: PropTypes.string,
+
+  /** Fired on dropdown open/close */
+  onChange: PropTypes.func
 };
 
 /** @component */

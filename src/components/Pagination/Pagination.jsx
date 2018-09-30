@@ -3,30 +3,27 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 /**
-* [Description]
+* A control module that allows a user to change pages.
 */
 const Pagination = (props) => {
   const StyledPagination = styled.div`
-    font-family: ${ (props) => props.theme.fontFamily };
-    color: ${ (props) => props.theme.primaryColor };
+    font-family: ${ (props) => props.theme.textFontFamily };
+    color: ${ (props) => props.theme.textColor };
   `;
 
   return (
-    <StyledPagination
-      currentPage=""
-      totalCount=""
-    >
-
+    <StyledPagination>
+      
     </StyledPagination>
   );
 };
 
 Pagination.propTypes = {
-  /** An integer with the current page */
-  currentPage: PropTypes.any,
+  /** The current page index */
+  currentPage: PropTypes.number.isRequired,
 
-  /** An integer with the total count of pages */
-  totalCount: PropTypes.any,
+  /** The total count of pages */
+  totalCount: PropTypes.number.isRequired,
 };
 
 /** @component */

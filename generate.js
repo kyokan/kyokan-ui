@@ -17,19 +17,45 @@ function renderImages (images) {
 
 function renderProps (props, numOfSpaces) {
   return Object.keys(props).filter((propName) => propName !== 'children').map((propName) => {
-    return `${' '.repeat(numOfSpaces)}${propName}=""`;
+    let defaultValue;
+
+    if (props[propName].type === 'array') {
+      defaultValue = '{[]}';
+    } else if (props[propName].type === 'bool') {
+      defaultValue = '{false}';
+    } else if (props[propName].type === 'func') {
+      defaultValue = '{() => {}}';
+    } else if (props[propName].type === 'number') {
+      defaultValue = '{0}';
+    } else if (props[propName].type === 'object') {
+      defaultValue = '{{}}';
+    } else if (props[propName].type === 'string') {
+      defaultValue = '""';
+    }
+
+    return `${' '.repeat(numOfSpaces)}${propName}=${defaultValue}`;
   }).join('\n');
 }
 
 function renderPropTypes (props, numOfSpaces) {
   return Object.keys(props).map((propName) => {
-    return `${' '.repeat(numOfSpaces)}/** ${props[propName] ? props[propName] : '[prop description]'} */
-${' '.repeat(numOfSpaces)}${propName}: PropTypes.any,`;
+    const hasProp        = props.hasOwnProperty(propName);
+    const hasType        = hasProp && props[propName].hasOwnProperty('type');
+    const hasDescription = hasProp && props[propName].hasOwnProperty('description');
+    const hasIsRequired  = hasProp && props[propName].hasOwnProperty('isRequired') && props[propName].isRequired;
+
+    return `${' '.repeat(numOfSpaces)}/** ${hasDescription ? props[propName].description : '[prop description]'} */
+${' '.repeat(numOfSpaces)}${propName}: PropTypes.${hasType ? props[propName].type : 'any'}${hasIsRequired ? '.isRequired' : ''},`;
   }).join('\n\n');
 }
 
 function generateComponent (componentName, jsonMetadata) {
   const metadata = jsonMetadata ? JSON.parse(jsonMetadata) : {};
+
+  const hasNotes      = metadata.hasOwnProperty('notes') && metadata.notes.length;
+  const hasImages     = metadata.hasOwnProperty('images');
+  const hasAttributes = metadata.hasOwnProperty('attributes') && Object.keys(metadata.attributes).length;
+  const hasChildren   = hasAttributes && metadata.attributes.hasOwnProperty('children');
 
   const targetDirectory = 'src/components';
   const outputDirectory = `src/components/${componentName}`;
@@ -39,12 +65,11 @@ function generateComponent (componentName, jsonMetadata) {
 
     const indexTemplate = `export { default } from './${componentName}';`;
 
-    const componentTemplate = `import React from 'react';
-import PropTypes from 'prop-types';
+    const componentTemplate = `import React from 'react';${hasAttributes ? '\nimport PropTypes from \'prop-types\';' : ''}
 import styled from 'styled-components';
 
 /**
-* ${metadata.notes ? metadata.notes : '[Description]'}
+* ${hasNotes ? metadata.notes : '[Description]'}
 */
 const ${componentName} = (props) => {
   const Styled${componentName} = styled.div\`
@@ -53,34 +78,28 @@ const ${componentName} = (props) => {
   \`;
 
   return (
-    <Styled${componentName}
-${metadata.attributes ? renderProps(metadata.attributes, 6) : ''}
-    >
-      ${(metadata.attributes && metadata.attributes.children) ? '{props.children}' : ''}
+    <Styled${componentName}>
+      ${hasChildren ? '{props.children}' : ''}
     </Styled${componentName}>
   );
 };
 
 ${componentName}.propTypes = {
-${metadata.attributes ? renderPropTypes(metadata.attributes, 2) : ''}
+${hasAttributes ? renderPropTypes(metadata.attributes, 2) : ''}
 };
 
 /** @component */
 export default ${componentName};
 `;
 
-    const documentationTemplate = `${(metadata.notes && metadata.notes.length) ? metadata.notes : '[Component description]'}
+    const documentationTemplate = `${hasNotes ? metadata.notes : '[Component description]'}
 
 <div class="examples">
-${metadata.images ? renderImages(metadata.images) : ''}
+${hasImages ? renderImages(metadata.images) : ''}
 </div>
 
 \`\`\`jsx
-<${componentName}
-${metadata.attributes ? renderProps(metadata.attributes, 2) : ''}
->
-  Children
-</${componentName}>
+${hasAttributes ? `<${componentName}\n` : `<${componentName}>\n`}${hasAttributes ? `${renderProps(metadata.attributes, 2)}\n` : ''}${hasAttributes ? (hasChildren ? '>\n' : '') : ''}${hasChildren ? `  Children\n` : ''}${hasChildren ? `</${componentName}>` : `/>`}
 \`\`\`
 `;
 

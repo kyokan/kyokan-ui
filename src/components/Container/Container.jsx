@@ -3,18 +3,16 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 /**
-* [Description]
+* A layout component that encapsulates content.
 */
 const Container = (props) => {
   const StyledContainer = styled.div`
-    font-family: ${ (props) => props.theme.fontFamily };
-    color: ${ (props) => props.theme.primaryColor };
+    font-family: ${ (props) => props.theme.textFontFamily };
+    color: ${ (props) => props.theme.textColor };
   `;
 
   return (
-    <StyledContainer
-
-    >
+    <StyledContainer>
       {props.children}
     </StyledContainer>
   );
@@ -22,7 +20,7 @@ const Container = (props) => {
 
 Container.propTypes = {
   /** Any content */
-  children: PropTypes.any,
+  children: PropTypes.any.isRequired,
 };
 
 /** @component */

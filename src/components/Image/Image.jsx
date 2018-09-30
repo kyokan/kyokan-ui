@@ -3,26 +3,24 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 /**
-* [Description]
+* An image.
 */
 const Image = (props) => {
   const StyledImage = styled.div`
-    font-family: ${ (props) => props.theme.fontFamily };
-    color: ${ (props) => props.theme.primaryColor };
+    font-family: ${ (props) => props.theme.textFontFamily };
+    color: ${ (props) => props.theme.textColor };
   `;
 
   return (
-    <StyledImage
-      url=""
-    >
-
+    <StyledImage>
+      
     </StyledImage>
   );
 };
 
 Image.propTypes = {
   /** A string with the url of the image */
-  url: PropTypes.any,
+  url: PropTypes.string.isRequired,
 };
 
 /** @component */

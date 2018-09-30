@@ -1,10 +1,12 @@
-[Markdown writeup]
+A layout component that encapsulates vertical content.
 
+<div class="examples">
 
+</div>
 
 ```jsx
 <Column
-  width=""
+  width={0}
 >
   Children
 </Column>

@@ -1,12 +1,23 @@
-[Markdown writeup]
+An input control to select one of many options. Radio Buttons are usually part of a RadioGroup.
 
-<img src="public/images/components/RadioButton/1.png" alt="RadioButton 1" style="max-width: 100%;" /><br />
-
-<img src="public/images/components/RadioButton/2.png" alt="RadioButton 2" style="max-width: 100%;" /><br />
+<div class="examples">
+  <div class="example">
+    <a href="public/images/components/RadioButton/1.png">
+      <img src="public/images/components/RadioButton/1.png" alt="RadioButton 1" />
+    </a>
+  </div>
+  <div class="example">
+    <a href="public/images/components/RadioButton/2.png">
+      <img src="public/images/components/RadioButton/2.png" alt="RadioButton 2" />
+    </a>
+  </div>
+</div>
 
 ```jsx
 <RadioButton
   checked=""
+  id=""
+  onChange={() => {}}
 >
   Children
 </RadioButton>

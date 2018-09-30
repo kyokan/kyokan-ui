@@ -1,6 +1,12 @@
-[Markdown writeup]
+A block of content, almost like an inline modal.
 
-<img src="public/images/components/Panel/1.png" alt="Panel 1" style="max-width: 100%;" /><br />
+<div class="examples">
+  <div class="example">
+    <a href="public/images/components/Panel/1.png">
+      <img src="public/images/components/Panel/1.png" alt="Panel 1" />
+    </a>
+  </div>
+</div>
 
 ```jsx
 <Panel

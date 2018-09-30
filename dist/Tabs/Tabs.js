@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 /**
-* [Description]
+* A collection of tab components (either all VerticalTab or HorizontalTab).
 */
 const Tabs = props => {
   const StyledTabs = styled.div`
-    font-family: ${props => props.theme.fontFamily};
-    color: ${props => props.theme.primaryColor};
+    font-family: ${props => props.theme.textFontFamily};
+    color: ${props => props.theme.textColor};
   `;
 
   return React.createElement(
@@ -19,8 +19,11 @@ const Tabs = props => {
 };
 
 Tabs.propTypes = {
-  /** Tabs */
-  children: PropTypes.any
+  /** A set of tab components to display */
+  children: PropTypes.any,
+
+  /** A unique identifier for which of the tab components will be active */
+  activeKey: PropTypes.string
 };
 
 /** @component */

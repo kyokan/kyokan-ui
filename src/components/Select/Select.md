@@ -1,16 +1,28 @@
-[Markdown writeup]
+A dropdown that allows a user to select one of many options.
 
-<img src="public/images/components/Select/1.png" alt="Select 1" style="max-width: 100%;" /><br />
-
-<img src="public/images/components/Select/2.png" alt="Select 2" style="max-width: 100%;" /><br />
-
-<img src="public/images/components/Select/3.png" alt="Select 3" style="max-width: 100%;" /><br />
+<div class="examples">
+  <div class="example">
+    <a href="public/images/components/Select/1.png">
+      <img src="public/images/components/Select/1.png" alt="Select 1" />
+    </a>
+  </div>
+  <div class="example">
+    <a href="public/images/components/Select/2.png">
+      <img src="public/images/components/Select/2.png" alt="Select 2" />
+    </a>
+  </div>
+  <div class="example">
+    <a href="public/images/components/Select/3.png">
+      <img src="public/images/components/Select/3.png" alt="Select 3" />
+    </a>
+  </div>
+</div>
 
 ```jsx
 <Select
-  isExpanded=""
+  options={[]}
+  open={false}
   placeholder=""
->
-  Children
-</Select>
+  onChange={() => {}}
+/>
 ```

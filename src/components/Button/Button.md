@@ -1,30 +1,53 @@
-[Markdown writeup]
+A block element that fires an action on click. Loading buttons should be disabled while loading.
 
-<img src="public/images/components/Button/1.png" alt="Button 1" style="max-width: 100%;" /><br />
-
-<img src="public/images/components/Button/2.png" alt="Button 2" style="max-width: 100%;" /><br />
-
-<img src="public/images/components/Button/3.png" alt="Button 3" style="max-width: 100%;" /><br />
-
-<img src="public/images/components/Button/4.png" alt="Button 4" style="max-width: 100%;" /><br />
-
-<img src="public/images/components/Button/5.png" alt="Button 5" style="max-width: 100%;" /><br />
-
-<img src="public/images/components/Button/6.png" alt="Button 6" style="max-width: 100%;" /><br />
-
-<img src="public/images/components/Button/7.png" alt="Button 7" style="max-width: 100%;" /><br />
+<div class="examples">
+  <div class="example">
+    <a href="public/images/components/Button/1.png">
+      <img src="public/images/components/Button/1.png" alt="Button 1" />
+    </a>
+  </div>
+  <div class="example">
+    <a href="public/images/components/Button/2.png">
+      <img src="public/images/components/Button/2.png" alt="Button 2" />
+    </a>
+  </div>
+  <div class="example">
+    <a href="public/images/components/Button/3.png">
+      <img src="public/images/components/Button/3.png" alt="Button 3" />
+    </a>
+  </div>
+  <div class="example">
+    <a href="public/images/components/Button/4.png">
+      <img src="public/images/components/Button/4.png" alt="Button 4" />
+    </a>
+  </div>
+  <div class="example">
+    <a href="public/images/components/Button/5.png">
+      <img src="public/images/components/Button/5.png" alt="Button 5" />
+    </a>
+  </div>
+  <div class="example">
+    <a href="public/images/components/Button/6.png">
+      <img src="public/images/components/Button/6.png" alt="Button 6" />
+    </a>
+  </div>
+  <div class="example">
+    <a href="public/images/components/Button/7.png">
+      <img src="public/images/components/Button/7.png" alt="Button 7" />
+    </a>
+  </div>
+</div>
 
 ```jsx
 <Button
   text=""
-  isLoading=""
+  loading={false}
   loadingText=""
-  disabled=""
+  disabled={false}
   type=""
   rightIcon=""
   leftIcon=""
-  light=""
->
-  Children
-</Button>
+  light={false}
+  onClick={() => {}}
+/>
 ```

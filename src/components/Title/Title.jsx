@@ -3,18 +3,16 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 /**
-* [Description]
+* The title text of the site - usually the largest text.
 */
 const Title = (props) => {
   const StyledTitle = styled.div`
-    font-family: ${ (props) => props.theme.fontFamily };
-    color: ${ (props) => props.theme.primaryColor };
+    font-family: ${ (props) => props.theme.textFontFamily };
+    color: ${ (props) => props.theme.textColor };
   `;
 
   return (
-    <StyledTitle
-
-    >
+    <StyledTitle>
       {props.children}
     </StyledTitle>
   );
@@ -22,7 +20,7 @@ const Title = (props) => {
 
 Title.propTypes = {
   /** The text to be displayed */
-  children: PropTypes.any,
+  children: PropTypes.string.isRequired,
 };
 
 /** @component */

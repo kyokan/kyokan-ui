@@ -3,34 +3,33 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 /**
-* [Description]
+* A text input field.
 */
 const TextInput = (props) => {
   const StyledTextInput = styled.div`
-    font-family: ${ (props) => props.theme.fontFamily };
-    color: ${ (props) => props.theme.primaryColor };
+    font-family: ${ (props) => props.theme.textFontFamily };
+    color: ${ (props) => props.theme.textColor };
   `;
 
   return (
-    <StyledTextInput
-      value=""
-      label=""
-      placeholder=""
-    >
-
+    <StyledTextInput>
+      
     </StyledTextInput>
   );
 };
 
 TextInput.propTypes = {
-  /** The string of text to display in the text input field */
-  value: PropTypes.any,
+  /** Text to display in the text input field */
+  value: PropTypes.string,
 
-  /** The text to display above a text input */
-  label: PropTypes.any,
+  /** The text to display as the label for the text input */
+  label: PropTypes.string,
 
-  /** A string of placeholder text */
-  placeholder: PropTypes.any,
+  /** Placeholder text */
+  placeholder: PropTypes.string,
+
+  /** Fired on input value change */
+  onChange: PropTypes.func,
 };
 
 /** @component */
