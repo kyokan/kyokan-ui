@@ -44,8 +44,8 @@ import styled from 'styled-components';
 */
 const ${componentName} = (props) => {
   const Styled${componentName} = styled.div\`
-    font-family: \$\{ (props) => props.theme.fontFamily \};
-    color: \$\{ (props) => props.theme.primaryColor \};
+    font-family: \$\{ (props) => props.theme.textFontFamily \};
+    color: \$\{ (props) => props.theme.textColor \};
   \`;
 
   return (

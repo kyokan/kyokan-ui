@@ -1,7 +1,12 @@
-export default {
-  // COLORS
-  primaryColor : 'red',
+import BUTTON from './Default/button';
+import TEXT   from './Default/text';
 
-  // TEXT
-  fontFamily   : "'Helvetica', sans-serif;",
+const DefaultTheme = {
+  // general
+  ...TEXT,
+
+  // component-specific
+  ...BUTTON,
 };
+
+export default DefaultTheme;
