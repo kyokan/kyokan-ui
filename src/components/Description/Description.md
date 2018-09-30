@@ -9,9 +9,7 @@ Text that serves as a description.
 </div>
 
 ```jsx
-<Description
-
->
+<Description>
   Children
 </Description>
 ```

@@ -5,9 +5,7 @@ The header for a site - should only have one per page.
 </div>
 
 ```jsx
-<SiteHeader
-
->
+<SiteHeader>
   Children
 </SiteHeader>
 ```

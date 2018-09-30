@@ -9,9 +9,7 @@ Text that serves as a header.
 </div>
 
 ```jsx
-<Header
-
->
+<Header>
   Children
 </Header>
 ```

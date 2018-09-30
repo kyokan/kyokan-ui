@@ -5,9 +5,7 @@ A layout component that encapsulates content.
 </div>
 
 ```jsx
-<Container
-
->
+<Container>
   Children
 </Container>
 ```

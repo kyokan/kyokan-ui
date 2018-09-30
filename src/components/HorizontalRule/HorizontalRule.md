@@ -9,6 +9,5 @@ A horizontal rule.
 </div>
 
 ```jsx
-<HorizontalRule>
-/>
+<HorizontalRule />
 ```

@@ -9,9 +9,7 @@ Text.
 </div>
 
 ```jsx
-<Text
-
->
+<Text>
   Children
 </Text>
 ```

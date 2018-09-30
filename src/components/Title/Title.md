@@ -9,9 +9,7 @@ The title text of the site - usually the largest text.
 </div>
 
 ```jsx
-<Title
-
->
+<Title>
   Children
 </Title>
 ```

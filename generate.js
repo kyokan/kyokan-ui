@@ -17,7 +17,7 @@ function renderImages (images) {
 
 function renderProps (props, numOfSpaces) {
   return Object.keys(props).filter((propName) => propName !== 'children').map((propName) => {
-    let defaultValue;
+    let defaultValue = '""';
 
     if (props[propName].type === 'array') {
       defaultValue = '{[]}';
@@ -29,8 +29,6 @@ function renderProps (props, numOfSpaces) {
       defaultValue = '{0}';
     } else if (props[propName].type === 'object') {
       defaultValue = '{{}}';
-    } else if (props[propName].type === 'string') {
-      defaultValue = '""';
     }
 
     return `${' '.repeat(numOfSpaces)}${propName}=${defaultValue}`;

@@ -35,7 +35,7 @@ A generic component that is used when there is header and toggleable content.
 
 ```jsx
 <Dropdown
-  header=undefined
+  header=""
   placeholder=""
   onChange={() => {}}
 >

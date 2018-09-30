@@ -5,9 +5,7 @@ A layout component that encapsulates horizontal content.
 </div>
 
 ```jsx
-<Row
-
->
+<Row>
   Children
 </Row>
 ```

@@ -5,9 +5,7 @@ Content (usually as opposed to SiteHeader).
 </div>
 
 ```jsx
-<Content
-
->
+<Content>
   Children
 </Content>
 ```

@@ -9,9 +9,7 @@ A container for repeatable entities.
 </div>
 
 ```jsx
-<Card
-
->
+<Card>
   Children
 </Card>
 ```

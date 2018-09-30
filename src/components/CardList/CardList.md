@@ -9,9 +9,7 @@ A collection of Cards.
 </div>
 
 ```jsx
-<CardList
-
->
+<CardList>
   Children
 </CardList>
 ```

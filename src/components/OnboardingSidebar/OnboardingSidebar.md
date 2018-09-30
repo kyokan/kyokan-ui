@@ -9,6 +9,5 @@
 </div>
 
 ```jsx
-<OnboardingSidebar>
-/>
+<OnboardingSidebar />
 ```

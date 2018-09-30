@@ -9,9 +9,7 @@ A block of content, almost like an inline modal.
 </div>
 
 ```jsx
-<Panel
-
->
+<Panel>
   Children
 </Panel>
 ```
