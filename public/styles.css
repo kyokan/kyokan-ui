@@ -1,0 +1,16 @@
+.examples {
+  display: flex;
+  align-content: center;
+}
+
+.examples .example {
+  flex: 1;
+  border: 1px solid gray;
+  padding: 10px;
+  margin-right: 10px;
+  text-align: center;
+}
+
+.examples .example img {
+  max-width: 100%;
+}
