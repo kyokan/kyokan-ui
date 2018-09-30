@@ -15,41 +15,67 @@ const Link = styled.a`
   text-decoration : none;
   cursor          : pointer;
   color           : #1978c8;
+
+  &.active {
+    font-weight: bold;
+  }
 `;
 
-const themes = [
-  {
-    name  : 'Default',
-    value : 'default',
-  },
-  {
-    name  : 'DML',
-    value : 'dml',
-  },
-].map((theme) => {
-  return (
-    <Link
-      key={theme.value}
-      href="#"
-      onClick={() => {
-        setTheme(theme.value);
-      }}
-    >{theme.name}</Link>
-  );
-});
+class ThemeToggle extends Component {
+  constructor (props) {
+    super(props);
 
-const setTheme = (themeValue) => {
-  window.localStorage.setItem('styleGuideTheme', themeValue);
-  window.location.reload();
-};
+    this.state = {
+      currentTheme: window.localStorage.getItem('styleGuideTheme'),
+    }
+  }
+  setTheme = (themeValue) => {
+    window.localStorage.setItem('styleGuideTheme', themeValue);
+    window.location.reload();
+  };
 
-export default class ThemeToggle extends Component {
+  getThemes = () => {
+    const THEMES = [
+      {
+        name  : 'Default',
+        value : 'default',
+      },
+      {
+        name  : 'DML',
+        value : 'dml',
+      },
+    ]
+
+    return (
+      THEMES.map((theme) => {
+        const isActive    = (this.state.currentTheme === theme.value);
+        const classes     = (isActive ? 'active' : '');
+        const displayName = (isActive ? `[${theme.name}]` : theme.name);
+
+        return (
+          <Link
+            className={classes}
+            key={theme.value}
+            href="#"
+            onClick={() => {
+              this.setTheme(theme.value);
+            }}
+          >
+            {displayName}
+          </Link>
+        )
+      })
+    );
+  }
+
   render() {
     return (
       <div>
         <Title>Kyokan UI Style Guide</Title>
-        {themes}
+        {this.getThemes()}
       </div>
     );
   }
 }
+
+export default ThemeToggle;
