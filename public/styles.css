@@ -1,16 +1,89 @@
-.examples {
+.references {
   display: flex;
   align-content: center;
+  position: relative;
+  margin-top: -12px;
+  margin-bottom: 50px;
 }
 
-.examples .example {
+.references::before,
+.references::after {
+  display: block;
+  position: absolute;
+  left: 0px;
+
+  /* copied styles from usage button */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  border-bottom: 2px #f28a25 solid;
+  padding: 8px 0;
+  font-size: 15px;
+  color: #767676;
+  text-transform: uppercase;
+}
+
+.references::before {
+  content: 'References';
+  top: -36px;
+}
+
+.references::after {
+  content: 'Example';
+  bottom: -50px;
+}
+
+.references .reference {
   flex: 1;
-  border: 1px solid gray;
+  border: 1px dotted gray;
   padding: 10px;
   margin-right: 10px;
   text-align: center;
 }
 
-.examples .example img {
+.references .reference img {
   max-width: 100%;
+}
+
+#styleguide-title {
+  font-size: 120%;
+  text-align: center;
+}
+
+#theme-toggle {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  text-align: center;
+}
+
+[class^="rsg--sidebar"] {
+  width: 300px !important;
+}
+
+footer[class^="rsg--"] {
+  display: none;
+}
+
+#lightroom-display {
+  display: none;
+}
+
+#lightroom-display.show {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+
+  z-index: 9999;
+
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+#lightroom-display.show img {
+  max-height: 98vh;
+  max-width: 98vw;
 }

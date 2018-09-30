@@ -1,5 +1,5 @@
-<div class="examples">
-  <div class="example">
+<div class="references">
+  <div class="reference">
     <a href="public/images/components/CountMetric/1.png">
       <img src="public/images/components/CountMetric/1.png" alt="CountMetric 1" />
     </a>

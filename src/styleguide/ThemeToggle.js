@@ -1,14 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-const Title = styled.div`
-  font-weight : bold;
-  font-family : sans-serif;
-  font-size   : 14px;
-  text-align  : center;
-`;
-
-const Link = styled.a`
+const Link = styled.div`
   display         : inline-block;
   padding         : 10px 5px 0 5px;
   font-family     : sans-serif;
@@ -21,12 +14,30 @@ const Link = styled.a`
   }
 `;
 
+const THEMES = [
+  {
+    name  : 'Default',
+    value : 'default',
+  },
+  {
+    name  : 'DML',
+    value : 'dml',
+  },
+];
+const DEFAULT_THEME = THEMES[0];
+
 class ThemeToggle extends Component {
   constructor (props) {
     super(props);
 
+    const theme = window.localStorage.getItem('styleGuideTheme');
+
+    if (!theme) {
+      this.setTheme(DEFAULT_THEME.value);
+    }
+
     this.state = {
-      currentTheme: window.localStorage.getItem('styleGuideTheme'),
+      currentTheme: theme,
     }
   }
   setTheme = (themeValue) => {
@@ -35,17 +46,6 @@ class ThemeToggle extends Component {
   };
 
   getThemes = () => {
-    const THEMES = [
-      {
-        name  : 'Default',
-        value : 'default',
-      },
-      {
-        name  : 'DML',
-        value : 'dml',
-      },
-    ]
-
     return (
       THEMES.map((theme) => {
         const isActive    = (this.state.currentTheme === theme.value);
@@ -56,7 +56,6 @@ class ThemeToggle extends Component {
           <Link
             className={classes}
             key={theme.value}
-            href="#"
             onClick={() => {
               this.setTheme(theme.value);
             }}
@@ -71,8 +70,20 @@ class ThemeToggle extends Component {
   render() {
     return (
       <div>
-        <Title>Kyokan UI Style Guide</Title>
-        {this.getThemes()}
+        <div id="styleguide-title">
+          <Link
+            onClick={() => {
+              window.location.replace('#');
+            }}
+          >
+            Kyokan UI Style Guide
+          </Link>
+        </div>
+
+        <div id="theme-toggle">
+          <span>Theme: </span>
+          {this.getThemes()}
+        </div>
       </div>
     );
   }

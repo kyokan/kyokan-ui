@@ -7,7 +7,7 @@ function downFirst (string) {
 
 function renderImages (images) {
   return images.map((image) => {
-    return `  <div class="example">
+    return `  <div class="reference">
     <a href="${image.src}">
       <img src="${image.src}" alt="${image.alt}" />
     </a>
@@ -90,7 +90,7 @@ ${hasAttributes ? renderPropTypes(metadata.attributes, 2) : ''}
 export default ${componentName};
 `;
 
-<div class="examples">
+<div class="references">
 ${hasImages ? renderImages(metadata.images) : ''}
 </div>
 

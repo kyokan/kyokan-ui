@@ -24,9 +24,6 @@ module.exports = {
       ],
       scripts: [
         {
-          src: 'public/Luminous.min.js',
-        },
-        {
           src: 'public/scripts.js',
         }
       ],
