@@ -11,7 +11,13 @@ const Button = props => {
     color: ${props => props.theme.textColor};
   `;
 
-  return React.createElement(StyledButton, null);
+  return React.createElement(
+    StyledButton,
+    {
+      onClick: props.onClick
+    },
+    props.text
+  );
 };
 
 Button.propTypes = {

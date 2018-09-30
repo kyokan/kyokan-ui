@@ -12,7 +12,9 @@ const Button = (props) => {
   `;
 
   return (
-    <StyledButton>
+    <StyledButton
+      onClick={props.onClick}
+    >
       {props.text}
     </StyledButton>
   );
