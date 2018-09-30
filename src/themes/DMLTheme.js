@@ -14,13 +14,18 @@ const color11 = 'rgb(237, 240, 245)'; // #EDF0F5 Mystic
 const color12 = 'rgb(255, 200,   0)'; // #FFC800 Supernova
 
 const theme = {
-  fontFamily         : "'Barlow', sans-serif;",
-  primaryColor       : color1,
-  buttonHeightSmall  : '26px',
-  buttonHeightMedium : '36px',
-  buttonHeightLarge  : '40px',
-  buttonHeightXLarge : '54px',
-  disabledOpacity    : 0.6,
+  // COLORS
+  primaryColor : color1,
+
+  // TEXT
+  fontFamily : "'Barlow', sans-serif;",
+
+  // BUTTON
+  buttonHeightSmall     : '26px',
+  buttonHeightMedium    : '36px',
+  buttonHeightLarge     : '40px',
+  buttonHeightXLarge    : '54px',
+  buttonDisabledOpacity : 0.6,
 };
 
 export default Object.assign({}, DefaultTheme, theme);

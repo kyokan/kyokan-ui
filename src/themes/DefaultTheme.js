@@ -1,4 +1,7 @@
 export default {
-  fontFamily   : "'Helvetica', sans-serif;",
+  // COLORS
   primaryColor : 'red',
+
+  // TEXT
+  fontFamily   : "'Helvetica', sans-serif;",
 };
