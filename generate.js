@@ -8,7 +8,7 @@ function downFirst (string) {
 function renderImages (images) {
   return images.map((image) => {
     return `  <div class="example"><img src="${image.src}" alt="${image.alt}" /></div>`;
-  }).join('\n\n');
+  }).join('\n');
 }
 
 function renderProps (props, numOfSpaces) {
