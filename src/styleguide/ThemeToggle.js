@@ -21,12 +21,30 @@ const Link = styled.a`
   }
 `;
 
+const THEMES = [
+  {
+    name  : 'Default',
+    value : 'default',
+  },
+  {
+    name  : 'DML',
+    value : 'dml',
+  },
+];
+const DEFAULT_THEME = THEMES[1];
+
 class ThemeToggle extends Component {
   constructor (props) {
     super(props);
 
+    const theme = window.localStorage.getItem('styleGuideTheme');
+
+    if (!theme) {
+      this.setTheme(DEFAULT_THEME.value);
+    }
+
     this.state = {
-      currentTheme: window.localStorage.getItem('styleGuideTheme'),
+      currentTheme: theme,
     }
   }
   setTheme = (themeValue) => {
@@ -35,17 +53,6 @@ class ThemeToggle extends Component {
   };
 
   getThemes = () => {
-    const THEMES = [
-      {
-        name  : 'Default',
-        value : 'default',
-      },
-      {
-        name  : 'DML',
-        value : 'dml',
-      },
-    ]
-
     return (
       THEMES.map((theme) => {
         const isActive    = (this.state.currentTheme === theme.value);
