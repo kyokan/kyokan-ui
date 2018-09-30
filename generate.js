@@ -65,7 +65,7 @@ ${metadata.attributes ? renderPropTypes(metadata.attributes, 2) : ''}
 export default ${componentName};
 `;
 
-    const documentationTemplate = `[Markdown writeup]
+    const documentationTemplate = `${metadata.notes}
 
 <div class="examples">
 ${metadata.images ? renderImages(metadata.images) : ''}
