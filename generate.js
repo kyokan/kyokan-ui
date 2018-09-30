@@ -90,7 +90,7 @@ ${hasAttributes ? renderPropTypes(metadata.attributes, 2) : ''}
 export default ${componentName};
 `;
 
-<div class="references">
+const documentationTemplate = `<div class="references">
 ${hasImages ? renderImages(metadata.images) : ''}
 </div>
 
