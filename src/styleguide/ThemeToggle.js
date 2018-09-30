@@ -1,13 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-const Title = styled.div`
-  font-weight : bold;
-  font-family : sans-serif;
-  font-size   : 14px;
-  text-align  : center;
-`;
-
 const Link = styled.div`
   display         : inline-block;
   padding         : 10px 5px 0 5px;
@@ -77,8 +70,20 @@ class ThemeToggle extends Component {
   render() {
     return (
       <div>
-        <Title>Kyokan UI Style Guide</Title>
-        {this.getThemes()}
+        <div id="styleguide-title">
+          <Link
+            onClick={() => {
+              window.location.replace('#');
+            }}
+          >
+            Kyokan UI Style Guide
+          </Link>
+        </div>
+
+        <div id="theme-toggle">
+          <span>Theme: </span>
+          {this.getThemes()}
+        </div>
       </div>
     );
   }
