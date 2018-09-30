@@ -7,7 +7,11 @@ function downFirst (string) {
 
 function renderImages (images) {
   return images.map((image) => {
-    return `  <div class="example"><img src="${image.src}" alt="${image.alt}" /></div>`;
+    return `  <div class="example">
+    <a href="${image.src}">
+      <img src="${image.src}" alt="${image.alt}" />
+    </a>
+  </div>`;
   }).join('\n');
 }
 

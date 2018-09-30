@@ -22,6 +22,14 @@ module.exports = {
           href: 'public/styles.css',
         },
       ],
+      scripts: [
+        {
+          src: 'public/Luminous.min.js',
+        },
+        {
+          src: 'public/scripts.js',
+        }
+      ],
     },
   },
 
