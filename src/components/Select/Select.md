@@ -1,5 +1,3 @@
-A dropdown that allows a user to select one of many options.
-
 <div class="examples">
   <div class="example">
     <a href="public/images/components/Select/1.png">

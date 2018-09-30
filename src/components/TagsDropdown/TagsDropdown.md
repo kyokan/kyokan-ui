@@ -1,5 +1,3 @@
-A small widget to condense tags.
-
 <div class="examples">
   <div class="example">
     <a href="public/images/components/TagsDropdown/1.png">

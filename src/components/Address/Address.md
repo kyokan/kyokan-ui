@@ -1,5 +1,3 @@
-An address.
-
 <div class="examples">
   <div class="example">
     <a href="public/images/components/Address/1.png">

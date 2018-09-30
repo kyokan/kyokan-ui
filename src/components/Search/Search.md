@@ -1,5 +1,3 @@
-An input search bar.
-
 <div class="examples">
   <div class="example">
     <a href="public/images/components/Search/1.png">

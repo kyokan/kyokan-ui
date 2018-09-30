@@ -1,5 +1,3 @@
-A snippet of text to serve as a tag.
-
 <div class="examples">
   <div class="example">
     <a href="public/images/components/Tag/1.png">

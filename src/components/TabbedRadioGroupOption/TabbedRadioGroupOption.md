@@ -1,5 +1,3 @@
-An option within a TabbedRadioGroup.
-
 <div class="examples">
   <div class="example">
     <a href="public/images/components/TabbedRadioGroupOption/1.png">

@@ -1,5 +1,3 @@
-A collection of tab components (either all VerticalTab or HorizontalTab).
-
 <div class="examples">
   <div class="example">
     <a href="public/images/components/Tabs/1.png">

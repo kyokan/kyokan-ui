@@ -1,5 +1,3 @@
-A horizontal rule.
-
 <div class="examples">
   <div class="example">
     <a href="public/images/components/HorizontalRule/1.png">

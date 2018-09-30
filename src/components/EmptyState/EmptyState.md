@@ -1,5 +1,3 @@
-A standardized empty state.
-
 <div class="examples">
   <div class="example">
     <a href="public/images/components/EmptyState/1.png">

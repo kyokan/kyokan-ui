@@ -1,5 +1,3 @@
-Text.
-
 <div class="examples">
   <div class="example">
     <a href="public/images/components/Text/1.png">

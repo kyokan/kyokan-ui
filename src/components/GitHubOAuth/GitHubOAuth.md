@@ -1,5 +1,3 @@
-A module that allows the user to connect/disconnect to their GitHub account.
-
 <div class="examples">
   <div class="example">
     <a href="public/images/components/GitHubOAuth/1.png">

@@ -1,5 +1,3 @@
-A control module that allows a user to change pages.
-
 <div class="examples">
   <div class="example">
     <a href="public/images/components/Pagination/1.png">

@@ -1,5 +1,3 @@
-A dropdown to allow the user to select multiple options from a set of options.
-
 <div class="examples">
   <div class="example">
     <a href="public/images/components/MultiSelect/1.png">

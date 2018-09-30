@@ -1,5 +1,3 @@
-An input control to select one of many options. Radio Buttons are usually part of a RadioGroup.
-
 <div class="examples">
   <div class="example">
     <a href="public/images/components/RadioButton/1.png">

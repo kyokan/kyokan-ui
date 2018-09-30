@@ -1,5 +1,3 @@
-A block element that hides and shows content below a header.
-
 <div class="examples">
   <div class="example">
     <a href="public/images/components/Accordion/1.png">

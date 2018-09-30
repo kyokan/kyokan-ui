@@ -90,8 +90,6 @@ ${hasAttributes ? renderPropTypes(metadata.attributes, 2) : ''}
 export default ${componentName};
 `;
 
-    const documentationTemplate = `${hasNotes ? metadata.notes : '[Component description]'}
-
 <div class="examples">
 ${hasImages ? renderImages(metadata.images) : ''}
 </div>

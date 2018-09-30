@@ -1,5 +1,3 @@
-A generic component that is used when there is header and toggleable content.
-
 <div class="examples">
   <div class="example">
     <a href="public/images/components/Dropdown/1.png">

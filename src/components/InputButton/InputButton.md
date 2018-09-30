@@ -1,5 +1,3 @@
-An input field with a joined submit button.
-
 <div class="examples">
   <div class="example">
     <a href="public/images/components/InputButton/1.png">

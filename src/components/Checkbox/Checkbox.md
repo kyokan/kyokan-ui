@@ -1,5 +1,3 @@
-An input control that toggles state.
-
 <div class="examples">
   <div class="example">
     <a href="public/images/components/Checkbox/1.png">

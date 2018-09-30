@@ -1,5 +1,3 @@
-A layout component that encapsulates horizontal content.
-
 <div class="examples">
 
 </div>

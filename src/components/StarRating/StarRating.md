@@ -1,5 +1,3 @@
-A star representation of a number rating.
-
 <div class="examples">
   <div class="example">
     <a href="public/images/components/StarRating/1.png">

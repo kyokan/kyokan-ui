@@ -1,5 +1,3 @@
-A branding logo.
-
 <div class="examples">
   <div class="example">
     <a href="public/images/components/Logo/1.png">

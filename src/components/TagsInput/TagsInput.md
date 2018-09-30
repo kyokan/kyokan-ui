@@ -1,5 +1,3 @@
-An input field that allows the user to select tags from a dropdown.
-
 <div class="examples">
   <div class="example">
     <a href="public/images/components/TagsInput/1.png">

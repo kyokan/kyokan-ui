@@ -1,5 +1,3 @@
-A small module to show a metric next to an icon.
-
 <div class="examples">
   <div class="example">
     <a href="public/images/components/CountMetric/1.png">

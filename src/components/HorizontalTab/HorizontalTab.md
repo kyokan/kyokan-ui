@@ -1,5 +1,3 @@
-A tab that will be toggled from a horizontal control.
-
 <div class="examples">
 
 </div>

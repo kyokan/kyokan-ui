@@ -1,5 +1,3 @@
-A dropdown that allows the user to sort a list by a selected option.
-
 <div class="examples">
   <div class="example">
     <a href="public/images/components/Sorter/1.png">

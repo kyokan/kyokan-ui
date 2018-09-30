@@ -1,5 +1,3 @@
-A module to show while loading page elements.
-
 <div class="examples">
   <div class="example">
     <a href="public/images/components/Loading/1.png">

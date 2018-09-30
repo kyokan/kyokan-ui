@@ -1,5 +1,3 @@
-A block of content, almost like an inline modal.
-
 <div class="examples">
   <div class="example">
     <a href="public/images/components/Panel/1.png">

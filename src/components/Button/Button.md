@@ -1,5 +1,3 @@
-A block element that fires an action on click. Loading buttons should be disabled while loading.
-
 <div class="examples">
   <div class="example">
     <a href="public/images/components/Button/1.png">

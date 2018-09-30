@@ -1,5 +1,3 @@
-An image.
-
 <div class="examples">
   <div class="example">
     <a href="public/images/components/Image/1.png">

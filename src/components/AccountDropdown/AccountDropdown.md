@@ -1,5 +1,3 @@
-A module that allows the user to quickly access user/account-level options. For example: 'Sign Out', 'Settings', etc.
-
 <div class="examples">
   <div class="example">
     <a href="public/images/components/AccountDropdown/1.png">

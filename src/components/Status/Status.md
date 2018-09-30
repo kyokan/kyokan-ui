@@ -1,5 +1,3 @@
-A message styled as a notification for the user.
-
 <div class="examples">
   <div class="example">
     <a href="public/images/components/Status/1.png">

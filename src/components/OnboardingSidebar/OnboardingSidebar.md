@@ -1,5 +1,3 @@
-[Component description]
-
 <div class="examples">
   <div class="example">
     <a href="public/images/components/OnboardingSidebar/1.png">

@@ -1,5 +1,3 @@
-A 'cloud' of tags - a freeform way of expressing Tags.
-
 <div class="examples">
   <div class="example">
     <a href="public/images/components/TagsCloud/1.png">

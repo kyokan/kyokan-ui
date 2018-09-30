@@ -1,5 +1,3 @@
-A tab that will be toggled from a vertical control.
-
 <div class="examples">
   <div class="example">
     <a href="public/images/components/VerticalTab/1.png">

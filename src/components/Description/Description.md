@@ -1,5 +1,3 @@
-Text that serves as a description.
-
 <div class="examples">
   <div class="example">
     <a href="public/images/components/Description/1.png">

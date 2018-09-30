@@ -1,5 +1,3 @@
-Text that serves as a header.
-
 <div class="examples">
   <div class="example">
     <a href="public/images/components/Header/1.png">

@@ -1,5 +1,3 @@
-A text input field.
-
 <div class="examples">
   <div class="example">
     <a href="public/images/components/TextInput/1.png">

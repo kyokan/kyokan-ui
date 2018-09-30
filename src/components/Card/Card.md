@@ -1,5 +1,3 @@
-A container for repeatable entities.
-
 <div class="examples">
   <div class="example">
     <a href="public/images/components/Card/1.png">

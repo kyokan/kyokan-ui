@@ -1,5 +1,3 @@
-A display with a number and a token symbol.
-
 <div class="examples">
   <div class="example">
     <a href="public/images/components/TokenAmount/1.png">
