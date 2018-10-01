@@ -3,8 +3,9 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 import DefaultTheme from '../DefaultTheme';
 
 import BUTTON from './sections/button';
+import ONBOARDING_SIDEBAR from './sections/onboarding-sidebar';
 import TEXT from './sections/text';
 
-const DMLTheme = _extends({}, TEXT, BUTTON);
+const DMLTheme = _extends({}, TEXT, BUTTON, ONBOARDING_SIDEBAR);
 
 export default Object.assign({}, DefaultTheme, DMLTheme);

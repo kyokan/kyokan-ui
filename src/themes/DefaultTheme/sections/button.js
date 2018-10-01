@@ -1,7 +1,9 @@
+import { pxToRem } from '../../utils';
+
 export default {
-  buttonHeightSmall     : '20px',
-  buttonHeightMedium    : '25px',
-  buttonHeightLarge     : '30px',
-  buttonHeightXLarge    : '35px',
+  buttonHeightSmall     : pxToRem(20),
+  buttonHeightMedium    : pxToRem(25),
+  buttonHeightLarge     : pxToRem(30),
+  buttonHeightXLarge    : pxToRem(35),
   buttonDisabledOpacity : 0.75,
 };
