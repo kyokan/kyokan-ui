@@ -14,6 +14,6 @@ const color13 = 'rgb(255, 255, 255)'; // #FFFFFF White
 
 export default {
   primaryColor: color1,
-  sidebarBackground: color10,
-  siderbarText: color13
+  sidebarBackgroundColor: color10,
+  siderbarTextColor: color13
 };

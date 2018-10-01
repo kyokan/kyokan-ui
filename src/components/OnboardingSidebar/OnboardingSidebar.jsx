@@ -22,7 +22,7 @@ const StyledSidebarProgressWrapper = styled.div`
 
 const StyledEmptyProgressBar = styled.div`
     height: 4px;
-    width: 40px;
+    width: 44px;
     border-radius: 2px;
     background-color: rgba(255, 255, 255, 0.5);
     margin-right: 1.4rem;
@@ -30,7 +30,7 @@ const StyledEmptyProgressBar = styled.div`
 
 const StyledFullProgressBar = styled.div`
     height: 4px;
-    width: 40px;
+    width: 44px;
     border-radius: 2px;
     background-color: rgb(255, 255, 255);
     margin-right: 1.4rem;
@@ -44,23 +44,24 @@ const OnboardingSidebar = (props) => {
   const StyledOnboardingSidebar = styled.div`
     font-family: ${ (props) => props.theme.textFontFamily };
     color: ${ (props) => props.theme.textColor };
-    background-color: ${ props => props.theme.sidebarBackground};
+    background-color: ${ props => props.theme.sidebarBackgroundColor};
     display: flex;
     flex-flow: column nowrap;
     width: 440px;
     padding: 3rem 4rem;
+    flex: 0 0 auto;
   `;
 
   const StyledHeader = styled.div`
     font-size: 1.55rem;
     width: 270px;
-    color: ${props => props.theme.siderbarText};
+    color: ${props => props.theme.siderbarTextColor};
     font-weight: 400;
     letter-spacing: 1px;
   `;
 
   const StyledSubheader = styled.div`
-    color: ${props => props.theme.siderbarText};
+    color: ${props => props.theme.siderbarTextColor};
     opacity: .5;
     font-weight: 300;
     margin: 1.45rem 0 .5rem;
@@ -69,7 +70,7 @@ const OnboardingSidebar = (props) => {
   `;
 
   const StyledDescription = styled.div`
-    color: ${props => props.theme.siderbarText};
+    color: ${props => props.theme.siderbarTextColor};
     opacity: .6;
     font-weight: 300;
     margin: 0.8rem 0 2.6rem;
