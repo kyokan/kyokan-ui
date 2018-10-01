@@ -17,8 +17,12 @@ const color15 = 'rgb(  0,   0,   0, .5)'; // #000000 Black
 export default {
   primaryColor: color1,
   textColor: color5,
+
+  lineColor: color8,
+
   darkBackgroundColor: color10,
   darkBackgroundHighlightTextColor: color13,
+
   titleTextColor: color14,
   descriptionTextColor: color15,
   sidebarBackgroundColor: color10,
