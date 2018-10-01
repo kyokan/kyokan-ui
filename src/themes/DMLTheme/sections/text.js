@@ -8,7 +8,11 @@ export default {
   textFontWeight    : '500',
   textFontSize      : pxToRem(16),
   textLineHeight    : pxToRem(24),
-
-  sidebarBackgroundColor  : _COLORS.sidebarBackgroundColor,
-  sidebarTextColor       : _COLORS.sidebarTextColor,
+  panelBackgroundColor      : _COLORS.panelBackgroundColor,
+  sidebarBackgroundColor    : _COLORS.sidebarBackgroundColor,
+  sidebarTextColor          : _COLORS.sidebarTextColor,
+  descriptionTextColor      : _COLORS.descriptionTextColor,
+  titleTextSize             : "2.4rem",
+  panelBorderRadius         : "3px",
+  panelBoxShadow            : "0 0 2px 1px rgba(0, 0, 0, 0.03)",
 };

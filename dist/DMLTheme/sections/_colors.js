@@ -11,11 +11,17 @@ const color10 = 'rgb( 41,  54,  74)'; // #29364A Pickled Bluewood
 const color11 = 'rgb(237, 240, 245)'; // #EDF0F5 Mystic
 const color12 = 'rgb(255, 200,   0)'; // #FFC800 Supernova
 const color13 = 'rgb(255, 255, 255)'; // #FFFFFF White
+const color14 = 'rgb(  0,   0,   0)'; // #000000 Black
+const color15 = 'rgb(  0,   0,   0, .5)'; // #000000 Black
 
 export default {
   primaryColor: color1,
   textColor: color5,
-
   darkBackgroundColor: color10,
-  darkBackgroundHighlightTextColor: color13
+  darkBackgroundHighlightTextColor: color13,
+  titleTextColor: color14,
+  descriptionTextColor: color15,
+  sidebarBackgroundColor: color10,
+  sidebarTextColor: color13,
+  panelBackgroundColor: color13
 };

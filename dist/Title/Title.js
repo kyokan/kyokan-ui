@@ -8,7 +8,8 @@ import styled from 'styled-components';
 const Title = props => {
   const StyledTitle = styled.div`
     font-family: ${props => props.theme.textFontFamily};
-    color: ${props => props.theme.textColor};
+    color: ${props => props.theme.titleTextColor};
+    font-size: ${props => props.theme.titleTextSize};
   `;
 
   return React.createElement(
