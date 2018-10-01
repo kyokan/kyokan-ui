@@ -4,9 +4,6 @@
   "main": "dist/index.js",
   "license": "MIT",
   "dependencies": {
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "command-exists": "^1.2.7",
-    "mkdirp": "^0.5.1",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-scripts": "1.1.4",
@@ -29,6 +26,10 @@
     "create-index": "^2.3.0",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
-    "react-styleguidist": "^7.3.8"
+    "react-styleguidist": "^7.3.8",
+    "babel-loader": "^8.0.4",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "command-exists": "^1.2.7",
+    "mkdirp": "^0.5.1"
   }
 }
