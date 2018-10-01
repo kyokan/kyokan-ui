@@ -1,19 +1,56 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import classnames from 'classnames';
 
 /**
 * A message styled as a notification for the user.
 */
 const Status = (props) => {
   const StyledStatus = styled.div`
-    font-family: ${ (props) => props.theme.textFontFamily };
-    color: ${ (props) => props.theme.textColor };
+    display       : ${ (props) => props.theme.statusDisplay };
+    font-family   : ${ (props) => props.theme.statusFontFamily };
+    border-radius : ${ (props) => props.theme.statusBorderRadius };
+    padding       : ${ (props) => props.theme.statusPadding };
+    line-height   : ${ (props) => props.theme.statusLineHeight };
+
+    &.error {
+      background-color : ${ (props) => props.theme.statusErrorBackgroundColor };
+      color            : ${ (props) => props.theme.statusErrorTextColor };
+    }
+
+    &.success {
+      background-color : ${ (props) => props.theme.statusSuccessBackgroundColor };
+      color            : ${ (props) => props.theme.statusSuccessTextColor };
+    }
+
+    &.warning {
+      background-color : ${ (props) => props.theme.statusWarningBackgroundColor };
+      color            : ${ (props) => props.theme.statusWarningTextColor };
+    }
+
+    &.info {
+      background-color : ${ (props) => props.theme.statusInfoBackgroundColor };
+      color            : ${ (props) => props.theme.statusInfoTextColor };
+      border-width     : ${ (props) => props.theme.statusInfoBorderWidth };
+      border-style     : ${ (props) => props.theme.statusInfoBorderStyle };
+      border-color     : ${ (props) => props.theme.statusInfoBorderColor };
+      padding          : ${ (props) => props.theme.statusInfoPadding };
+    }
   `;
 
+  const classes = classnames({
+    error   : props.error,
+    info    : props.info,
+    success : props.success,
+    warning : props.warning,
+  });
+
   return (
-    <StyledStatus>
-      
+    <StyledStatus
+      className={classes}
+    >
+      {props.text}
     </StyledStatus>
   );
 };

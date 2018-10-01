@@ -10,4 +10,8 @@ function pxToRem(px, basePx = 16) {
   return `${input / basePx}rem`;
 }
 
-export { pxToRem };
+function rgbToRgba(rgbString, alpha) {
+  return rgbString.replace('rgb', 'rgba').replace(')', `,${alpha})`);
+}
+
+export { pxToRem, rgbToRgba };
