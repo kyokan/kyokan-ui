@@ -1,14 +1,12 @@
 import { pxToRem } from '../../utils';
 
 import _COLORS from './_colors';
+import _FONTS  from './_fonts';
 
 export default {
-  textFontFamily    : '"Barlow", sans-serif;',
-  textColor         : _COLORS.textColor,
-  textFontWeight    : '500',
-  textFontSize      : pxToRem(16),
-  textLineHeight    : pxToRem(24),
-
-  sidebarBackgroundColor  : _COLORS.sidebarBackgroundColor,
-  sidebarTextColor       : _COLORS.sidebarTextColor,
+  textFontFamily  : _FONTS.baseFont,
+  textColor       : _COLORS.textColor,
+  textFontWeight  : _FONTS.mediumFontWeight,
+  textFontSize    : pxToRem(16),
+  textLineHeight  : pxToRem(24),
 };

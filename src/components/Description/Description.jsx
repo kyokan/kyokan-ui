@@ -7,8 +7,10 @@ import styled from 'styled-components';
 */
 const Description = (props) => {
   const StyledDescription = styled.div`
-    font-family: ${ (props) => props.theme.textFontFamily };
-    color: ${ (props) => props.theme.textColor };
+    font-family: ${ (props) => props.theme.descriptionFontFamily };
+    color:       ${ (props) => props.theme.descriptionTextColor };
+    font-weight: ${ (props) => props.theme.descriptionFontWeight };
+    line-height: ${ (props) => props.theme.descriptionLineHeight };
   `;
 
   return (
