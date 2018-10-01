@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { Grid as RFGrid } from 'react-flexbox-grid';
 
 /**
-* A layout grid component (currently a wrapper around https://github.com/roylee0704/react-flexbox-grid).
+* A layout grid component (currently a wrapper around https://github.com/roylee0704/react-flexbox-grid/blob/master/src/components/Grid.js).
 */
 const Grid = (props) => {
   return (
@@ -17,15 +17,21 @@ const Grid = (props) => {
 };
 
 Grid.defaultProps = {
-  fluid: true,
+  fluid : true,
 }
 
 Grid.propTypes = {
   /** Rows that you wish to compose */
-  children: PropTypes.any.isRequired,
+  children: PropTypes.node.isRequired,
 
   /** Whether or not the grid is fluid; defaults to true to prevent horizontal overflow issues */
   fluid: PropTypes.bool,
+
+  /** A classname to add to the element */
+  className: PropTypes.string,
+
+  /** The tagname that you wish the component to render */
+  tagName: PropTypes.string,
 };
 
 /** @component */
