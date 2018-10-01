@@ -8,6 +8,6 @@
 
 ```jsx
 <Text>
-  Children
+  This is some sample text.
 </Text>
 ```
