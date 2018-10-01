@@ -55,13 +55,13 @@ const OnboardingSidebar = (props) => {
   const StyledHeader = styled.div`
     font-size: 1.55rem;
     width: 270px;
-    color: ${props => props.theme.siderbarTextColor};
+    color: ${props => props.theme.sidebarTextColor};
     font-weight: 400;
     letter-spacing: 1px;
   `;
 
   const StyledSubheader = styled.div`
-    color: ${props => props.theme.siderbarTextColor};
+    color: ${props => props.theme.sidebarTextColor};
     opacity: .5;
     font-weight: 300;
     margin: 1.45rem 0 .5rem;
@@ -70,7 +70,7 @@ const OnboardingSidebar = (props) => {
   `;
 
   const StyledDescription = styled.div`
-    color: ${props => props.theme.siderbarTextColor};
+    color: ${props => props.theme.sidebarTextColor};
     opacity: .6;
     font-weight: 300;
     margin: 0.8rem 0 2.6rem;
