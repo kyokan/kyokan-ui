@@ -8,6 +8,6 @@
 
 ```jsx
 <Text>
-  This is some sample text.
+  You can use your Github account and upload Algorithms to the marketplace.
 </Text>
 ```
