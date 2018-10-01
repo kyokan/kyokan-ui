@@ -50,14 +50,14 @@ const Status = (props) => {
     <StyledStatus
       className={classes}
     >
-      {props.text}
+      {props.children}
     </StyledStatus>
   );
 };
 
 Status.propTypes = {
-  /** A string of text to be displayed within the status */
-  text: PropTypes.string.isRequired,
+  /** The text to display as the status text */
+  children: PropTypes.any.isRequired,
 
   /** An icon to display before the status text */
   icon: PropTypes.string,

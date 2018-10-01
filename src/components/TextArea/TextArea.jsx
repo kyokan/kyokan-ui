@@ -13,7 +13,7 @@ const TextArea = (props) => {
 
   return (
     <StyledTextArea>
-      
+
     </StyledTextArea>
   );
 };
@@ -22,8 +22,11 @@ TextArea.propTypes = {
   /** A callback function to fire when user is typing */
   onKeyUp: PropTypes.func,
 
-  /** A string of placeholder text */
+  /** Placeholder text */
   placeholder: PropTypes.string,
+
+  /** Label text for the TextArea */
+  label: PropTypes.string,
 };
 
 /** @component */

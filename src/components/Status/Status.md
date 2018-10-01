@@ -24,29 +24,34 @@
 ```jsx
 <div>
   <Status
-    text="Success Status"
     success
-  />
+  >
+    Success Status
+  </Status>
 </div>
 
 <div>
   <Status
-    text="Error Status"
     error
-  />
+  >
+    Error Status
+  </Status>
 </div>
 
 <div>
   <Status
-    text="Warning Status"
     warning
-  />
+  >
+    Warning Status
+  </Status>
 </div>
 
 <div>
   <Status
-    text="Enrolled"
+    icon=""
     info
-  />
+  >
+    Enrolled
+  </Status>
 </div>
 ```

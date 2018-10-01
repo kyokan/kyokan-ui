@@ -10,5 +10,6 @@
 <TextArea
   onKeyUp={() => {}}
   placeholder=""
+  label=""
 />
 ```
