@@ -8,7 +8,4 @@ export default {
   textFontWeight    : '500',
   textFontSize      : pxToRem(16),
   textLineHeight    : pxToRem(24),
-
-  sidebarBackgroundColor  : _COLORS.sidebarBackgroundColor,
-  sidebarTextColor       : _COLORS.sidebarTextColor,
 };
