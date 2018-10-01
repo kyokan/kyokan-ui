@@ -7,11 +7,11 @@ import styled from 'styled-components';
 */
 const Panel = (props) => {
   const StyledPanel = styled.div`
-    font-family: ${ (props) => props.theme.textFontFamily };
-    color: ${ (props) => props.theme.textColor };
+    font-family:      ${ (props) => props.theme.panelFontFamily };
+    color:            ${ (props) => props.theme.panelTextColor };
     background-color: ${ (props) => props.theme.panelBackgroundColor };
-    border-radius: ${ (props) => props.theme.panelBorderRadius };
-    box-shadow: ${ (props) => props.theme.panelBoxShadow };
+    border-radius:    ${ (props) => props.theme.panelBorderRadius };
+    box-shadow:       ${ (props) => props.theme.panelBoxShadow };
   `;
 
   return (

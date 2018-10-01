@@ -21,19 +21,19 @@ const StyledSidebarProgressWrapper = styled.div`
 `;
 
 const StyledEmptyProgressBar = styled.div`
-    height: 4px;
-    width: 44px;
-    border-radius: 2px;
-    background-color: rgba(255, 255, 255, 0.5);
-    margin-right: 1.4rem;
+  height: 4px;
+  width: 44px;
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin-right: 1.4rem;
 `;
 
 const StyledFullProgressBar = styled.div`
-    height: 4px;
-    width: 44px;
-    border-radius: 2px;
-    background-color: rgb(255, 255, 255);
-    margin-right: 1.4rem;
+  height: 4px;
+  width: 44px;
+  border-radius: 2px;
+  background-color: rgb(255, 255, 255);
+  margin-right: 1.4rem;
 `;
 
 /**
@@ -41,9 +41,9 @@ const StyledFullProgressBar = styled.div`
 */
 const OnboardingSidebar = props => {
   const StyledOnboardingSidebar = styled.div`
-    font-family: ${props => props.theme.textFontFamily};
-    color: ${props => props.theme.textColor};
-    background-color: ${props => props.theme.sidebarBackgroundColor};
+    font-family:      ${props => props.theme.onboardingSidebarFontFamily};
+    color:            ${props => props.theme.onboardingSidebarTextColor};
+    background-color: ${props => props.theme.onboardingSidebarBackgroundColor};
     display: flex;
     flex-flow: column nowrap;
     width: 440px;
@@ -54,13 +54,13 @@ const OnboardingSidebar = props => {
   const StyledHeader = styled.div`
     font-size: 1.55rem;
     width: 270px;
-    color: ${props => props.theme.sidebarTextColor};
+    color: ${props => props.theme.onboardingSidebarTextColor};
     font-weight: 400;
     letter-spacing: 1px;
   `;
 
   const StyledSubheader = styled.div`
-    color: ${props => props.theme.sidebarTextColor};
+    color: ${props => props.theme.onboardingSidebarTextColor};
     opacity: .5;
     font-weight: 300;
     margin: 1.45rem 0 .5rem;
@@ -69,7 +69,7 @@ const OnboardingSidebar = props => {
   `;
 
   const StyledDescription = styled.div`
-    color: ${props => props.theme.sidebarTextColor};
+    color: ${props => props.theme.onboardingSidebarTextColor};
     opacity: .6;
     font-weight: 300;
     margin: 0.8rem 0 2.6rem;
