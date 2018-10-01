@@ -15,6 +15,7 @@ const color13 = 'rgb(255, 255, 255)'; // #FFFFFF White
 export default {
   primaryColor: color1,
   textColor: color5,
+  darkTextColor: color3,
 
   darkBackgroundColor: color10,
   darkBackgroundHighlightTextColor: color13

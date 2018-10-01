@@ -13,8 +13,9 @@ const color12 = 'rgb(255, 200,   0)'; // #FFC800 Supernova
 const color13 = 'rgb(255, 255, 255)'; // #FFFFFF White
 
 export default {
-  primaryColor : color1,
-  textColor    : color5,
+  primaryColor  : color1,
+  textColor     : color5,
+  darkTextColor : color3,
 
   darkBackgroundColor              : color10,
   darkBackgroundHighlightTextColor : color13,
