@@ -15,6 +15,28 @@ const StyledSidebarContentWrapper = styled.div`
   flex: 1 0 auto;
 `;
 
+const StyledSidebarProgressWrapper = styled.div`
+  display: flex;
+  flex-flow: row nowrap;
+`;
+
+const StyledEmptyProgressBar = styled.div`
+    height: 4px;
+    width: 40px;
+    border-radius: 2px;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin-right: 1.4rem;
+`;
+
+const StyledFullProgressBar = styled.div`
+    height: 4px;
+    width: 40px;
+    border-radius: 2px;
+    background-color: rgb(255, 255, 255);
+    margin-right: 1.4rem;
+`;
+
+
 /**
 * [Description]
 */
@@ -50,7 +72,7 @@ const OnboardingSidebar = (props) => {
     color: ${props => props.theme.siderbarText};
     opacity: .6;
     font-weight: 300;
-    margin: 0.8rem 0;
+    margin: 0.8rem 0 2.6rem;
     font-size: 0.9rem;
     letter-spacing: 0.8px;
     line-height: 1.8rem;
@@ -67,6 +89,15 @@ const OnboardingSidebar = (props) => {
         <StyledSubheader>{props.subheaderText}</StyledSubheader>
         <StyledHeader>{props.headerText}</StyledHeader>
         <StyledDescription>{props.descriptionText}</StyledDescription>
+        <StyledSidebarProgressWrapper>
+          {
+            Array(props.totalSteps).fill(0).map((n, i) => (
+              i <= props.currentStepIndex
+                ? <StyledFullProgressBar/>
+                : <StyledEmptyProgressBar/>
+            ))
+          }
+        </StyledSidebarProgressWrapper>
       </StyledSidebarContentWrapper>
     </StyledOnboardingSidebar>
   );
@@ -81,6 +112,8 @@ OnboardingSidebar.propTypes = {
   iconClassName: PropTypes.string,
   logoUrl: PropTypes.string,
   logoClassName: PropTypes.string,
+  currentStepIndex: PropTypes.number,
+  totalSteps: PropTypes.number,
 };
 
 OnboardingSidebar.defaultProps = {
