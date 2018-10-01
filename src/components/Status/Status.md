@@ -22,12 +22,31 @@
 </div>
 
 ```jsx
-<Status
-  text=""
-  icon=""
-  success={false}
-  error={false}
-  warning={false}
-  info={false}
-/>
+<div>
+  <Status
+    text="Success Status"
+    success
+  />
+</div>
+
+<div>
+  <Status
+    text="Error Status"
+    error
+  />
+</div>
+
+<div>
+  <Status
+    text="Warning Status"
+    warning
+  />
+</div>
+
+<div>
+  <Status
+    text="Enrolled"
+    info
+  />
+</div>
 ```

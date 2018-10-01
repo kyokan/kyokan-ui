@@ -24,6 +24,8 @@ const Panel = (props) => {
 Panel.propTypes = {
   /** Any content */
   children: PropTypes.any.isRequired,
+
+  /** A classname to add to the element */
   className: PropTypes.string,
 };
 
