@@ -16,6 +16,8 @@ export default {
   primaryColor: color1,
   textColor: color5,
 
+  lineColor: color8,
+
   darkBackgroundColor: color10,
   darkBackgroundHighlightTextColor: color13
 };

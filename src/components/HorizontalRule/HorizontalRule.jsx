@@ -5,20 +5,14 @@ import styled from 'styled-components';
 * A horizontal rule.
 */
 const HorizontalRule = (props) => {
-  const StyledHorizontalRule = styled.div`
-    font-family: ${ (props) => props.theme.textFontFamily };
-    color: ${ (props) => props.theme.textColor };
+  const StyledHorizontalRule = styled.hr`
+    color:        ${ (props) => props.theme.horizontalRuleColor };
+    border-style: ${ (props) => props.theme.horizontalRuleBorderStyle }
   `;
 
   return (
-    <StyledHorizontalRule>
-      
-    </StyledHorizontalRule>
+    <StyledHorizontalRule />
   );
-};
-
-HorizontalRule.propTypes = {
-
 };
 
 /** @component */
