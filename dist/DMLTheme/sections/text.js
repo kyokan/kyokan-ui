@@ -4,7 +4,7 @@ import _COLORS from './_colors';
 import _FONTS from './_fonts';
 
 export default {
-  titleFontFamily: _FONTS.baseFont,
+  textFontFamily: _FONTS.baseFont,
   textColor: _COLORS.textColor,
   textFontWeight: _FONTS.mediumFontWeight,
   textFontSize: pxToRem(16),
