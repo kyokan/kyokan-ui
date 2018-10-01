@@ -7,9 +7,10 @@ yarn start                    # to start a style guide dev server
 yarn generate [ComponentName] # to generate a scaffold for a new component
 yarn dist                     # build out component dist files for use as a module
 
-yarn build                    # to build a static version of the styleguide
 yarn link                     # to begin linking to use local module (this command must be run from this repo)
 yarn link kyokan-ui           # to complete linking to use local module (this command must be run from the target repo)
+
+yarn build                    # to build a static version of the styleguide
 ```
 
 ## Motivation
