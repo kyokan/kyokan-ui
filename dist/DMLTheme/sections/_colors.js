@@ -10,7 +10,10 @@ const color9 = 'rgb(247, 249, 252)'; // #F7F9FC Cloud White
 const color10 = 'rgb( 41,  54,  74)'; // #29364A Pickled Bluewood
 const color11 = 'rgb(237, 240, 245)'; // #EDF0F5 Mystic
 const color12 = 'rgb(255, 200,   0)'; // #FFC800 Supernova
+const color13 = 'rgb(255, 255, 255)'; // #FFFFFF White
 
 export default {
-  primaryColor: color1
+  primaryColor: color1,
+  sidebarBackgroundColor: color10,
+  sidebarTextColor: color13
 };
