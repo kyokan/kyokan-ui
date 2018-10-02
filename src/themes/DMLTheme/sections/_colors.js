@@ -18,8 +18,6 @@ const black   = 'rgb(  0,   0,   0)'; // #000000 Black
 const errorHighlightColor      = '#F40000';
 const errorHighlightFocusColor = Color(errorHighlightColor).darken(0.2).string();
 
-console.log(errorHighlightFocusColor);
-
 export default {
   primaryColor : color01,
 
