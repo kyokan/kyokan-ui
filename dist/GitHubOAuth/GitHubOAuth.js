@@ -9,7 +9,7 @@ import logo from './github_logo.svg';
 const GitHubOAuth = props => {
   const StyledGitHubOAuth = styled.button`
     font-family: ${props => props.theme.textFontFamily};
-    color: ${props => props.theme.githubOAuthButtonTextColor};
+    color: #000;
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
