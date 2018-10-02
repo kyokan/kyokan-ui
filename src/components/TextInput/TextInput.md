@@ -14,8 +14,23 @@
 ```jsx
 <TextInput
   value=""
-  label=""
-  placeholder=""
-  onChange={() => {}}
+  label="Label"
+  placeholder="Default value"
+  onChange={(domEvent) => {
+    console.log(domEvent);
+  }}
 />
+
+<br />
+
+<TextInput
+  value="Value"
+  label="Label"
+  errorMessage="Error message"
+  error
+/>
+
+<br />
+
+<TextInput />
 ```
