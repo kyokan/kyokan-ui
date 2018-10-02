@@ -10,9 +10,10 @@ const color09 = 'rgb(247, 249, 252)'; // #F7F9FC Cloud White
 const color10 = 'rgb( 41,  54,  74)'; // #29364A Pickled Bluewood
 const color11 = 'rgb(237, 240, 245)'; // #EDF0F5 Mystic
 const color12 = 'rgb(255, 200,   0)'; // #FFC800 Supernova
-
 const white = 'rgb(255, 255, 255)'; // #FFFFFF White
 const black = 'rgb(  0,   0,   0)'; // #000000 Black
+const color15 = 'rgb(  0,   0,   0, .5)'; // #000000 Black
+const color16 = 'rgb(248, 102, 102)'; // #000000 Carnation Red
 
 export default {
   primaryColor  : color01,
@@ -34,4 +35,15 @@ export default {
   warningBackgroundColor : '#FFFAC9',
   infoForegroundColor    : color01,
   infoBackgroundColor    : white,
+
+  titleTextColor: black,
+  descriptionTextColor: color15,
+  sidebarBackgroundColor : color10,
+  sidebarTextColor: white,
+  panelBackgroundColor: white,
+  textInputBorderColor: color07,
+  textInputActiveBorderColor: color06,
+  textInputPlaceholderColor: color05,
+  textInputColor: black,
+  textInputErrorColor: color16,
 };
