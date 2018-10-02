@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-const Link = styled.div`
+const StyledSiteHeader = styled.a`
   display         : inline-block;
   padding         : 10px 5px 0 5px;
   font-family     : sans-serif;
@@ -9,8 +9,8 @@ const Link = styled.div`
   cursor          : pointer;
   color           : #1978c8;
 
-  &.active {
-    font-weight: bold;
+  &:hover {
+    text-decoration: underline;
   }
 `;
 
@@ -40,30 +40,33 @@ class ThemeToggle extends Component {
       currentTheme: theme,
     }
   }
+
   setTheme = (themeValue) => {
     window.localStorage.setItem('styleGuideTheme', themeValue);
     window.location.reload();
   };
 
-  getThemes = () => {
+  renderThemes = () => {
     return (
-      THEMES.map((theme) => {
-        const isActive    = (this.state.currentTheme === theme.value);
-        const classes     = (isActive ? 'active' : '');
-        const displayName = (isActive ? `[${theme.name}]` : theme.name);
-
-        return (
-          <Link
-            className={classes}
-            key={theme.value}
-            onClick={() => {
-              this.setTheme(theme.value);
-            }}
-          >
-            {displayName}
-          </Link>
-        )
-      })
+      <select
+        defaultValue={this.state.currentTheme}
+        onChange={(event) => {
+          this.setTheme(event.target.value);
+        }}
+      >
+        {
+          THEMES.map((theme) => {
+            return (
+              <option
+                key={theme.value}
+                value={theme.value}
+              >
+                {theme.name}
+              </option>
+            )
+          })
+        }
+      </select>
     );
   }
 
@@ -71,18 +74,16 @@ class ThemeToggle extends Component {
     return (
       <div>
         <div id="styleguide-title">
-          <Link
-            onClick={() => {
-              window.location.replace('#');
-            }}
+          <StyledSiteHeader
+            href="#"
           >
             Kyokan UI Style Guide
-          </Link>
+          </StyledSiteHeader>
         </div>
 
         <div id="theme-toggle">
           <span>Theme: </span>
-          {this.getThemes()}
+          {this.renderThemes()}
         </div>
       </div>
     );

@@ -51,11 +51,8 @@
 #theme-toggle {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   text-align: center;
+  margin-top: 10px;
 }
-
-/* [class^="rsg--sidebar"] {
-  width: 300px !important;
-} */
 
 footer[class^="rsg--"] {
   display: none;
