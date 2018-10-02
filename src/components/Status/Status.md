@@ -48,7 +48,7 @@
 
 <div>
   <Status
-    icon=""
+    icon="check"
     info
   >
     Enrolled
