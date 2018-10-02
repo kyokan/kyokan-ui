@@ -9,6 +9,4 @@ export default {
   textFontWeight  : _FONTS.mediumFontWeight,
   textFontSize    : pxToRem(16),
   textLineHeight  : pxToRem(24),
-
-  headerTextColor : _COLORS.headerTextColor,
 };

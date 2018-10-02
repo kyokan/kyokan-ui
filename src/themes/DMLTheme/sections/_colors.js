@@ -58,6 +58,4 @@ export default {
   warningBackgroundColor   : '#FFFAC9',
   infoForegroundColor      : color01,
   infoBackgroundColor      : white,
-
-  headerTextColor: black,
 };

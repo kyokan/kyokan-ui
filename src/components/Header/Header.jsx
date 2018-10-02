@@ -7,9 +7,9 @@ import styled from 'styled-components';
 */
 const Header = (props) => {
   const StyledHeader = styled.div`
-    font-family: ${ (props) => props.theme.textFontFamily };
-    color: ${ (props) => props.theme.headerTextColor };
-    font-weight: 500;
+    font-family : ${ ({ theme }) => theme.textFontFamily };
+    color       : ${ ({ theme }) => theme.headerTextColor };
+    font-weight : ${ ({ theme }) => theme.headerFontWeight };
   `;
 
   return (
@@ -19,16 +19,16 @@ const Header = (props) => {
   );
 };
 
+Header.defaultProps = {
+  className: '',
+};
+
 Header.propTypes = {
-  /** Class name for top level wrapper **/
+  /** Class name for top level wrapper */
   className: PropTypes.string,
 
   /** The header text to be displayed */
   children: PropTypes.string.isRequired,
-};
-
-Header.defaultProps = {
-  className: '',
 };
 
 /** @component */

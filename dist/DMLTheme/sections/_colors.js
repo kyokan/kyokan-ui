@@ -57,7 +57,5 @@ export default {
   warningForegroundColor: '#745B08',
   warningBackgroundColor: '#FFFAC9',
   infoForegroundColor: color01,
-  infoBackgroundColor: white,
-
-  headerTextColor: black
+  infoBackgroundColor: white
 };
