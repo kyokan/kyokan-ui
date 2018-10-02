@@ -13,10 +13,44 @@
 
 ```jsx
 <Accordion
-  title=""
-  expanded={false}
-  onChange={() => {}}
+  title="Accordion title"
+  onChange={(event, isExpanded) => {
+    console.log('Accordion toggled', isExpanded ? 'open' : 'closed');
+  }}
 >
-  Children
+  Content contained within Accordion
+</Accordion>
+
+<br />
+
+<Accordion
+  title="Accordion 1 title"
+  onChange={(event, isExpanded) => {
+    console.log('Accordion 1 toggled', isExpanded ? 'open' : 'closed');
+  }}
+  first
+>
+  Content contained within Accordion 1
+</Accordion>
+
+<Accordion
+  title="Accordion 2 title"
+  onChange={(event, isExpanded) => {
+    console.log('Accordion 2 toggled', isExpanded ? 'open' : 'closed');
+  }}
+  middle
+  expanded
+>
+  Content contained within Accordion 2
+</Accordion>
+
+<Accordion
+  title="Accordion 3 title"
+  onChange={(event, isExpanded) => {
+    console.log('Accordion 3 toggled', isExpanded ? 'open' : 'closed');
+  }}
+  last
+>
+  Content contained within Accordion 3
 </Accordion>
 ```

@@ -15,11 +15,15 @@ const white = 'rgb(255, 255, 255)'; // #FFFFFF White
 const black = 'rgb(  0,   0,   0)'; // #000000 Black
 
 export default {
-  primaryColor  : color01,
-  textColor     : color05,
-  darkTextColor : color03,
+  primaryColor : color01,
+
+  textColor      : color05,
+  lightTextColor : color04,
+  darkTextColor  : color03,
 
   lineColor : color08,
+
+  lightBackgroundColor : white,
 
   darkBackgroundColor              : color10,
   darkBackgroundHighlightTextColor : white,
