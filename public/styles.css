@@ -53,9 +53,9 @@
   text-align: center;
 }
 
-[class^="rsg--sidebar"] {
+/* [class^="rsg--sidebar"] {
   width: 300px !important;
-}
+} */
 
 footer[class^="rsg--"] {
   display: none;
