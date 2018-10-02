@@ -1,12 +1,43 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import styled, { withTheme } from 'styled-components';
 import classnames from 'classnames';
 
 /**
 * A message styled as a notification for the user.
 */
 const Status = props => {
+  const renderIcon = () => {
+    let output = null;
+
+    // if the user passed an icon string in
+    if (props.icon) {
+      let icon = null;
+
+      // if the icon string the user passed in is one that we support
+      if (props.icon === 'check') {
+        icon = props.theme.statusIconCheck;
+      }
+
+      // if we were able to find the icon
+      if (icon) {
+        const StyledIcon = styled.div`
+          display      : inline-block;
+          margin-left  : ${props => props.theme.statusIconMarginLeft};
+          margin-right : ${props => props.theme.statusIconMarginRight};
+        `;
+
+        output = React.createElement(
+          StyledIcon,
+          null,
+          icon
+        );
+      }
+    }
+
+    return output;
+  };
+
   const StyledStatus = styled.div`
     display       : ${props => props.theme.statusDisplay};
     font-family   : ${props => props.theme.statusFontFamily};
@@ -51,6 +82,7 @@ const Status = props => {
     {
       className: classes
     },
+    renderIcon(),
     props.children
   );
 };
@@ -60,7 +92,7 @@ Status.propTypes = {
   children: PropTypes.any.isRequired,
 
   /** An icon to display before the status text */
-  icon: PropTypes.string,
+  icon: PropTypes.oneOf(['check']),
 
   /** Whether or not the Status is a success status */
   success: PropTypes.bool,
@@ -76,4 +108,4 @@ Status.propTypes = {
 };
 
 /** @component */
-export default Status;
+export default withTheme(Status);

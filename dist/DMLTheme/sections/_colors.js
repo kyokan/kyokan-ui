@@ -17,10 +17,14 @@ const color16 = 'rgb(248, 102, 102)'; // #000000 Carnation Red
 
 export default {
   primaryColor: color01,
+
   textColor: color05,
+  lightTextColor: color04,
   darkTextColor: color03,
 
   lineColor: color08,
+
+  lightBackgroundColor: white,
 
   darkBackgroundColor: color10,
   darkBackgroundHighlightTextColor: white,

@@ -1,5 +1,6 @@
 import DefaultTheme from '../DefaultTheme';
 
+import ACCORDION          from './sections/accordion';
 import BUTTON             from './sections/button';
 import DESCRIPTION        from './sections/description';
 import HORIZONTAL_RULE    from './sections/horizontal-rule';
@@ -10,6 +11,7 @@ import TEXT               from './sections/text';
 import TITLE              from './sections/title';
 
 const DMLTheme = {
+  ...ACCORDION,
   ...BUTTON,
   ...DESCRIPTION,
   ...HORIZONTAL_RULE,
