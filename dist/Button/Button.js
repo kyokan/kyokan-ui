@@ -36,13 +36,21 @@ const Button = props => {
   return React.createElement(
     StyledButton,
     {
-      onClick: props.onClick
+      onClick: props.onClick,
+      className: props.className
     },
     props.children
   );
 };
 
+Button.defaultProps = {
+  className: ''
+};
+
 Button.propTypes = {
+  /** Class name for top-level wrapper **/
+  className: PropTypes.string,
+
   /** Text to display within the button */
   children: PropTypes.string.isRequired,
 

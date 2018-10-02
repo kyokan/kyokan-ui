@@ -36,13 +36,21 @@ const Button = (props) => {
   return (
     <StyledButton
       onClick={props.onClick}
+      className={props.className}
     >
       {props.children}
     </StyledButton>
   );
 };
 
+Button.defaultProps = {
+  className: '',
+};
+
 Button.propTypes = {
+  /** Class name for top-level wrapper **/
+  className: PropTypes.string,
+
   /** Text to display within the button */
   children: PropTypes.string.isRequired,
 

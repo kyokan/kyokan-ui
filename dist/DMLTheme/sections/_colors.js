@@ -20,6 +20,7 @@ const color09 = 'rgb(247, 249, 252)'; // #F7F9FC Cloud White
 const color10 = 'rgb( 41,  54,  74)'; // #29364A Pickled Bluewood
 const color11 = 'rgb(237, 240, 245)'; // #EDF0F5 Mystic
 const color12 = 'rgb(255, 200,   0)'; // #FFC800 Supernova
+
 const white = 'rgb(255, 255, 255)'; // #FFFFFF White
 const black = 'rgb(  0,   0,   0)'; // #000000 Black
 
