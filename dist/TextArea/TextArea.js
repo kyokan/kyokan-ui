@@ -2,80 +2,125 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
+import shortID from 'shortid';
+
 /**
 * A textarea for the user to input text
 */
 const TextArea = props => {
   const StyledWrapper = styled.div`
-    display: flex;
-    flex-flow: column nowrap;
+    display   : flex;
+    flex-flow : column nowrap;
   `;
 
   const StyledTextArea = styled.textarea`
-    font-family : ${props => props.theme.textInputFontFamily};
-    font-weight : ${props => props.theme.textInputFontWeight};
-    font-size   : ${props => props.theme.textInputFontSize};
-    color       : ${props => props.theme.textInputColor};
-
-    border-color  : ${props => props.theme.textInputBorderColor};
-    border-width  : ${props => props.theme.textInputBorderWidth};
-    border-style  : ${props => props.theme.textInputBorderStyle};
-    border-radius : ${props => props.theme.textInputBorderRadius};
-
-    padding-top    : ${props => props.theme.textInputPaddingTop};
-    padding-right  : ${props => props.theme.textInputPaddingRight};
-    padding-bottom : ${props => props.theme.textInputPaddingBottom};
-    padding-left   : ${props => props.theme.textInputPaddingLeft};
-
-    outline : none;
-    resize: none;
     flex: 1 0 auto;
 
+    font-family : ${({ theme }) => theme.textAreaFontFamily};
+    font-weight : ${({ theme }) => theme.textAreaFontWeight};
+    font-size   : ${({ theme }) => theme.textAreaFontSize};
+    color       : ${({ theme }) => theme.textAreaColor};
+
+    border-color  : ${({ theme }) => theme.textAreaBorderColor};
+    border-width  : ${({ theme }) => theme.textAreaBorderWidth};
+    border-style  : ${({ theme }) => theme.textAreaBorderStyle};
+    border-radius : ${({ theme }) => theme.textAreaBorderRadius};
+
+    padding-top    : ${({ theme }) => theme.textAreaPaddingTop};
+    padding-right  : ${({ theme }) => theme.textAreaPaddingRight};
+    padding-bottom : ${({ theme }) => theme.textAreaPaddingBottom};
+    padding-left   : ${({ theme }) => theme.textAreaPaddingLeft};
+
+    outline : none;
+    resize : none;
+
     &:focus {
-      border-color : ${props => props.theme.textInputBorderColorActive};
+      border-color : ${({ theme }) => theme.textAreaBorderColorActive};
     }
 
     &::placeholder {
-      color       : ${props => props.theme.textInputPlaceholderColor};
-      font-weight : ${props => props.theme.textInputPlaceholderFontWeight};
+      color       : ${({ theme }) => theme.textAreaPlaceholderColor};
+      font-weight : ${({ theme }) => theme.textAreaPlaceholderFontWeight};
     }
   `;
 
   const StyledLabel = styled.label`
-    margin-bottom  : ${props => props.theme.textInputLabelMarginBottom};
-    color          : ${props => props.theme.textInputLabelColor};
-    font-family    : ${props => props.theme.textInputFontFamily};
-    font-size      : ${props => props.theme.textInputLabelFontSize};
-    text-transform : ${props => props.theme.textInputLabelTextTransform};
+    margin-bottom  : ${({ theme }) => theme.textAreaLabelMarginBottom};
+    color          : ${({ theme }) => theme.textAreaLabelColor};
+    font-family    : ${({ theme }) => theme.textAreaFontFamily};
+    font-size      : ${({ theme }) => theme.textAreaLabelFontSize};
+    text-transform : ${({ theme }) => theme.textAreaLabelTextTransform};
   `;
+
+  const id = shortID.generate(); // to tie label to input
 
   return React.createElement(
     StyledWrapper,
-    { className: props.className },
+    {
+      className: props.className
+    },
     React.createElement(
       StyledLabel,
-      null,
+      {
+        htmlFor: id
+      },
       props.label
     ),
-    React.createElement(
-      StyledTextArea,
-      {
-        onKeyUp: props.onKeyUp,
-        rows: props.rows,
-        cols: props.cols,
-        placeholder: props.placeholder,
-        maxlength: props.maxlength,
-        autofocus: props.autofocus,
-        readonly: props.readonly
-      },
-      props.children
-    )
+    React.createElement(StyledTextArea, {
+      autoFocus: props.autofocus,
+      cols: props.cols,
+      defaultValue: props.children,
+      disabled: props.disabled,
+      id: id,
+      maxLength: props.maxlength,
+      name: props.name,
+      onKeyUp: props.onKeyUp,
+      placeholder: props.placeholder,
+      readOnly: props.readonly,
+      rows: props.rows
+    })
   );
 };
 
+TextArea.defaultProps = {
+  autofocus: false,
+  children: '',
+  className: '',
+  cols: 20,
+  disabled: false,
+  label: '',
+  maxlength: null,
+  name: '',
+  onKeyUp: () => {},
+  placeholder: '',
+  readonly: false,
+  rows: 2
+};
+
 TextArea.propTypes = {
-  /** Class name for top-level wrapper **/
+  /** Specifies that a text area should automatically get focus when the page loads */
+  autofocus: PropTypes.bool,
+
+  /** The default text for the textarea */
+  children: PropTypes.string,
+
+  /** Class name for top-level wrapper */
   className: PropTypes.string,
+
+  /** Specifies the visible width of a text area */
+  cols: PropTypes.number,
+
+  /** Whether or not the textarea is disabled */
+  disabled: PropTypes.bool,
+
+  /** Label text for the TextArea */
+  label: PropTypes.string,
+
+  /** Specifies the maximum number of characters allowed in the text area */
+  maxlength: PropTypes.number,
+
+  /** The name for the textarea */
+  name: PropTypes.string,
 
   /** A callback function to fire when user is typing */
   onKeyUp: PropTypes.func,
@@ -83,27 +128,11 @@ TextArea.propTypes = {
   /** Placeholder text */
   placeholder: PropTypes.string,
 
-  /** Label text for the TextArea */
-  label: PropTypes.string,
+  /** Specifies that a text area should be read-only */
+  readonly: PropTypes.bool,
 
-  /** Specifies the visible number of lines in a text area **/
-  rows: PropTypes.number,
-
-  /** Specifies the visible width of a text area **/
-  cols: PropTypes.number,
-
-  /** Specifies the maximum number of characters allowed in the text area **/
-  maxlength: PropTypes.number,
-
-  /** Specifies that a text area should automatically get focus when the page loads **/
-  autofocus: PropTypes.bool,
-
-  /** Specifies that a text area should be read-only **/
-  readonly: PropTypes.bool
-};
-
-TextArea.defaultProps = {
-  className: ''
+  /** Specifies the visible number of lines in a text area */
+  rows: PropTypes.number
 };
 
 /** @component */
