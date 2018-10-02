@@ -5,6 +5,8 @@ import { Grid as RFGrid } from 'react-flexbox-grid';
 
 /**
 * A layout grid component (currently a wrapper around https://github.com/roylee0704/react-flexbox-grid/blob/master/src/components/Grid.js).
+*
+* It is made up of 12 columns.
 */
 const Grid = props => {
   return React.createElement(

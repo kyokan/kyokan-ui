@@ -1,5 +1,3 @@
-A grid with 12 columns.
-
 <div class="references">
 
 </div>
