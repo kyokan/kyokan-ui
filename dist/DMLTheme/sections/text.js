@@ -10,12 +10,6 @@ export default {
   textFontSize: pxToRem(16),
   textLineHeight: pxToRem(24),
 
-  textInputBorderColor: _COLORS.textInputBorderColor,
-  textInputActiveBorderColor: _COLORS.textInputActiveBorderColor,
-  textInputPlaceholderColor: _COLORS.textInputPlaceholderColor,
-  textInputColor: _COLORS.textInputColor,
-  textInputErrorColor: _COLORS.textInputErrorColor,
-
   primaryButtonBackgroundColor: _COLORS.primaryButtonBackgroundColor,
   primaryButtonHoverBackgroundColor: _COLORS.primaryButtonHoverBackgroundColor,
   primaryButtonActiveBackgroundColor: _COLORS.primaryButtonActiveBackgroundColor
