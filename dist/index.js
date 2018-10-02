@@ -29,6 +29,7 @@ export { default as Link } from './Link';
 export { default as Loading } from './Loading';
 export { default as Logo } from './Logo';
 export { default as MetaMaskButton } from './MetaMaskButton';
+export { default as Modal } from './Modal';
 export { default as MultiSelect } from './MultiSelect';
 export { default as OnboardingSidebar } from './OnboardingSidebar';
 export { default as Pagination } from './Pagination';
