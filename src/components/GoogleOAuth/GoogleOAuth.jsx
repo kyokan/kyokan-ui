@@ -63,8 +63,8 @@ GoogleOAuth.propTypes = {
   /** Whether or not the button is loading (whether OAuth is in progress) */
   loading: PropTypes.bool,
 
-  /** A callback that is fired when the Google OAuth button is clicked */
-  onClick: PropTypes.func,
+  /** A callback that is fired when the Google OAuth button is clicked and not loading */
+  onClick: PropTypes.func.isRequired,
 };
 
 GoogleOAuth.defaultProps = {
