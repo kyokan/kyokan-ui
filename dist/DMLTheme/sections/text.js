@@ -18,5 +18,7 @@ export default {
 
   primaryButtonBackgroundColor: _COLORS.primaryButtonBackgroundColor,
   primaryButtonHoverBackgroundColor: _COLORS.primaryButtonHoverBackgroundColor,
-  primaryButtonActiveBackgroundColor: _COLORS.primaryButtonActiveBackgroundColor
+  primaryButtonActiveBackgroundColor: _COLORS.primaryButtonActiveBackgroundColor,
+
+  headerTextColor: _COLORS.headerTextColor
 };
