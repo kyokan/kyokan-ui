@@ -8,39 +8,38 @@ import logo from './github_logo.svg';
 */
 const GitHubOAuth = props => {
   const StyledGitHubOAuth = styled.button`
-    font-family: ${props => props.theme.textFontFamily};
-    color: #000;
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    background-color: #eff3f6;
-    background-image: linear-gradient(-180deg,#fafbfc 0%,#eff3f6 90%);
-    border-radius: 4px;
-    border: 1px solid rgba(0, 0, 0, 0.15);
-    padding: .5rem 1rem;
-    cursor: pointer;
-    
+    font-family      : ${props => props.theme.githubOAuthFontFamily};
+    color            : #000;
+    display          : flex;
+    flex-flow        : row nowrap;
+    align-items      : center;
+    background-color : #eff3f6;
+    background-image : linear-gradient(-180deg,#fafbfc 0%,#eff3f6 90%);
+    border-radius    : 4px;
+    border           : 1px solid rgba(0, 0, 0, 0.15);
+    padding          : 0.5rem 1rem;
+    cursor           : pointer;
+
     &:hover {
-      background-color: #e6ebf1;
-      background-image: linear-gradient(-180deg,#f0f3f6 0%,#e6ebf1 90%);
-      background-position: -0.5em;
-      border-color: rgba(27,31,35,0.35);
+      background-color    : #e6ebf1;
+      background-image    : linear-gradient(-180deg,#f0f3f6 0%,#e6ebf1 90%);
+      background-position : -0.5em;
+      border-color        : rgba(27,31,35,0.35);
     }
-    
+
     &:active {
-      background-color: #e9ecef;
-      background-image: none;
-      border-color: rgba(27,31,35,0.35);
+      background-color : #e9ecef;
+      background-image : none;
+      border-color     : rgba(27,31,35,0.35);
     }
-    
+
     &:focus {
-      outline: none;
+      outline : none;
     }
   `;
 
   const StyledDiv = styled.div`
-    margin-left: .5rem;
-    color: ${({ theme }) => theme.githubOAuthButtonTextColor};
+    margin-left: 0.5rem;
   `;
 
   return React.createElement(
