@@ -14,6 +14,7 @@ import STATUS             from './sections/status';
 import TEXT               from './sections/text';
 import TEXT_INPUT         from './sections/text-input';
 import TITLE              from './sections/title';
+import LINK               from './sections/link';
 
 const DMLTheme = {
   ...ACCORDION,
@@ -30,6 +31,7 @@ const DMLTheme = {
   ...TEXT,
   ...TEXT_INPUT,
   ...TITLE,
+  ...LINK,
 };
 
 export default Object.assign({}, DefaultTheme, DMLTheme);
