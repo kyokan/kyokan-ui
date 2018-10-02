@@ -7,6 +7,7 @@ import GITHUB_OAUTH       from './sections/github-oauth';
 import HEADER             from './sections/header';
 import HORIZONTAL_RULE    from './sections/horizontal-rule';
 import METAMASK_BUTTON    from './sections/metamask-button';
+import MODAL              from './sections/modal';
 import ONBOARDING_SIDEBAR from './sections/onboarding-sidebar';
 import PANEL              from './sections/panel';
 import STATUS             from './sections/status';
@@ -22,6 +23,7 @@ const DMLTheme = {
   ...HEADER,
   ...HORIZONTAL_RULE,
   ...METAMASK_BUTTON,
+  ...MODAL,
   ...ONBOARDING_SIDEBAR,
   ...PANEL,
   ...STATUS,
