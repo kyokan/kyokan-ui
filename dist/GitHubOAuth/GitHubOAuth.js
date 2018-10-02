@@ -75,5 +75,9 @@ GitHubOAuth.propTypes = {
   onClick: PropTypes.func
 };
 
+GitHubOAuth.defaultProps = {
+  className: ''
+};
+
 /** @component */
 export default GitHubOAuth;

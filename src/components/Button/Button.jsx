@@ -32,6 +32,7 @@ const Button = (props) => {
   return (
     <StyledButton
       onClick={props.onClick}
+      className={props.className}
     >
       {props.children}
     </StyledButton>
@@ -39,6 +40,9 @@ const Button = (props) => {
 };
 
 Button.propTypes = {
+  /** Class name for top-level wrapper **/
+  className: PropTypes.string,
+
   /** Text to display within the button */
   children: PropTypes.string.isRequired,
 
@@ -65,6 +69,10 @@ Button.propTypes = {
 
   /** A callback function which is fired on button click */
   onClick: PropTypes.func.isRequired,
+};
+
+Button.defaultProps = {
+  className: '',
 };
 
 /** @component */
