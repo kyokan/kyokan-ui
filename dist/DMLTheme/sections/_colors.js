@@ -60,5 +60,7 @@ export default {
   primaryButtonHoverBackgroundColor: color18,
   primaryButtonActiveBackgroundColor: color01,
 
-  headerTextColor: black
+  headerTextColor: black,
+
+  githubOAuthButtonTextColor: black
 };
