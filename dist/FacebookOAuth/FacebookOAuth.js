@@ -1,16 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import logo from './google_logo.svg';
+import logo from './facebook_logo.svg';
 
 /**
-* A module that allows the user to connect to their Google account.
+* A module that allows the user to connect to their Facebook account.
 * Disconnecting is handled by a separate "Logout" component.
 */
-const GoogleOAuth = props => {
-  const StyledGoogleOAuth = styled.button`
-    font-family      : ${({ theme }) => theme.googleOAuthFontFamily};
-    font-size        : ${({ theme }) => theme.googleOAuthFontSize};
+const FacebookOAuth = props => {
+  const StyledFacebookOAuth = styled.button`
+    font-family      : ${({ theme }) => theme.facebookOAuthFontFamily};
+    font-size        : ${({ theme }) => theme.facebookOAuthFontSize};
     color            : #000;
     width            : 100%;
     display          : flex;
@@ -53,31 +53,31 @@ const GoogleOAuth = props => {
   };
 
   return React.createElement(
-    StyledGoogleOAuth,
+    StyledFacebookOAuth,
     { className: props.className, onClick: onClick, role: 'button', 'aria-pressed': props.loading ? 'true' : 'false' },
     React.createElement(StyledImg, { src: logo, alt: '' }),
     React.createElement(
       StyledDiv,
       null,
-      'Sign up with Google'
+      'Sign up with Facebook'
     )
   );
 };
 
-GoogleOAuth.propTypes = {
+FacebookOAuth.propTypes = {
   /** Class name for top-level wrapper **/
   className: PropTypes.string,
 
   /** Whether or not the button is loading (whether OAuth is in progress) */
   loading: PropTypes.bool,
 
-  /** A callback that is fired when the Google OAuth button is clicked and not loading */
+  /** A callback that is fired when the Facebook OAuth button is clicked and not loading */
   onClick: PropTypes.func.isRequired
 };
 
-GoogleOAuth.defaultProps = {
+FacebookOAuth.defaultProps = {
   className: ''
 };
 
 /** @component */
-export default GoogleOAuth;
+export default FacebookOAuth;

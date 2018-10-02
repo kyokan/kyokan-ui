@@ -3,6 +3,7 @@ import DefaultTheme from '../DefaultTheme';
 import ACCORDION          from './sections/accordion';
 import BUTTON             from './sections/button';
 import DESCRIPTION        from './sections/description';
+import FACEBOOK_OAUTH       from './sections/facebook-oauth';
 import GITHUB_OAUTH       from './sections/github-oauth';
 import GOOGLE_OAUTH       from './sections/google-oauth';
 import HEADER             from './sections/header';
@@ -20,6 +21,7 @@ const DMLTheme = {
   ...ACCORDION,
   ...BUTTON,
   ...DESCRIPTION,
+  ...FACEBOOK_OAUTH,
   ...GITHUB_OAUTH,
   ...GOOGLE_OAUTH,
   ...HEADER,

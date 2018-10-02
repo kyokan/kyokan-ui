@@ -17,6 +17,7 @@ export { default as DefaultTheme } from './DefaultTheme';
 export { default as Description } from './Description';
 export { default as Dropdown } from './Dropdown';
 export { default as EmptyState } from './EmptyState';
+export { default as FacebookOAuth } from './FacebookOAuth';
 export { default as GitHubOAuth } from './GitHubOAuth';
 export { default as GoogleOAuth } from './GoogleOAuth';
 export { default as Grid } from './Grid';

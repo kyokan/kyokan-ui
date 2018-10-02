@@ -39,9 +39,13 @@ const GoogleOAuth = (props) => {
     }
   `;
 
+  const StyledImg = styled.img`
+    width : 3rem;
+  `;
+
   const StyledDiv = styled.div`
-    margin    : 0 1rem 0 0;
-    flex-grow : 1;
+    margin-right : 3rem;
+    flex-grow    : 1;
   `;
 
   const onClick = function (e) {
@@ -50,7 +54,7 @@ const GoogleOAuth = (props) => {
 
   return (
     <StyledGoogleOAuth className={props.className} onClick={onClick} role="button" aria-pressed={props.loading ? 'true' : 'false'}>
-      <img src={logo} alt="" />
+      <StyledImg src={logo} alt="" />
       <StyledDiv>Sign up with Google</StyledDiv>
     </StyledGoogleOAuth>
   );
