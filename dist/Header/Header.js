@@ -31,9 +31,5 @@ Header.propTypes = {
   children: PropTypes.string.isRequired
 };
 
-Header.defaultProps = {
-  className: ''
-};
-
 /** @component */
 export default Header;
