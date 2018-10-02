@@ -61,17 +61,5 @@ export default {
   warningForegroundColor: '#745B08',
   warningBackgroundColor: '#FFFAC9',
   infoForegroundColor: color01,
-  infoBackgroundColor: white,
-
-  textInputBorderColor: color07,
-  textInputActiveBorderColor: color06,
-  textInputPlaceholderColor: color05,
-  textInputColor: black,
-  textInputErrorColor: color16,
-
-  primaryButtonBackgroundColor: color17,
-  primaryButtonHoverBackgroundColor: color18,
-  primaryButtonActiveBackgroundColor: color01,
-
-  headerTextColor: black
+  infoBackgroundColor: white
 };
