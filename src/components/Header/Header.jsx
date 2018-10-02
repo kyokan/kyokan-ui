@@ -8,19 +8,27 @@ import styled from 'styled-components';
 const Header = (props) => {
   const StyledHeader = styled.div`
     font-family: ${ (props) => props.theme.textFontFamily };
-    color: ${ (props) => props.theme.textColor };
+    color: ${ (props) => props.theme.headerTextColor };
+    font-weight: 500;
   `;
 
   return (
-    <StyledHeader>
+    <StyledHeader className={props.className}>
       {props.children}
     </StyledHeader>
   );
 };
 
 Header.propTypes = {
+  /** Class name for top level wrapper **/
+  className: PropTypes.string,
+
   /** The header text to be displayed */
   children: PropTypes.string.isRequired,
+};
+
+Header.defaultProps = {
+  className: '',
 };
 
 /** @component */

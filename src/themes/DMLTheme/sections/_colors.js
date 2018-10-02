@@ -59,4 +59,6 @@ export default {
   primaryButtonBackgroundColor: color17,
   primaryButtonHoverBackgroundColor: color18,
   primaryButtonActiveBackgroundColor: color01,
+
+  headerTextColor: black,
 };
