@@ -18,6 +18,7 @@ export { default as Description } from './Description';
 export { default as Dropdown } from './Dropdown';
 export { default as EmptyState } from './EmptyState';
 export { default as GitHubOAuth } from './GitHubOAuth';
+export { default as GoogleOAuth } from './GoogleOAuth';
 export { default as Grid } from './Grid';
 export { default as Header } from './Header';
 export { default as HorizontalRule } from './HorizontalRule';
