@@ -7,25 +7,29 @@ import styled from 'styled-components';
 */
 const Button = (props) => {
   const StyledButton = styled.div`
-    font-family: ${ (props) => props.theme.textFontFamily };
-    background-color: ${ ({ theme }) => theme.primaryButtonBackgroundColor };
-    color: white;
-    display: inline-block;
-    padding: .625rem;
-    border: 1px solid transparent;
-    border-radius: 5px;
-    cursor: pointer;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    user-select: none;
-    
+    font-family      : ${ ({ theme }) => theme.buttonFontFamily };
+    background-color : ${ ({ theme }) => theme.buttonPrimaryBackgroundColor };
+    color            : ${ ({ theme }) => theme.buttonColor };
+
+    border-width  : ${ ({ theme }) => theme.buttonBorderWidth };
+    border-style  : ${ ({ theme }) => theme.buttonBorderStyle };
+    border-color  : ${ ({ theme }) => theme.buttonBorderColor };
+    border-radius : ${ ({ theme }) => theme.buttonBorderRadius };
+
+    padding : ${ ({ theme }) => theme.buttonPadding };
+
+    cursor           : pointer;
+    display          : flex;
+    flex-flow        : row nowrap;
+    justify-content  : center;
+    user-select      : none;
+
     &:hover {
-      background-color: ${ ({ theme }) => theme.primaryButtonHoverBackgroundColor };
+      background-color: ${ ({ theme }) => theme.buttonPrimaryBackgroundColorHover };
     }
-    
+
     &:active {
-      background-color: ${ ({ theme }) => theme.primaryButtonActiveBackgroundColor };
+      background-color: ${ ({ theme }) => theme.buttonPrimaryBackgroundColorActive };
     }
   `;
 

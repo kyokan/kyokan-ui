@@ -2,69 +2,126 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
+import shortID from 'shortid';
+
 /**
 * A text input field.
 */
 const TextInput = props => {
-  const shouldShowError = !props.disableErrorMessage && props.errorMessage;
+  const id = shortID.generate(); // to tie label to input
+  const shouldShowError = props.error && props.errorMessage;
 
   const StyledTextInput = styled.div`
-    font-family: ${props => props.theme.textFontFamily};
-    color: ${props => props.theme.textColor};
-    display: flex;
-    flex-flow: column nowrap;
-  `;
+    display     : flex;
+    flex-flow   : column nowrap;
 
-  const StyledLabel = styled.div`
-  
-  `;
-
-  const StyledErrorMessage = styled.div`
-    color: ${props => props.theme.textInputErrorColor};
-    font-weight: 100;
-    font-size: .9rem;
-    line-height: 2.2rem;
+    font-family : ${props => props.theme.textInputFontFamily};
+    color       : ${props => props.theme.textInputColor};
   `;
 
   const StyledInput = styled.input`
-    border-radius: 3px;
-    padding: .5rem 1rem;
-    border: 1px solid ${props => props.theme.textInputBorderColor};
-    outline: none;
-    color: ${({ theme }) => theme.textInputColor};
-    border-color: ${({ theme }) => shouldShowError ? theme.textInputErrorColor : theme.textInputBorderColor};
-    font-weight: 300;
-    
+    font-family : ${props => props.theme.textInputFontFamily};
+    font-weight : ${props => props.theme.textInputFontWeight};
+    color       : ${props => props.theme.textInputColor};
+
+    border-color  : ${props => shouldShowError ? props.theme.textInputBorderColorError : props.theme.textInputBorderColor};
+    border-width  : ${props => props.theme.textInputBorderWidth};
+    border-style  : ${props => props.theme.textInputBorderStyle};
+    border-radius : ${props => props.theme.textInputBorderRadius};
+
+    padding-top    : ${props => props.theme.textInputPaddingTop};
+    padding-right  : ${props => props.theme.textInputPaddingRight};
+    padding-bottom : ${props => props.theme.textInputPaddingBottom};
+    padding-left   : ${props => props.theme.textInputPaddingLeft};
+
+    outline : none;
+
     &:focus {
-      border: 1px solid ${props => props.theme.textInputActiveBorderColor};
-      border-color: ${({ theme }) => shouldShowError ? theme.textInputErrorColor : theme.textInputActiveBorderColor};
+      border-color : ${props => shouldShowError ? props.theme.textInputBorderColorActiveError : props.theme.textInputBorderColorActive};
     }
-    
+
     &::placeholder {
-      color: ${props => props.theme.textInputPlaceholderColor};
-      font-weight: 100;
+      color       : ${props => props.theme.textInputPlaceholderColor};
+      font-weight : ${props => props.theme.textInputPlaceholderFontWeight};
     }
   `;
 
+  const StyledLabel = styled.label`
+    margin-bottom  : ${props => props.theme.textInputLabelMarginBottom};
+    color          : ${props => props.theme.textInputLabelColor};
+    font-family    : ${props => props.theme.textInputFontFamily};
+    font-size      : ${props => props.theme.textInputLabelFontSize};
+    text-transform : ${props => props.theme.textInputLabelTextTransform};
+  `;
+
+  const StyledErrorMessage = styled.div`
+    margin-top  : ${props => props.theme.textInputErrorMessageMarginTop};
+    color       : ${props => props.theme.textInputErrorMessageColor};
+    font-family : ${props => props.theme.textInputFontFamily};
+    font-size   : ${props => props.theme.textInputErrorMessageFontSize};
+    font-weight : ${props => props.theme.textInputErrorMessageFontWeight};
+  `;
+
+  function renderLabel() {
+    let output = null;
+
+    if (props.label) {
+      return React.createElement(
+        StyledLabel,
+        {
+          htmlFor: id
+        },
+        props.label
+      );
+    }
+
+    return output;
+  }
+
+  function renderErrorMessage() {
+    let output = null;
+
+    if (shouldShowError) {
+      output = React.createElement(
+        StyledErrorMessage,
+        null,
+        props.errorMessage
+      );
+    }
+
+    return output;
+  }
+
   return React.createElement(
     StyledTextInput,
-    { className: props.className },
-    React.createElement(
-      StyledLabel,
-      null,
-      props.label
-    ),
+    {
+      className: props.className
+    },
+    renderLabel(),
     React.createElement(StyledInput, {
+      id: id,
       type: props.type,
       placeholder: props.placeholder,
-      onChange: props.onChange
+      defaultValue: props.value,
+      onChange: event => {
+        // either the native DOM event or nothing
+        // (we don't want to return the Synthetic React event)
+        props.onChange(event.nativeEvent);
+      }
     }),
-    shouldShowError ? React.createElement(
-      StyledErrorMessage,
-      null,
-      props.errorMessage
-    ) : null
+    renderErrorMessage()
   );
+};
+
+TextInput.defaultProps = {
+  className: '',
+  error: false,
+  errorMessage: '',
+  label: '',
+  placeholder: '',
+  onChange: () => {},
+  type: 'text',
+  value: ''
 };
 
 TextInput.propTypes = {
@@ -80,23 +137,17 @@ TextInput.propTypes = {
   /** Type for input */
   type: PropTypes.oneOf(['text', 'password', 'number', 'email']),
 
-  /** Error Message text */
+  /** Error message text; must be set alongside `error` */
   errorMessage: PropTypes.string,
 
-  /** Show/Hide Error Message */
-  disableErrorMessage: PropTypes.bool,
+  /** Whether or not the input is in an error state; must be set alongside `errorMessage` */
+  error: PropTypes.bool,
 
   /** Placeholder text */
   placeholder: PropTypes.string,
 
   /** Fired on input value change */
   onChange: PropTypes.func
-};
-
-TextInput.defaultProps = {
-  className: '',
-  type: 'text',
-  errorMessage: ''
 };
 
 /** @component */
