@@ -102,11 +102,21 @@ const OnboardingSidebar = (props) => {
         <StyledDescription>{props.descriptionText}</StyledDescription>
         <StyledSidebarProgressWrapper>
           {
-            Array(props.totalSteps).fill(0).map((n, i) => (
-              i <= props.currentStepIndex
-                ? <StyledFullProgressBar/>
-                : <StyledEmptyProgressBar/>
-            ))
+            Array(props.totalSteps).fill(0).map((n, i) => {
+              if (i <= props.currentStepIndex) {
+                return (
+                  <StyledFullProgressBar
+                    key={`step-${i}`}
+                  />
+                );
+              } else {
+                return (
+                  <StyledEmptyProgressBar
+                    key={`step-${i}`}
+                  />
+                );
+              }
+            })
           }
         </StyledSidebarProgressWrapper>
       </StyledSidebarContentWrapper>

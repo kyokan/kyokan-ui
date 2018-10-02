@@ -119,7 +119,17 @@ const OnboardingSidebar = props => {
       React.createElement(
         StyledSidebarProgressWrapper,
         null,
-        Array(props.totalSteps).fill(0).map((n, i) => i <= props.currentStepIndex ? React.createElement(StyledFullProgressBar, null) : React.createElement(StyledEmptyProgressBar, null))
+        Array(props.totalSteps).fill(0).map((n, i) => {
+          if (i <= props.currentStepIndex) {
+            return React.createElement(StyledFullProgressBar, {
+              key: `step-${i}`
+            });
+          } else {
+            return React.createElement(StyledEmptyProgressBar, {
+              key: `step-${i}`
+            });
+          }
+        })
       )
     )
   );
