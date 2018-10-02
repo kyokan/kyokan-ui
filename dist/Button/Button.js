@@ -7,14 +7,30 @@ import styled from 'styled-components';
 */
 const Button = props => {
   const StyledButton = styled.div`
-    font-family: ${props => props.theme.textFontFamily};
-    color: white;
-    display: inline-block;
-    background-color: gray;
-    padding: 10px;
-    border: 1px solid black;
-    border-radius: 5px;
-    cursor: pointer;
+    font-family      : ${({ theme }) => theme.buttonFontFamily};
+    background-color : ${({ theme }) => theme.buttonPrimaryBackgroundColor};
+    color            : ${({ theme }) => theme.buttonColor};
+
+    border-width  : ${({ theme }) => theme.buttonBorderWidth};
+    border-style  : ${({ theme }) => theme.buttonBorderStyle};
+    border-color  : ${({ theme }) => theme.buttonBorderColor};
+    border-radius : ${({ theme }) => theme.buttonBorderRadius};
+
+    padding : ${({ theme }) => theme.buttonPadding};
+
+    cursor           : pointer;
+    display          : flex;
+    flex-flow        : row nowrap;
+    justify-content  : center;
+    user-select      : none;
+
+    &:hover {
+      background-color: ${({ theme }) => theme.buttonPrimaryBackgroundColorHover};
+    }
+
+    &:active {
+      background-color: ${({ theme }) => theme.buttonPrimaryBackgroundColorActive};
+    }
   `;
 
   return React.createElement(
