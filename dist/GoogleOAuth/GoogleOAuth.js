@@ -7,10 +7,10 @@ import logo from './google_logo.svg';
 * A module that allows the user to connect to their Google account.
 * Disconnecting is handled by a separate "Logout" component.
 */
-const GoogleOAuth = (props) => {
+const GoogleOAuth = props => {
   const StyledGoogleOAuth = styled.button`
-    font-family      : ${ ({ theme }) => theme.googleOAuthFontFamily };
-    font-size        : ${ ({ theme }) => theme.googleOAuthFontSize };
+    font-family      : ${({ theme }) => theme.googleOAuthFontFamily};
+    font-size        : ${({ theme }) => theme.googleOAuthFontSize};
     color            : #000;
     width            : 100%;
     display          : flex;
@@ -46,13 +46,17 @@ const GoogleOAuth = (props) => {
 
   const onClick = function (e) {
     return props.loading || !props.onClick ? null : props.onClick(e);
-  }
+  };
 
-  return (
-    <StyledGoogleOAuth className={props.className} onClick={onClick} role="button" aria-pressed={props.loading ? 'true' : 'false'}>
-      <img src={logo} alt="" />
-      <StyledDiv>Sign up with Google</StyledDiv>
-    </StyledGoogleOAuth>
+  return React.createElement(
+    StyledGoogleOAuth,
+    { className: props.className, onClick: onClick, role: 'button', 'aria-pressed': props.loading ? 'true' : 'false' },
+    React.createElement('img', { src: logo, alt: '' }),
+    React.createElement(
+      StyledDiv,
+      null,
+      'Sign up with Google'
+    )
   );
 };
 
@@ -64,11 +68,11 @@ GoogleOAuth.propTypes = {
   loading: PropTypes.bool,
 
   /** A callback that is fired when the Google OAuth button is clicked */
-  onClick: PropTypes.func,
+  onClick: PropTypes.func
 };
 
 GoogleOAuth.defaultProps = {
-  className: '',
+  className: ''
 };
 
 /** @component */
