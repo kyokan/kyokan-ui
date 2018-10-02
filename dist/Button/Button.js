@@ -8,13 +8,25 @@ import styled from 'styled-components';
 const Button = props => {
   const StyledButton = styled.div`
     font-family: ${props => props.theme.textFontFamily};
+    background-color: ${({ theme }) => theme.primaryButtonBackgroundColor};
     color: white;
     display: inline-block;
-    background-color: gray;
-    padding: 10px;
-    border: 1px solid black;
+    padding: .625rem;
+    border: 1px solid transparent;
     border-radius: 5px;
     cursor: pointer;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    user-select: none;
+    
+    &:hover {
+      background-color: ${({ theme }) => theme.primaryButtonHoverBackgroundColor};
+    }
+    
+    &:active {
+      background-color: ${({ theme }) => theme.primaryButtonActiveBackgroundColor};
+    }
   `;
 
   return React.createElement(
