@@ -24,7 +24,7 @@ const Text = (props) => {
 
 Text.propTypes = {
   /** Text to display */
-  children: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
 };
 
 /** @component */

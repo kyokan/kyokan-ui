@@ -44,30 +44,26 @@ const Button = props => {
 };
 
 Button.defaultProps = {
-  className: ''
+  className: '',
+  disabled: false,
+  leftIcon: null,
+  light: false,
+  loading: false,
+  loadingText: '',
+  onClick: () => {},
+  rightIcon: null,
+  type: 'brand'
 };
 
 Button.propTypes = {
-  /** Class name for top-level wrapper **/
-  className: PropTypes.string,
-
   /** Text to display within the button */
   children: PropTypes.string.isRequired,
 
-  /** Whether or not the button is displaying a loading state */
-  loading: PropTypes.bool,
-
-  /** The text to show as button text while 'isLoading' is true */
-  loadingText: PropTypes.string,
+  /** Class name for top-level wrapper **/
+  className: PropTypes.string,
 
   /** Whether or not a button is disabled */
   disabled: PropTypes.bool,
-
-  /** One of the following: 'base', 'neutral', 'brand', 'brand-outline', 'destructive', 'success' */
-  type: PropTypes.string,
-
-  /** The icon shown to the right of the button text */
-  rightIcon: PropTypes.string,
 
   /** The icon shown to the left of the button text */
   leftIcon: PropTypes.string,
@@ -75,8 +71,20 @@ Button.propTypes = {
   /** Whether or not to apply light styles */
   light: PropTypes.bool,
 
+  /** Whether or not the button is displaying a loading state */
+  loading: PropTypes.bool,
+
+  /** The text to show as button text while 'isLoading' is true */
+  loadingText: PropTypes.string,
+
   /** A callback function which is fired on button click */
-  onClick: PropTypes.func.isRequired
+  onClick: PropTypes.func,
+
+  /** The icon shown to the right of the button text */
+  rightIcon: PropTypes.string,
+
+  /** One of the following: 'base', 'neutral', 'brand', 'brand-outline', 'destructive', 'success' */
+  type: PropTypes.string
 };
 
 /** @component */
