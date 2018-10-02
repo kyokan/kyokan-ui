@@ -44,7 +44,7 @@ const GitHubOAuth = (props) => {
 
   return (
     <StyledGitHubOAuth className={props.className} onClick={props.onClick}>
-      <img src={logo} />
+      <img src={logo} alt="" />
       <StyledDiv>Connect to GitHub</StyledDiv>
     </StyledGitHubOAuth>
   );
