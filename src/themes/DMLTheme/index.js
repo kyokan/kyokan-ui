@@ -8,6 +8,7 @@ import ONBOARDING_SIDEBAR from './sections/onboarding-sidebar';
 import PANEL              from './sections/panel';
 import STATUS             from './sections/status';
 import TEXT               from './sections/text';
+import TEXT_INPUT         from './sections/text-input';
 import TITLE              from './sections/title';
 
 const DMLTheme = {
@@ -19,6 +20,7 @@ const DMLTheme = {
   ...PANEL,
   ...STATUS,
   ...TEXT,
+  ...TEXT_INPUT,
   ...TITLE,
 };
 

@@ -1,3 +1,5 @@
+import Color from 'color';
+
 const color01 = 'rgb( 60, 129, 237)'; // #3C81ED Royal Blue
 const color02 = 'rgb(177, 204, 248)'; // #B1CCF8 Sail
 const color03 = 'rgb( 13,  41,  87)'; // #0D2957 Downriver
@@ -10,9 +12,11 @@ const color09 = 'rgb(247, 249, 252)'; // #F7F9FC Cloud White
 const color10 = 'rgb( 41,  54,  74)'; // #29364A Pickled Bluewood
 const color11 = 'rgb(237, 240, 245)'; // #EDF0F5 Mystic
 const color12 = 'rgb(255, 200,   0)'; // #FFC800 Supernova
+const white   = 'rgb(255, 255, 255)'; // #FFFFFF White
+const black   = 'rgb(  0,   0,   0)'; // #000000 Black
 
-const white = 'rgb(255, 255, 255)'; // #FFFFFF White
-const black = 'rgb(  0,   0,   0)'; // #000000 Black
+const errorHighlightColor      = '#F40000';
+const errorHighlightFocusColor = Color(errorHighlightColor).darken(0.2).string();
 
 export default {
   primaryColor : color01,
@@ -21,7 +25,8 @@ export default {
   lightTextColor : color04,
   darkTextColor  : color03,
 
-  lineColor : color08,
+  lineColor     : color08,
+  lineColorDark : color06,
 
   lightBackgroundColor : white,
 
@@ -30,12 +35,14 @@ export default {
 
   highlightBackgroundColor : white,
 
-  errorForegroundColor   : '#DB0F38',
-  errorBackgroundColor   : '#FFEDF1',
-  successForegroundColor : '#008B41',
-  successBackgroundColor : '#DDFCE6',
-  warningForegroundColor : '#745B08',
-  warningBackgroundColor : '#FFFAC9',
-  infoForegroundColor    : color01,
-  infoBackgroundColor    : white,
+  errorForegroundColor     : '#DB0F38',
+  errorBackgroundColor     : '#FFEDF1',
+  errorHighlightColor      : errorHighlightColor,
+  errorHighlightFocusColor : errorHighlightFocusColor,
+  successForegroundColor   : '#008B41',
+  successBackgroundColor   : '#DDFCE6',
+  warningForegroundColor   : '#745B08',
+  warningBackgroundColor   : '#FFFAC9',
+  infoForegroundColor      : color01,
+  infoBackgroundColor      : white,
 };
