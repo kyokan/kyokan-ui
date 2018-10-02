@@ -1,6 +1,3 @@
-import _COLORS from './_colors';
-import _FONTS from './_fonts';
-
 import TEXT_INPUT from './text-input';
 
 export default {

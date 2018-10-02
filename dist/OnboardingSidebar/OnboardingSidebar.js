@@ -81,16 +81,26 @@ const OnboardingSidebar = props => {
 
   return React.createElement(
     StyledOnboardingSidebar,
-    { className: props.className },
+    {
+      className: props.className
+    },
     React.createElement(
       StyledImageWrapper,
       null,
-      React.createElement('img', { src: props.logoUrl, className: props.logoClassName })
+      React.createElement('img', {
+        src: props.logoUrl,
+        className: props.logoClassName,
+        alt: 'Logo'
+      })
     ),
     React.createElement(
       StyledSidebarContentWrapper,
       null,
-      React.createElement('img', { className: props.iconClassName, src: props.iconUrl }),
+      React.createElement('img', {
+        className: props.iconClassName,
+        src: props.iconUrl,
+        alt: 'Icon'
+      }),
       React.createElement(
         StyledSubheader,
         null,

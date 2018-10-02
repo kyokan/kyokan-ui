@@ -81,12 +81,22 @@ const OnboardingSidebar = (props) => {
   `;
 
   return (
-    <StyledOnboardingSidebar className={props.className}>
+    <StyledOnboardingSidebar
+      className={props.className}
+    >
       <StyledImageWrapper>
-        <img src={props.logoUrl} className={props.logoClassName} />
+        <img
+          src={props.logoUrl}
+          className={props.logoClassName}
+          alt="Logo"
+        />
       </StyledImageWrapper>
       <StyledSidebarContentWrapper>
-        <img className={props.iconClassName} src={props.iconUrl} />
+        <img
+          className={props.iconClassName}
+          src={props.iconUrl}
+          alt="Icon"
+        />
         <StyledSubheader>{props.subheaderText}</StyledSubheader>
         <StyledHeader>{props.headerText}</StyledHeader>
         <StyledDescription>{props.descriptionText}</StyledDescription>

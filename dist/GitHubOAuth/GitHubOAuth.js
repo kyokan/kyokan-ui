@@ -44,8 +44,14 @@ const GitHubOAuth = props => {
 
   return React.createElement(
     StyledGitHubOAuth,
-    { className: props.className, onClick: props.onClick },
-    React.createElement('img', { src: logo }),
+    {
+      className: props.className,
+      onClick: props.onClick
+    },
+    React.createElement('img', {
+      src: logo,
+      alt: 'GitHub logo'
+    }),
     React.createElement(
       StyledDiv,
       null,

@@ -45,8 +45,14 @@ const MetaMaskButton = props => {
 
   return React.createElement(
     StyledMetaMaskButton,
-    { className: props.className, onClick: props.onClick },
-    React.createElement('img', { src: logo }),
+    {
+      className: props.className,
+      onClick: props.onClick
+    },
+    React.createElement('img', {
+      src: logo,
+      alt: 'MetaMask logo'
+    }),
     React.createElement(
       StyledDiv,
       null,

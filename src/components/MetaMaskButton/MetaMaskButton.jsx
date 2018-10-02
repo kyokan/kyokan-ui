@@ -44,8 +44,14 @@ const MetaMaskButton = (props) => {
   `;
 
   return (
-    <StyledMetaMaskButton className={props.className} onClick={props.onClick}>
-      <img src={logo} />
+    <StyledMetaMaskButton
+      className={props.className}
+      onClick={props.onClick}
+    >
+      <img
+        src={logo}
+        alt="MetaMask logo"
+      />
       <StyledDiv>Install MetaMask</StyledDiv>
     </StyledMetaMaskButton>
   );
