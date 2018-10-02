@@ -5,6 +5,7 @@ import BUTTON             from './sections/button';
 import DESCRIPTION        from './sections/description';
 import HEADER             from './sections/header';
 import HORIZONTAL_RULE    from './sections/horizontal-rule';
+import METAMASK_BUTTON    from './sections/metamask-button';
 import ONBOARDING_SIDEBAR from './sections/onboarding-sidebar';
 import PANEL              from './sections/panel';
 import STATUS             from './sections/status';
@@ -18,6 +19,7 @@ const DMLTheme = {
   ...DESCRIPTION,
   ...HEADER,
   ...HORIZONTAL_RULE,
+  ...METAMASK_BUTTON,
   ...ONBOARDING_SIDEBAR,
   ...PANEL,
   ...STATUS,
