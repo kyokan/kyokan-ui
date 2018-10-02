@@ -8,7 +8,7 @@ export default {
   textInputColor         : _COLORS.darkTextColor,
   textInputFontFamily    : _FONTS.baseFont,
   textInputFontSize      : pxToRem(15),
-  textInputFontWeight    : _FONTS.mediumFontWeight,
+  textInputFontWeight    : _FONTS.regularFontWeight,
   textInputPaddingBottom : pxToRem(10),
   textInputPaddingLeft   : pxToRem(15),
   textInputPaddingRight  : pxToRem(15),

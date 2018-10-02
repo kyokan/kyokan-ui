@@ -9,7 +9,7 @@
 ```jsx
 <TextArea
   onKeyUp={() => {}}
-  placeholder=""
-  label=""
+  placeholder="Enter text here"
+  label="Bio (Optional)"
 />
 ```

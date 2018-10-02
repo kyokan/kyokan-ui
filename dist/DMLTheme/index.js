@@ -14,9 +14,11 @@ import ONBOARDING_SIDEBAR from './sections/onboarding-sidebar';
 import PANEL from './sections/panel';
 import STATUS from './sections/status';
 import TEXT from './sections/text';
+import TEXT_AREA from './sections/text-area';
 import TEXT_INPUT from './sections/text-input';
 import TITLE from './sections/title';
+import LINK from './sections/link';
 
-const DMLTheme = _extends({}, ACCORDION, BUTTON, DESCRIPTION, GITHUB_OAUTH, HEADER, HORIZONTAL_RULE, METAMASK_BUTTON, MODAL, ONBOARDING_SIDEBAR, PANEL, STATUS, TEXT, TEXT_INPUT, TITLE);
+const DMLTheme = _extends({}, ACCORDION, BUTTON, DESCRIPTION, GITHUB_OAUTH, HEADER, HORIZONTAL_RULE, METAMASK_BUTTON, MODAL, ONBOARDING_SIDEBAR, PANEL, STATUS, TEXT, TEXT_AREA, TEXT_INPUT, TITLE, LINK);
 
 export default Object.assign({}, DefaultTheme, DMLTheme);

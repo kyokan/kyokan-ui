@@ -22,6 +22,7 @@ const TextInput = (props) => {
   const StyledInput = styled.input`
     font-family : ${ (props) => props.theme.textInputFontFamily };
     font-weight : ${ (props) => props.theme.textInputFontWeight };
+    font-size   : ${ (props) => props.theme.textInputFontSize };
     color       : ${ (props) => props.theme.textInputColor };
 
     border-color  : ${ (props) => shouldShowError ? props.theme.textInputBorderColorError : props.theme.textInputBorderColor };
