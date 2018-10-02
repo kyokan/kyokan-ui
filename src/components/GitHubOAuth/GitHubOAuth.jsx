@@ -8,7 +8,8 @@ import logo from './github_logo.svg';
 */
 const GitHubOAuth = (props) => {
   const StyledGitHubOAuth = styled.button`
-    font-family      : ${ (props) => props.theme.githubOAuthFontFamily };
+    font-family      : ${ ({ theme }) => theme.githubOAuthFontFamily };
+    font-size        : ${ ({ theme }) => theme.githubOAuthFontSize };
     color            : #000;
     display          : flex;
     flex-flow        : row nowrap;
