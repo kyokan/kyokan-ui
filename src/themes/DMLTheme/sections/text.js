@@ -9,8 +9,4 @@ export default {
   textFontWeight  : _FONTS.mediumFontWeight,
   textFontSize    : pxToRem(16),
   textLineHeight  : pxToRem(24),
-
-  primaryButtonBackgroundColor       : _COLORS.primaryButtonBackgroundColor,
-  primaryButtonHoverBackgroundColor  : _COLORS.primaryButtonHoverBackgroundColor,
-  primaryButtonActiveBackgroundColor : _COLORS.primaryButtonActiveBackgroundColor,
 };

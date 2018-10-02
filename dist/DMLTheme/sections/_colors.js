@@ -1,5 +1,13 @@
 import Color from 'color';
 
+function lighten(color, value) {
+  return Color(color).lighten(value).string();
+}
+
+function darken(color, value) {
+  return Color(color).darken(value).string();
+}
+
 const color01 = 'rgb( 60, 129, 237)'; // #3C81ED Royal Blue
 const color02 = 'rgb(177, 204, 248)'; // #B1CCF8 Sail
 const color03 = 'rgb( 13,  41,  87)'; // #0D2957 Downriver
@@ -15,16 +23,16 @@ const color12 = 'rgb(255, 200,   0)'; // #FFC800 Supernova
 const white = 'rgb(255, 255, 255)'; // #FFFFFF White
 const black = 'rgb(  0,   0,   0)'; // #000000 Black
 
-const color15 = 'rgba(  0,   0,   0, .5)'; // #000000 Black
-const color16 = 'rgb(248, 102, 102)'; // #000000 Carnation Red
-const color17 = 'rgba( 60, 129, 237, .95)'; // #3C81ED Royal Blue
-const color18 = 'rgba( 60, 129, 237, .9)'; // #3C81ED Royal Blue
+const primaryColorHover = lighten(color01, 0.2);
+const primaryColorActive = lighten(color01, 0.1);
 
 const errorHighlightColor = '#F40000';
-const errorHighlightFocusColor = Color(errorHighlightColor).darken(0.2).string();
+const errorHighlightFocusColor = darken(errorHighlightColor, 0.2);
 
 export default {
   primaryColor: color01,
+  primaryColorHover: primaryColorHover,
+  primaryColorActive: primaryColorActive,
 
   textColor: color05,
   lightTextColor: color04,
@@ -49,9 +57,5 @@ export default {
   warningForegroundColor: '#745B08',
   warningBackgroundColor: '#FFFAC9',
   infoForegroundColor: color01,
-  infoBackgroundColor: white,
-
-  primaryButtonBackgroundColor: color17,
-  primaryButtonHoverBackgroundColor: color18,
-  primaryButtonActiveBackgroundColor: color01
+  infoBackgroundColor: white
 };
