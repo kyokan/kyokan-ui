@@ -101,6 +101,7 @@ const TextInput = (props) => {
         id={id}
         type={props.type}
         placeholder={props.placeholder}
+        defaultValue={props.value}
         onChange={(event) => {
           // either the native DOM event or nothing
           // (we don't want to return the Synthetic React event)

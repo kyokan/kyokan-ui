@@ -15,7 +15,7 @@
 <TextInput
   value=""
   label="Label"
-  placeholder="Default value"
+  placeholder="Default Value"
   onChange={(domEvent) => {
     console.log(domEvent);
   }}
