@@ -13,8 +13,6 @@ function ready(callback) {
 function handleClick (event) {
   const lightroomDisplayElement = document.getElementById(LIGHTROOM_DISPLAY_ID);
 
-  window.RAVI = event.target.parentElement;
-
   // click on
   if (
     event.target &&
