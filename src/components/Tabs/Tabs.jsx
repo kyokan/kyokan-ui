@@ -107,6 +107,8 @@ class Tabs extends Component {
     const StyledTabs = styled.div`
       font-family : ${ ({ theme }) => theme.textFontFamily };
       color       : ${ ({ theme }) => theme.textColor };
+
+      background-color: white;
     `;
 
     return (
