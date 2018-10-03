@@ -2,7 +2,6 @@ import { pxToRem, rgbToRgba } from '../../utils';
 
 import _COLORS from './_colors';
 import _FONTS from './_fonts';
-import _ICONS from './_icons';
 
 export default {
   statusFontFamily: _FONTS.baseFont,
@@ -28,7 +27,6 @@ export default {
   statusInfoBorderColor: rgbToRgba(_COLORS.infoForegroundColor, 0.4),
   statusInfoPadding: pxToRem(4),
 
-  statusIconCheck: _ICONS.check,
   statusIconColor: _COLORS.infoForegroundColor,
   statusIconMarginLeft: pxToRem(3),
   statusIconMarginRight: pxToRem(8)
