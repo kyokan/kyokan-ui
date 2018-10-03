@@ -7,8 +7,8 @@ import styled from 'styled-components';
 */
 const VerticalTab = (props) => {
   const StyledVerticalTab = styled.div`
-    font-family: ${ (props) => props.theme.textFontFamily };
-    color: ${ (props) => props.theme.textColor };
+    font-family : ${ ({ theme }) => theme.verticalTabFontFamily };
+    color       : ${ ({ theme }) => theme.verticalTabColor };
   `;
 
   return (
@@ -22,8 +22,8 @@ VerticalTab.propTypes = {
   /** The content of the tab */
   children: PropTypes.any.isRequired,
 
-  /** A boolean which triggers the application of the active styles */
-  active: PropTypes.bool,
+  /** The title of the tab */
+  title: PropTypes.string.isRequired,
 };
 
 /** @component */

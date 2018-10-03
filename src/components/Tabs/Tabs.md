@@ -7,9 +7,19 @@
 </div>
 
 ```jsx
-<Tabs
-  activeKey=""
->
-  Children
+<Tabs>
+  <VerticalTab
+    title="Tab 1"
+    icon="user"
+  >
+    Tab 1 Content
+  </VerticalTab>
+
+  <VerticalTab
+    title="Tab 2"
+    icon="wallet"
+  >
+    Tab 2 Content
+  </VerticalTab>
 </Tabs>
 ```

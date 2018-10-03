@@ -2,19 +2,36 @@ import React from 'react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
+  faAward,
   faCheck,
   faChevronDown,
   faChevronUp,
+  faClipboard,
+  faCopy,
+  faUserCircle,
+  faUserPlus,
+  faWallet,
 } from "@fortawesome/free-solid-svg-icons";
 
-function wrapFontAwesomeIcon (icon) {
+function wrapFontAwesomeIcon (icon, size) {
   return (
-    <FontAwesomeIcon icon={icon} />
+    // https://github.com/FortAwesome/react-fontawesome#features
+    <FontAwesomeIcon
+      icon={icon}
+      size={size}
+      fixedWidth
+    />
   );
 }
 
 export default {
-  check       : wrapFontAwesomeIcon(faCheck),
-  chevronDown : wrapFontAwesomeIcon(faChevronDown),
-  chevronUp   : wrapFontAwesomeIcon(faChevronUp),
+  award       : (size) => wrapFontAwesomeIcon(faAward, size),
+  check       : (size) => wrapFontAwesomeIcon(faCheck, size),
+  chevronDown : (size) => wrapFontAwesomeIcon(faChevronDown, size),
+  chevronUp   : (size) => wrapFontAwesomeIcon(faChevronUp, size),
+  clipboard   : (size) => wrapFontAwesomeIcon(faClipboard, size),
+  copy        : (size) => wrapFontAwesomeIcon(faCopy, size),
+  userCircle  : (size) => wrapFontAwesomeIcon(faUserCircle, size),
+  userPlus    : (size) => wrapFontAwesomeIcon(faUserPlus, size),
+  wallet      : (size) => wrapFontAwesomeIcon(faWallet, size),
 }

@@ -14,7 +14,13 @@ function handleClick (event) {
   const lightroomDisplayElement = document.getElementById(LIGHTROOM_DISPLAY_ID);
 
   // click on
-  if (event.target.parentElement.parentElement.classList.contains(LIGHTROOM_TARGET_CLASS)) {
+  if (
+    event.target &&
+    event.target.parentElement &&
+    event.target.parentElement.parentElement &&
+    event.target.parentElement.parentElement.classList &&
+    event.target.parentElement.parentElement.classList.contains(LIGHTROOM_TARGET_CLASS)
+  ) {
     event.preventDefault();
 
     // add image to display
