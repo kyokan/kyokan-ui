@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled, { withTheme } from 'styled-components';
 
+import Icon from '../Icon';
+
 const StyledAccordionContent = styled.div`
   background-color : ${ (props) => props.theme.accordionContentBackgroundColor };
   padding          : ${ (props) => props.theme.accordionContentPadding };
@@ -42,9 +44,17 @@ class Accordion extends Component {
 
   renderToggleIcon = () => {
     if (this.state.expanded) {
-      return this.props.theme.accordionToggleIconExpanded;
+      return (
+        <Icon
+          name={this.props.expandedIcon}
+        />
+      );
     } else {
-      return this.props.theme.accordionToggleIcon;
+      return (
+        <Icon
+          name={this.props.closedIcon}
+        />
+      );
     }
   }
 
@@ -102,11 +112,13 @@ class Accordion extends Component {
 }
 
 Accordion.defaultProps = {
-  first    : false,
-  last     : false,
-  middle   : false,
-  expanded : false,
-  onChange : () => {},
+  closedIcon   : 'chevronDown',
+  expanded     : false,
+  expandedIcon : 'chevronUp',
+  first        : false,
+  last         : false,
+  middle       : false,
+  onChange     : () => {},
 };
 
 Accordion.propTypes = {
@@ -130,6 +142,12 @@ Accordion.propTypes = {
 
   /** Whether or not the accordion is neither the first nor last of a list */
   middle: PropTypes.bool,
+
+  /** The icon you want to use when accordion is expanded */
+  expandedIcon: PropTypes.string,
+
+  /** The icon you want to use when accordion is closed */
+  closedIcon: PropTypes.string,
 };
 
 /** @component */
