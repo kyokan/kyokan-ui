@@ -1,6 +1,8 @@
-TO SPIN UP SERVER                        : yarn start
-TO GENERATE NEW COMPONENT                : yarn generate [ComponentName]
-TO IMPORT FROM REGION-SELECTOR JSON FILE : yarn import-rs
+TO INSTALL DEPENDENCIES                  : npm run install-with-peers
 
-TO GENERATE DIST FILES                   : yarn dist
-TO BUILD STYLEGUIDE                      : yarn build
+TO SPIN UP SERVER                        : npm run start
+TO GENERATE NEW COMPONENT                : npm run generate [ComponentName]
+TO IMPORT FROM REGION-SELECTOR JSON FILE : npm run import-rs
+
+TO GENERATE DIST FILES                   : npm run dist
+TO BUILD STYLEGUIDE                      : npm run build

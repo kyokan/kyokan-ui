@@ -70,16 +70,24 @@ class Tabs extends Component {
   }
 
   renderContent = () => {
+    const StyledContent = styled.div`
+      border-left-width: ${ ({ theme }) => theme.tabsBorderWidth };
+      border-left-style: ${ ({ theme }) => theme.tabsBorderStyle };
+      border-left-color: ${ ({ theme }) => theme.tabsBorderColor };
+    `;
+
     if (this.props.children && this.props.children.length) {
       if (this.props.children[0].type.name === 'VerticalTab') {
         return (
           <Grid>
             <Row>
-              <Column md={4} lg={4} xl={4}>
+              <Column md={3} lg={3} xl={3}>
                 {this.renderVerticalTabList()}
               </Column>
-              <Column md={8} lg={8} xl={4}>
-                {this.renderActiveTabContent()}
+              <Column md={9} lg={9} xl={9}>
+                <StyledContent>
+                  {this.renderActiveTabContent()}
+                </StyledContent>
               </Column>
             </Row>
           </Grid>

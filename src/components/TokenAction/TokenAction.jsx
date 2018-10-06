@@ -7,13 +7,13 @@ import styled from 'styled-components';
 */
 const TokenAction = (props) => {
   const StyledTokenAction = styled.div`
-    font-family: ${ (props) => props.theme.textFontFamily };
-    color: ${ (props) => props.theme.textColor };
+    font-family : ${ (props) => props.theme.textFontFamily };
+    color       : ${ (props) => props.theme.textColor };
   `;
 
   return (
     <StyledTokenAction>
-      
+      {props.amount}
     </StyledTokenAction>
   );
 };

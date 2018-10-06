@@ -2,27 +2,27 @@ import React from 'react';
 import { configure, mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
-import Panel from './Panel';
+import Box from './Box';
 
 configure({ adapter: new Adapter() });
 
-describe('Panel', () => {
-  let mountedPanel;
-  const content = 'Test Panel';
-  const panel = () => {
-    if (!mountedPanel) {
-      mountedPanel = mount(
-        <Panel>{content}</Panel>
+describe('Box', () => {
+  let mountedBox;
+  const content = 'Test Box';
+  const box = () => {
+    if (!mountedBox) {
+      mountedBox = mount(
+        <Box>{content}</Box>
       );
     }
 
-    return mountedPanel;
+    return mountedBox;
   }
 
   beforeEach(() => {});
 
   it('always renders a div', () => {
-    const divs = panel().find('div');
+    const divs = box().find('div');
     expect(divs.length).toBeGreaterThan(0);
   });
 });

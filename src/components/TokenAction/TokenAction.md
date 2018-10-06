@@ -14,8 +14,8 @@
 ```jsx
 <TokenAction
   amount={0}
-  token=""
-  buttonText=""
+  token="DML"
+  buttonText="Press me"
   onClick={() => {}}
 />
 ```

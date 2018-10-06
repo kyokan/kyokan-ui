@@ -1,16 +1,22 @@
 # Kyokan UI
 
+## Setup
+
+```shell
+npm run install-with-peers
+```
+
 ## Commands
 
 ```shell
-yarn start                    # to start a style guide dev server
-yarn generate [ComponentName] # to generate a scaffold for a new component
-yarn dist                     # build out component dist files for use as a module
+npm run start                    # to start a style guide dev server
+npm run generate [ComponentName] # to generate a scaffold for a new component
+npm run dist                     # build out component dist files for use as a module
 
-yarn link                     # to begin linking to use local module (this command must be run from this repo)
-yarn link kyokan-ui           # to complete linking to use local module (this command must be run from the target repo)
+npm run build                    # to build a static version of the styleguide
 
-yarn build                    # to build a static version of the styleguide
+npm link                         # to begin linking to use local module (this command must be run from this repo)
+npm link kyokan-ui               # to complete linking to use local module (this command must be run from the target repo)
 ```
 
 ## Motivation

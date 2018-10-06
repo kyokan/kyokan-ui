@@ -63,6 +63,12 @@ class Tabs extends Component {
     };
 
     this.renderContent = () => {
+      const StyledContent = styled.div`
+      border-left-width: ${({ theme }) => theme.tabsBorderWidth};
+      border-left-style: ${({ theme }) => theme.tabsBorderStyle};
+      border-left-color: ${({ theme }) => theme.tabsBorderColor};
+    `;
+
       if (this.props.children && this.props.children.length) {
         if (this.props.children[0].type.name === 'VerticalTab') {
           return React.createElement(
@@ -73,13 +79,17 @@ class Tabs extends Component {
               null,
               React.createElement(
                 Column,
-                { md: 4, lg: 4, xl: 4 },
+                { md: 3, lg: 3, xl: 3 },
                 this.renderVerticalTabList()
               ),
               React.createElement(
                 Column,
-                { md: 8, lg: 8, xl: 4 },
-                this.renderActiveTabContent()
+                { md: 9, lg: 9, xl: 9 },
+                React.createElement(
+                  StyledContent,
+                  null,
+                  this.renderActiveTabContent()
+                )
               )
             )
           );
