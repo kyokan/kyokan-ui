@@ -14,6 +14,7 @@ import MODAL                  from './sections/modal';
 import ONBOARDING_SIDEBAR     from './sections/onboarding-sidebar';
 import STATUS                 from './sections/status';
 import TABBED_SELECTOR_OPTION from './sections/tabbed-selector-option';
+import TABS                   from './sections/tabs';
 import TEXT                   from './sections/text';
 import TEXT_AREA              from './sections/text-area';
 import TEXT_INPUT             from './sections/text-input';
@@ -35,6 +36,7 @@ const DMLTheme = {
   ...ONBOARDING_SIDEBAR,
   ...STATUS,
   ...TABBED_SELECTOR_OPTION,
+  ...TABS,
   ...TEXT_AREA,
   ...TEXT_INPUT,
   ...TEXT,

@@ -10,4 +10,8 @@
 <Text>
   You can use your Github account and upload Algorithms to the marketplace.
 </Text>
+
+<Text dark>
+  You can use your Github account and upload Algorithms to the marketplace.
+</Text>
 ```

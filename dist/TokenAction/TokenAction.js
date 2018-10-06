@@ -7,11 +7,15 @@ import styled from 'styled-components';
 */
 const TokenAction = props => {
   const StyledTokenAction = styled.div`
-    font-family: ${props => props.theme.textFontFamily};
-    color: ${props => props.theme.textColor};
+    font-family : ${props => props.theme.textFontFamily};
+    color       : ${props => props.theme.textColor};
   `;
 
-  return React.createElement(StyledTokenAction, null);
+  return React.createElement(
+    StyledTokenAction,
+    null,
+    props.amount
+  );
 };
 
 TokenAction.propTypes = {

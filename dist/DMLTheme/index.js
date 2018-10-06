@@ -16,12 +16,13 @@ import MODAL from './sections/modal';
 import ONBOARDING_SIDEBAR from './sections/onboarding-sidebar';
 import STATUS from './sections/status';
 import TABBED_SELECTOR_OPTION from './sections/tabbed-selector-option';
+import TABS from './sections/tabs';
 import TEXT from './sections/text';
 import TEXT_AREA from './sections/text-area';
 import TEXT_INPUT from './sections/text-input';
 import TITLE from './sections/title';
 import VERTICAL_TAB from './sections/vertical-tab';
 
-const DMLTheme = _extends({}, ACCORDION, BOX, BUTTON, DESCRIPTION, GITHUB_OAUTH, HEADER, HORIZONTAL_RULE, ICON, LINK, METAMASK_BUTTON, MODAL, ONBOARDING_SIDEBAR, STATUS, TABBED_SELECTOR_OPTION, TEXT_AREA, TEXT_INPUT, TEXT, TITLE, VERTICAL_TAB);
+const DMLTheme = _extends({}, ACCORDION, BOX, BUTTON, DESCRIPTION, GITHUB_OAUTH, HEADER, HORIZONTAL_RULE, ICON, LINK, METAMASK_BUTTON, MODAL, ONBOARDING_SIDEBAR, STATUS, TABBED_SELECTOR_OPTION, TABS, TEXT_AREA, TEXT_INPUT, TEXT, TITLE, VERTICAL_TAB);
 
 export default Object.assign({}, DefaultTheme, DMLTheme);

@@ -83,6 +83,6 @@ Object.keys(regionGroupsData).forEach((regionGroupName) => {
 
   const jsonData = JSON.stringify(JSON.stringify(data));
 
-  const command = `yarn generate ${regionGroupName} ${jsonData}`;
+  const command = `npm run generate ${regionGroupName} ${jsonData}`;
   execSync(command);
 });

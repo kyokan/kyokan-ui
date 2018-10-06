@@ -17,6 +17,7 @@ const Box = (props) => {
     6: props.theme.box6value,
     7: props.theme.box7value,
     8: props.theme.box8value,
+    9: props.theme.box9value,
   };
 
   const generateMarginString = () => {
@@ -36,8 +37,16 @@ const Box = (props) => {
       tokens.push(`margin-bottom: ${MAPPINGS[props.verticalMargin]};`);
     }
 
+    if (props.marginTop) {
+      tokens.push(`margin-top: ${MAPPINGS[props.marginTop]};`);
+    }
+
     if (props.marginRight) {
       tokens.push(`margin-right: ${MAPPINGS[props.marginRight]};`);
+    }
+
+    if (props.marginBottom) {
+      tokens.push(`margin-bottom: ${MAPPINGS[props.marginBottom]};`);
     }
 
     if (props.marginLeft) {
@@ -64,8 +73,16 @@ const Box = (props) => {
       tokens.push(`padding-bottom: ${MAPPINGS[props.verticalPadding]};`);
     }
 
+    if (props.paddingTop) {
+      tokens.push(`padding-top: ${MAPPINGS[props.paddingTop]};`);
+    }
+
     if (props.paddingRight) {
       tokens.push(`padding-right: ${MAPPINGS[props.paddingRight]};`);
+    }
+
+    if (props.paddingBottom) {
+      tokens.push(`padding-bottom: ${MAPPINGS[props.paddingBottom]};`);
     }
 
     if (props.paddingLeft) {
@@ -96,6 +113,7 @@ const Box = (props) => {
 
     &.rounded {
       border-radius : ${ ({theme}) => theme.boxBorderRadiusRounded };
+      overflow: hidden;
     }
   `;
 
@@ -141,46 +159,46 @@ Box.propTypes = {
   children: PropTypes.node.isRequired,
 
   /** Padding level */
-  padding: PropTypes.oneOf([0, 1, 2, 3, 4, 5, 6, 7, 8]),
+  padding: PropTypes.oneOf([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]),
 
   /** Margin level */
-  margin: PropTypes.oneOf([0, 1, 2, 3, 4, 5, 6, 7, 8]),
+  margin: PropTypes.oneOf([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]),
 
   /** Padding-top and padding-bottom level */
-  verticalPadding: PropTypes.oneOf([0, 1, 2, 3, 4, 5, 6, 7, 8]),
+  verticalPadding: PropTypes.oneOf([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]),
 
   /** Padding-right and padding-left level */
-  horizontalPadding: PropTypes.oneOf([0, 1, 2, 3, 4, 5, 6, 7, 8]),
+  horizontalPadding: PropTypes.oneOf([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]),
 
   /** Margin-top and margin-bottom level */
-  verticalMargin: PropTypes.oneOf([0, 1, 2, 3, 4, 5, 6, 7, 8]),
+  verticalMargin: PropTypes.oneOf([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]),
 
   /** Margin-right and margin-left level */
-  horizontalMargin: PropTypes.oneOf([0, 1, 2, 3, 4, 5, 6, 7, 8]),
+  horizontalMargin: PropTypes.oneOf([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]),
 
   /** Padding-top level */
-  paddingTop: PropTypes.oneOf([0, 1, 2, 3, 4, 5, 6, 7, 8]),
+  paddingTop: PropTypes.oneOf([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]),
 
   /** Padding-right level */
-  paddingRight: PropTypes.oneOf([0, 1, 2, 3, 4, 5, 6, 7, 8]),
+  paddingRight: PropTypes.oneOf([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]),
 
   /** Padding-bottom level */
-  paddingBottom: PropTypes.oneOf([0, 1, 2, 3, 4, 5, 6, 7, 8]),
+  paddingBottom: PropTypes.oneOf([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]),
 
   /** Padding-left level */
-  paddingLeft: PropTypes.oneOf([0, 1, 2, 3, 4, 5, 6, 7, 8]),
+  paddingLeft: PropTypes.oneOf([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]),
 
   /** Margin-top level */
-  marginTop: PropTypes.oneOf([0, 1, 2, 3, 4, 5, 6, 7, 8]),
+  marginTop: PropTypes.oneOf([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]),
 
   /** Margin-right level */
-  marginRight: PropTypes.oneOf([0, 1, 2, 3, 4, 5, 6, 7, 8]),
+  marginRight: PropTypes.oneOf([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]),
 
   /** Margin-bottom level */
-  marginBottom: PropTypes.oneOf([0, 1, 2, 3, 4, 5, 6, 7, 8]),
+  marginBottom: PropTypes.oneOf([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]),
 
   /** Margin-left level */
-  marginLeft: PropTypes.oneOf([0, 1, 2, 3, 4, 5, 6, 7, 8]),
+  marginLeft: PropTypes.oneOf([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]),
 
   /** Whether or not the box's background color should be the dark color */
   dark: PropTypes.bool,
@@ -192,7 +210,7 @@ Box.propTypes = {
   highlight: PropTypes.bool,
 
   /** Whether or not the box's border should be rounded */
-  rounded: PropTypes.rounded,
+  rounded: PropTypes.bool,
 };
 
 /** @component */

@@ -16,11 +16,15 @@ const TabbedSelectorOption = props => {
     font-family : ${props => props.theme.tabbedSelectorOptionFontFamily};
     color       : ${props => props.theme.tabbedSelectorOptionColor};
 
-    border-left-width : 3px;
+    border-left-width : 4px;
     border-left-style : solid;
     border-left-color : transparent;
 
-    padding: 10px;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: lightgray;
+
+    padding: 14px;
 
     cursor: pointer;
 
@@ -77,17 +81,17 @@ TabbedSelectorOption.defaultProps = {
 };
 
 TabbedSelectorOption.propTypes = {
-  /** The icon that shows up to the left of the text */
-  icon: PropTypes.string,
-
   /** The text that displays as the option */
   children: PropTypes.string.isRequired,
 
-  /** Whether or not the component receives active styles */
-  selected: PropTypes.bool,
+  /** The icon that shows up to the left of the text */
+  icon: PropTypes.string,
 
   /** A callback to fire on click. (**THIS IS PROVIDED BY `TabbedSelector`**) */
-  onClick: PropTypes.func
+  onClick: PropTypes.func,
+
+  /** Whether or not the component receives active styles */
+  selected: PropTypes.bool
 };
 
 /** @component */

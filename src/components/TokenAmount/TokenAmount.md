@@ -13,7 +13,7 @@
 
 ```jsx
 <TokenAmount
-  amount=""
-  token=""
+  amount={0}
+  token="DML"
 />
 ```

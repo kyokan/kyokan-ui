@@ -7,7 +7,7 @@ export default {
   statusFontFamily   : _FONTS.baseFont,
   statusFontSize     : pxToRem(14),
   statusBorderRadius : pxToRem(3),
-  statusPadding      : pxToRem(6),
+  statusPadding      : pxToRem(12),
   statusDisplay      : 'inline-block',
   statusLineHeight   : pxToRem(21),
 

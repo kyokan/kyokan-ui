@@ -7,13 +7,13 @@ import styled from 'styled-components';
 */
 const Address = (props) => {
   const StyledAddress = styled.div`
-    font-family: ${ (props) => props.theme.textFontFamily };
-    color: ${ (props) => props.theme.textColor };
+    font-family : ${ (props) => props.theme.textFontFamily };
+    color       : ${ (props) => props.theme.textColor };
   `;
 
   return (
     <StyledAddress>
-      
+      {props.value}
     </StyledAddress>
   );
 };

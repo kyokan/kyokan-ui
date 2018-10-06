@@ -7,20 +7,20 @@ import styled from 'styled-components';
 */
 const TokenAmount = (props) => {
   const StyledTokenAmount = styled.div`
-    font-family: ${ (props) => props.theme.textFontFamily };
-    color: ${ (props) => props.theme.textColor };
+    font-family : ${ (props) => props.theme.textFontFamily };
+    color       : ${ (props) => props.theme.textColor };
   `;
 
   return (
     <StyledTokenAmount>
-      
+      {props.amount}
     </StyledTokenAmount>
   );
 };
 
 TokenAmount.propTypes = {
   /** A number with the amount */
-  amount: PropTypes.string,
+  amount: PropTypes.number,
 
   /** A string with the name of the token */
   token: PropTypes.string,
