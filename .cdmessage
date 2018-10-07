@@ -1,6 +1,7 @@
 TO INSTALL DEPENDENCIES                  : npm run install-with-peers
 
 TO SPIN UP SERVER                        : npm run start
+
 TO GENERATE NEW COMPONENT                : npm run generate [ComponentName]
 TO IMPORT FROM REGION-SELECTOR JSON FILE : npm run import-rs
 
