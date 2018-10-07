@@ -10,14 +10,14 @@ npm run install-with-peers
 
 ```shell
 npm run start                    # to start a style guide dev server
+
 npm run generate [ComponentName] # to generate a scaffold for a new component
 npm run dist                     # build out component dist files for use as a module
 
-npm run build                    # to build a static version of the styleguide
-
-npm link                         # to begin linking to use local module (this command must be run from this repo)
-npm link kyokan-ui               # to complete linking to use local module (this command must be run from the target repo)
+npm run build                    # to build a static version of the styleguide (for deployment)
 ```
+
+**NOTE: DO NOT USE `yarn link` IF YOU ARE USING `styled-components` in your own project - this might result in conflicting versions of `styled-components`.**
 
 ## Motivation
 
