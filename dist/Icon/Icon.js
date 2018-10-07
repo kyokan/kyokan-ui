@@ -22,14 +22,16 @@ const Icon = props => {
 
   // if the icon string the user passed in is one that we support
   if (props.name && MAPPINGS.hasOwnProperty(props.name)) {
-    output = props.theme[MAPPINGS[props.name]](props.size);
+    if (typeof props.theme[MAPPINGS[props.name]] === 'function') {
+      output = props.theme[MAPPINGS[props.name]](props.size);
+    }
   }
 
   return output;
 };
 
 Icon.defaultProps = {
-  size: "lg"
+  size: 'lg'
 };
 
 Icon.propTypes = {
