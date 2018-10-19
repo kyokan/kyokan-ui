@@ -1,4 +1,4 @@
-function pxToRem(px, basePx = 16) {
+export function pxToRem(px, basePx = 16) {
   let input;
 
   if (Number.isInteger(px)) {
@@ -10,8 +10,6 @@ function pxToRem(px, basePx = 16) {
   return `${input / basePx}rem`;
 }
 
-function rgbToRgba(rgbString, alpha) {
+export function rgbToRgba(rgbString, alpha) {
   return rgbString.replace('rgb', 'rgba').replace(')', `,${alpha})`);
 }
-
-export { pxToRem, rgbToRgba };
