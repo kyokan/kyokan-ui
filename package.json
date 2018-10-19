@@ -1,5 +1,5 @@
 {
-  "name": "kyokan-ui",
+  "name": "@kyokan/kyokan-ui",
   "version": "0.1.0",
   "main": "dist/index.js",
   "license": "MIT",
@@ -37,7 +37,7 @@
     "dist": "rm -rf dist && NODE_ENV=production babel src/components src/themes --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,.md,__snapshots__ && cd ./dist && rm index.js && npx create-index ./ && cd --",
     "generate": "node generate.js",
     "import-rs": "node importFromRegionSelector.js",
-    "install-with-peers": "npm install && npm run peers",
+    "install-with-peers": "npm install; npm run peers",
     "peers": "npm install --no-save react react-dom styled-components",
     "r-build": "react-scripts build",
     "r-eject": "react-scripts eject",
