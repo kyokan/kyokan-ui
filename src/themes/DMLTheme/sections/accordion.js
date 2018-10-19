@@ -1,4 +1,4 @@
-import { pxToRem } from '../../utils';
+import utils from '../../utils';
 
 import _COLORS from './_colors';
 import _FONTS  from './_fonts';
@@ -19,20 +19,20 @@ export default {
   accordionBorderBottomRightRadius : borderRadius,
 
   accordionTitleBackgroundColor : _COLORS.lightBackgroundColor,
-  accordionTitlePadding         : pxToRem(padding),
+  accordionTitlePadding         : utils.pxToRem(padding),
   accordionTitleColor           : _COLORS.lightTextColor,
   accordionTitleHoverCursor     : 'pointer',
-  accordionTitleFontSize        : pxToRem(18),
+  accordionTitleFontSize        : utils.pxToRem(18),
   accordionTitleColorExpanded   : _COLORS.darkTextColor,
 
   accordionToggleIcon         : _ICONS.chevronDown,
   accordionToggleIconExpanded : _ICONS.chevronUp,
-  accordionToggleIconTop      : pxToRem(20),
-  accordionToggleIconRight    : pxToRem(20),
+  accordionToggleIconTop      : utils.pxToRem(20),
+  accordionToggleIconRight    : utils.pxToRem(20),
   accordionToggleIconColor    : _COLORS.lightTextColor,
 
   accordionContentBackgroundColor : _COLORS.lightBackgroundColor,
-  accordionContentPadding         : pxToRem(padding),
+  accordionContentPadding         : utils.pxToRem(padding),
   accordionContentColor           : _COLORS.textColor,
-  accordionContentFontSize        : pxToRem(15),
+  accordionContentFontSize        : utils.pxToRem(15),
 };

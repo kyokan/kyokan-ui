@@ -56,5 +56,5 @@ export { default as Title } from './Title';
 export { default as TokenAction } from './TokenAction';
 export { default as TokenAmount } from './TokenAmount';
 export { default as VerticalTab } from './VerticalTab';
-export { default as utils } from './utils.js';
+export { default as utils } from './utils';
 

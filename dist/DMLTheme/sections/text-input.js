@@ -1,4 +1,4 @@
-import { pxToRem } from '../../utils';
+import utils from '../../utils';
 
 import _COLORS from './_colors';
 import _FONTS from './_fonts';
@@ -7,15 +7,15 @@ export default {
   // input
   textInputColor: _COLORS.darkTextColor,
   textInputFontFamily: _FONTS.baseFont,
-  textInputFontSize: pxToRem(15),
+  textInputFontSize: utils.pxToRem(15),
   textInputFontWeight: _FONTS.regularFontWeight,
-  textInputPaddingBottom: pxToRem(10),
-  textInputPaddingLeft: pxToRem(15),
-  textInputPaddingRight: pxToRem(15),
-  textInputPaddingTop: pxToRem(10),
+  textInputPaddingBottom: utils.pxToRem(10),
+  textInputPaddingLeft: utils.pxToRem(15),
+  textInputPaddingRight: utils.pxToRem(15),
+  textInputPaddingTop: utils.pxToRem(10),
 
   // borders
-  textInputBorderWidth: pxToRem(1),
+  textInputBorderWidth: utils.pxToRem(1),
   textInputBorderStyle: 'solid',
   textInputBorderRadius: '3px',
   textInputBorderColor: _COLORS.lineColor,
@@ -29,13 +29,13 @@ export default {
 
   // label
   textInputLabelColor: _COLORS.textColor,
-  textInputLabelFontSize: pxToRem(12),
-  textInputLabelMarginBottom: pxToRem(8),
+  textInputLabelFontSize: utils.pxToRem(12),
+  textInputLabelMarginBottom: utils.pxToRem(8),
   textInputLabelTextTransform: 'uppercase',
 
   // error message
   textInputErrorMessageColor: _COLORS.errorHighlightColor,
-  textInputErrorMessageFontSize: pxToRem(13),
+  textInputErrorMessageFontSize: utils.pxToRem(13),
   textInputErrorMessageFontWeight: _FONTS.regularFontWeight,
-  textInputErrorMessageMarginTop: pxToRem(5)
+  textInputErrorMessageMarginTop: utils.pxToRem(5)
 };

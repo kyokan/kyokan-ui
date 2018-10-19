@@ -13,3 +13,8 @@ export function pxToRem (px, basePx = 16) {
 export function rgbToRgba (rgbString, alpha) {
   return rgbString.replace('rgb', 'rgba').replace(')', `,${alpha})`);
 }
+
+export default {
+  pxToRem,
+  rgbToRgba,
+}

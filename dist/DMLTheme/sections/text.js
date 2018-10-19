@@ -1,4 +1,4 @@
-import { pxToRem } from '../../utils';
+import utils from '../../utils';
 
 import _COLORS from './_colors';
 import _FONTS from './_fonts';
@@ -8,6 +8,6 @@ export default {
   textColor: _COLORS.textColor,
   textDarkColor: _COLORS.darkTextColor,
   textFontWeight: _FONTS.mediumFontWeight,
-  textFontSize: pxToRem(16),
-  textLineHeight: pxToRem(16)
+  textFontSize: utils.pxToRem(16),
+  textLineHeight: utils.pxToRem(16)
 };

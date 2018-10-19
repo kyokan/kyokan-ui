@@ -1,15 +1,15 @@
-import { pxToRem, rgbToRgba } from '../../utils';
+import utils from '../../utils';
 
 import _COLORS from './_colors';
 import _FONTS  from './_fonts';
 
 export default {
   statusFontFamily   : _FONTS.baseFont,
-  statusFontSize     : pxToRem(14),
-  statusBorderRadius : pxToRem(3),
-  statusPadding      : pxToRem(12),
+  statusFontSize     : utils.pxToRem(14),
+  statusBorderRadius : utils.pxToRem(3),
+  statusPadding      : utils.pxToRem(12),
   statusDisplay      : 'inline-block',
-  statusLineHeight   : pxToRem(21),
+  statusLineHeight   : utils.pxToRem(21),
 
   statusErrorTextColor       : _COLORS.errorForegroundColor,
   statusErrorBackgroundColor : _COLORS.errorBackgroundColor,
@@ -22,12 +22,12 @@ export default {
 
   statusInfoTextColor       : _COLORS.infoForegroundColor,
   statusInfoBackgroundColor : _COLORS.infoBackgroundColor,
-  statusInfoBorderWidth     : pxToRem(2),
+  statusInfoBorderWidth     : utils.pxToRem(2),
   statusInfoBorderStyle     : 'solid',
-  statusInfoBorderColor     : rgbToRgba(_COLORS.infoForegroundColor, 0.4),
-  statusInfoPadding         : pxToRem(4),
+  statusInfoBorderColor     : utils.rgbToRgba(_COLORS.infoForegroundColor, 0.4),
+  statusInfoPadding         : utils.pxToRem(4),
 
   statusIconColor       : _COLORS.infoForegroundColor,
-  statusIconMarginLeft  : pxToRem(3),
-  statusIconMarginRight : pxToRem(8),
+  statusIconMarginLeft  : utils.pxToRem(3),
+  statusIconMarginRight : utils.pxToRem(8),
 };
