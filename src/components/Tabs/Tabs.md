@@ -22,4 +22,23 @@
     Tab 2 Content
   </VerticalTab>
 </Tabs>
+
+<br />
+<br />
+
+<Tabs>
+  <HorizontalTab
+    title="Tab 1"
+    icon="user"
+  >
+    Tab 1 Content
+  </HorizontalTab>
+
+  <HorizontalTab
+    title="Tab 2"
+    icon="wallet"
+  >
+    Tab 2 Content
+  </HorizontalTab>
+</Tabs>
 ```

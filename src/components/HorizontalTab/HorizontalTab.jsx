@@ -7,8 +7,8 @@ import styled from 'styled-components';
 */
 const HorizontalTab = (props) => {
   const StyledHorizontalTab = styled.div`
-    font-family: ${ (props) => props.theme.textFontFamily };
-    color: ${ (props) => props.theme.textColor };
+    font-family : ${ ({ theme }) => theme.horizontalTabFontFamily };
+    color       : ${ ({ theme }) => theme.horizontalTabColor };
   `;
 
   return (
@@ -22,8 +22,8 @@ HorizontalTab.propTypes = {
   /** The content of the tab */
   children: PropTypes.any.isRequired,
 
-  /** A boolean which triggers the application of the active styles */
-  active: PropTypes.bool,
+  /** The title of the tab */
+  title: PropTypes.string.isRequired,
 };
 
 /** @component */

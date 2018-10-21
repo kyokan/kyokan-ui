@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 /**
-* A (multi-)select with options displayed as vertical tabs.
+* A (multi-)select with options displayed as tabs.
 */
 class TabbedSelector extends Component {
   constructor (props) {
@@ -45,6 +45,7 @@ class TabbedSelector extends Component {
       return React.cloneElement(child, {
         ...child.props,
         selected: (this.state.selectedIndices.indexOf(index) !== -1),
+        vertical: this.props.vertical,
         onClick: () => {
           child.props && child.props.onClick && child.props.onClick();
           this.handleOptionClick(index);
@@ -55,10 +56,12 @@ class TabbedSelector extends Component {
 
   render () {
     const StyledTabbedSelector = styled.div`
+      display : ${ (props) => this.props.vertical ? 'block' : 'flex' };
+
       font-family : ${ (props) => props.theme.textFontFamily };
       color       : ${ (props) => props.theme.textColor };
 
-      border-radius: 3px;
+      border-radius : ${ (props) => this.props.vertical ? '3px' : '0' };
 
       // to show the rounded borders
       overflow: hidden;
@@ -76,6 +79,7 @@ TabbedSelector.defaultProps = {
   defaultSelectedIndex   : null,
   defaultSelectedIndices : [],
   onlyOne                : false,
+  vertical               : false,
 };
 
 TabbedSelector.propTypes = {
@@ -90,6 +94,9 @@ TabbedSelector.propTypes = {
 
   /** Whether or not only one option can be selected */
   onlyOne: PropTypes.bool,
+
+  /** Whether or not the options are shown vertically (in a column) */
+  vertical: PropTypes.bool,
 };
 
 /** @component */

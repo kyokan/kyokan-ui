@@ -10,6 +10,7 @@
 <TabbedSelector
   defaultSelectedIndex={0}
   onlyOne
+  vertical
 >
   <TabbedSelectorOption
     icon="addUser"
@@ -37,11 +38,22 @@
 </TabbedSelector>
 
 <br />
+<br />
 
-<TabbedSelector>
+<TabbedSelector vertical>
   <TabbedSelectorOption>$</TabbedSelectorOption>
   <TabbedSelectorOption>$$</TabbedSelectorOption>
   <TabbedSelectorOption>$$$</TabbedSelectorOption>
   <TabbedSelectorOption>$$$$</TabbedSelectorOption>
+</TabbedSelector>
+
+<br />
+<br />
+
+<TabbedSelector onlyOne>
+  <TabbedSelectorOption>Home</TabbedSelectorOption>
+  <TabbedSelectorOption>Store</TabbedSelectorOption>
+  <TabbedSelectorOption>About</TabbedSelectorOption>
+  <TabbedSelectorOption>Contact</TabbedSelectorOption>
 </TabbedSelector>
 ```

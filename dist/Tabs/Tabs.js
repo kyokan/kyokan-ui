@@ -38,19 +38,42 @@ class Tabs extends Component {
       });
     };
 
+    this.renderHorizontalTabListItems = () => {
+      return React.Children.map(this.props.children, (child, index) => {
+        return React.createElement(
+          TabbedSelectorOption,
+          {
+            onClick: () => {
+              this.handleTabListItemClick(index);
+            },
+            icon: child.props.icon
+          },
+          child.props.title
+        );
+      });
+    };
+
     this.renderVerticalTabList = () => {
       return React.createElement(
         TabbedSelector,
         {
           defaultSelectedIndex: this.state.activeTabIndex,
-          onlyOne: true
+          onlyOne: true,
+          vertical: true
         },
         this.renderVerticalTabListItems()
       );
     };
 
     this.renderHorizontalTabList = () => {
-      return null;
+      return React.createElement(
+        TabbedSelector,
+        {
+          defaultSelectedIndex: this.state.activeTabIndex,
+          onlyOne: true
+        },
+        this.renderHorizontalTabListItems()
+      );
     };
 
     this.renderActiveTabContent = () => {

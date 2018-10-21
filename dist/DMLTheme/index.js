@@ -9,6 +9,7 @@ import DESCRIPTION from './sections/description';
 import GITHUB_OAUTH from './sections/github-oauth';
 import HEADER from './sections/header';
 import HORIZONTAL_RULE from './sections/horizontal-rule';
+import HORIZONTAL_TAB from './sections/horizontal-tab';
 import ICON from './sections/icon';
 import LINK from './sections/link';
 import METAMASK_BUTTON from './sections/metamask-button';
@@ -23,6 +24,6 @@ import TEXT_INPUT from './sections/text-input';
 import TITLE from './sections/title';
 import VERTICAL_TAB from './sections/vertical-tab';
 
-const DMLTheme = _extends({}, ACCORDION, BOX, BUTTON, DESCRIPTION, GITHUB_OAUTH, HEADER, HORIZONTAL_RULE, ICON, LINK, METAMASK_BUTTON, MODAL, ONBOARDING_SIDEBAR, STATUS, TABBED_SELECTOR_OPTION, TABS, TEXT_AREA, TEXT_INPUT, TEXT, TITLE, VERTICAL_TAB);
+const DMLTheme = _extends({}, ACCORDION, BOX, BUTTON, DESCRIPTION, GITHUB_OAUTH, HEADER, HORIZONTAL_RULE, HORIZONTAL_TAB, ICON, LINK, METAMASK_BUTTON, MODAL, ONBOARDING_SIDEBAR, STATUS, TABBED_SELECTOR_OPTION, TABS, TEXT_AREA, TEXT_INPUT, TEXT, TITLE, VERTICAL_TAB);
 
 export default Object.assign({}, DefaultTheme, DMLTheme);

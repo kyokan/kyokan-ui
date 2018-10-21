@@ -11,10 +11,4 @@
   </div>
 </div>
 
-```jsx
-<VerticalTab
-  active={false}
->
-  Children
-</VerticalTab>
-```
+**See `Tabs` for an example**

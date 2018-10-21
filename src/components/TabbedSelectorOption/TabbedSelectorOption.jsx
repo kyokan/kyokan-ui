@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import classnames from 'classnames';
 
 import Icon from '../Icon';
 
@@ -13,26 +14,40 @@ const TabbedSelectorOption = (props) => {
     display: flex;
     align-items: center;
 
-    font-family : ${ (props) => props.theme.tabbedSelectorOptionFontFamily };
-    color       : ${ (props) => props.theme.tabbedSelectorOptionColor };
-
-    border-left-width : 4px;
-    border-left-style : solid;
-    border-left-color : transparent;
-
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-    border-bottom-color: lightgray;
+    font-family : ${ ({ theme }) => theme.tabbedSelectorOptionFontFamily };
+    color       : ${ ({ theme }) => theme.tabbedSelectorOptionColor };
 
     padding: 14px;
 
     cursor: pointer;
 
-    &.selected {
-      border-left-color: ${ (props) => props.theme.tabbedSelectorOptionBorderColorSelected };
+    &.vertical {
+      border-left-width : 4px;
+      border-left-style : solid;
+      border-left-color : transparent;
 
+      border-bottom-width: 1px;
+      border-bottom-style: solid;
+      border-bottom-color: lightgray;
+
+      &.selected {
+        border-left-color: ${ ({ theme }) => theme.tabbedSelectorOptionBorderColorSelected };
+      }
+    }
+
+    &.horizontal {
+      border-bottom-width: 4px;
+      border-bottom-style: solid;
+      border-bottom-color: lightgray;
+
+      &.selected {
+        border-bottom-color: ${ ({ theme }) => theme.tabbedSelectorOptionBorderColorSelected };
+      }
+    }
+
+    &.selected {
       .icon {
-        color : ${ (props) => props.theme.tabbedSelectorOptionIconColorSelected };
+        color : ${ ({ theme }) => theme.tabbedSelectorOptionIconColorSelected };
       }
     }
 
@@ -42,7 +57,7 @@ const TabbedSelectorOption = (props) => {
 
     .icon {
       margin : 0 10px;
-      color  : ${ (props) => props.theme.tabbedSelectorOptionIconColor };
+      color  : ${ ({ theme }) => theme.tabbedSelectorOptionIconColor };
     }
   `;
 
@@ -63,9 +78,15 @@ const TabbedSelectorOption = (props) => {
     return output;
   }
 
+  const classes = classnames({
+    horizontal : !props.vertical,
+    selected   : props.selected,
+    vertical   : props.vertical,
+  })
+
   return (
     <StyledTabbedSelectorOption
-      className={props.selected ? 'selected' : ''}
+      className={classes}
       onClick={props.onClick}
     >
       {renderIcon()}
@@ -92,6 +113,9 @@ TabbedSelectorOption.propTypes = {
 
   /** Whether or not the component receives active styles */
   selected: PropTypes.bool,
+
+  /** Whether or not this option is in a vertical selector (**THIS IS PROVIDED BY `TabbedSelector`**) */
+  vertical: PropTypes.bool,
 };
 
 /** @component */

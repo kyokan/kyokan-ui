@@ -7,6 +7,7 @@ import DESCRIPTION            from './sections/description';
 import GITHUB_OAUTH           from './sections/github-oauth';
 import HEADER                 from './sections/header';
 import HORIZONTAL_RULE        from './sections/horizontal-rule';
+import HORIZONTAL_TAB         from './sections/horizontal-tab';
 import ICON                   from './sections/icon';
 import LINK                   from './sections/link';
 import METAMASK_BUTTON        from './sections/metamask-button';
@@ -29,6 +30,7 @@ const DMLTheme = {
   ...GITHUB_OAUTH,
   ...HEADER,
   ...HORIZONTAL_RULE,
+  ...HORIZONTAL_TAB,
   ...ICON,
   ...LINK,
   ...METAMASK_BUTTON,

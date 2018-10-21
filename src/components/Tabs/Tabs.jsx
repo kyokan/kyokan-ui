@@ -43,11 +43,27 @@ class Tabs extends Component {
     })
   }
 
+  renderHorizontalTabListItems = () => {
+    return React.Children.map(this.props.children, (child, index) => {
+      return (
+        <TabbedSelectorOption
+          onClick={() => {
+            this.handleTabListItemClick(index);
+          }}
+          icon={child.props.icon}
+        >
+          {child.props.title}
+        </TabbedSelectorOption>
+      );
+    })
+  }
+
   renderVerticalTabList = () => {
     return (
       <TabbedSelector
         defaultSelectedIndex={this.state.activeTabIndex}
         onlyOne
+        vertical
       >
         {this.renderVerticalTabListItems()}
       </TabbedSelector>
@@ -56,7 +72,12 @@ class Tabs extends Component {
 
   renderHorizontalTabList = () => {
     return (
-      null
+      <TabbedSelector
+        defaultSelectedIndex={this.state.activeTabIndex}
+        onlyOne
+      >
+        {this.renderHorizontalTabListItems()}
+      </TabbedSelector>
     );
   }
 

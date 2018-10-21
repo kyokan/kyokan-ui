@@ -2,10 +2,4 @@
 
 </div>
 
-```jsx
-<HorizontalTab
-  active={false}
->
-  Children
-</HorizontalTab>
-```
+**See `Tabs` for an example**
