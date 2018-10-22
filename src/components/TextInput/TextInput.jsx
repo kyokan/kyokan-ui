@@ -100,6 +100,7 @@ const TextInput = (props) => {
       {renderLabel()}
       <StyledInput
         id={id}
+        data-id={props['data-id']}
         type={props.type}
         placeholder={props.placeholder}
         defaultValue={props.value}
@@ -123,6 +124,7 @@ TextInput.defaultProps = {
   onChange     : () => {},
   type         : 'text',
   value        : '',
+  'data-id'    : '',
 };
 
 TextInput.propTypes = {
@@ -149,6 +151,9 @@ TextInput.propTypes = {
 
   /** Fired on input value change */
   onChange: PropTypes.func,
+
+  /** A data attribute ID (used in place of refs since this is a stateless component) */
+  'data-id': PropTypes.string,
 };
 
 /** @component */
