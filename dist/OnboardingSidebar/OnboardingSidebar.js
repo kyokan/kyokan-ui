@@ -46,14 +46,14 @@ const OnboardingSidebar = props => {
     background-color: ${props => props.theme.onboardingSidebarBackgroundColor};
     display: flex;
     flex-flow: column nowrap;
-    width: 440px;
+    width: 100%;
     padding: 3rem 4rem;
     flex: 0 0 auto;
   `;
 
   const StyledHeader = styled.div`
     font-size: 1.55rem;
-    width: 270px;
+    width: 60%;
     color: ${props => props.theme.onboardingSidebarTextColor};
     font-weight: 400;
     letter-spacing: 1px;
@@ -76,7 +76,7 @@ const OnboardingSidebar = props => {
     font-size: 0.9rem;
     letter-spacing: 0.8px;
     line-height: 1.8rem;
-    width: 270px;
+    width: 60%;
   `;
 
   return React.createElement(
