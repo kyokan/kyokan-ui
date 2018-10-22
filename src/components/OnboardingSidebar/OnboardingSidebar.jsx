@@ -54,7 +54,6 @@ const OnboardingSidebar = (props) => {
 
   const StyledHeader = styled.div`
     font-size: 1.55rem;
-    width: 60%;
     color: ${(props) => props.theme.onboardingSidebarTextColor};
     font-weight: 400;
     letter-spacing: 1px;
@@ -77,7 +76,6 @@ const OnboardingSidebar = (props) => {
     font-size: 0.9rem;
     letter-spacing: 0.8px;
     line-height: 1.8rem;
-    width: 60%;
   `;
 
   return (
