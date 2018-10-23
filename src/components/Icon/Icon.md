@@ -6,7 +6,7 @@
 <div>
   xs:
   <Icon
-    name="check"
+    name="plusCircle"
     size="xs"
   />
 </div>

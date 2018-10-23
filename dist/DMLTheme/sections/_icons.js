@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAward, faCheck, faChevronDown, faChevronUp, faClipboard, faCopy, faUserCircle, faUserPlus, faWallet } from "@fortawesome/free-solid-svg-icons";
+import { faAward, faCheck, faChevronDown, faChevronUp, faClipboard, faCopy, faPlusCircle, faUserCircle, faUserPlus, faWallet } from "@fortawesome/free-solid-svg-icons";
 
 function wrapFontAwesomeIcon(icon, size) {
   return (
@@ -21,6 +21,7 @@ export default {
   chevronUp: size => wrapFontAwesomeIcon(faChevronUp, size),
   clipboard: size => wrapFontAwesomeIcon(faClipboard, size),
   copy: size => wrapFontAwesomeIcon(faCopy, size),
+  plusCircle: size => wrapFontAwesomeIcon(faPlusCircle, size),
   userCircle: size => wrapFontAwesomeIcon(faUserCircle, size),
   userPlus: size => wrapFontAwesomeIcon(faUserPlus, size),
   wallet: size => wrapFontAwesomeIcon(faWallet, size)
