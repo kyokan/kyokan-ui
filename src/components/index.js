@@ -17,6 +17,7 @@ export { default as EmptyState } from './EmptyState';
 export { default as GitHubOAuth } from './GitHubOAuth';
 export { default as Grid } from './Grid';
 export { default as Header } from './Header';
+export { default as Hidden } from './Hidden';
 export { default as HorizontalRule } from './HorizontalRule';
 export { default as HorizontalTab } from './HorizontalTab';
 export { default as Icon } from './Icon';
@@ -54,4 +55,5 @@ export { default as Title } from './Title';
 export { default as TokenAction } from './TokenAction';
 export { default as TokenAmount } from './TokenAmount';
 export { default as VerticalTab } from './VerticalTab';
+export { default as Visible } from './Visible';
 
