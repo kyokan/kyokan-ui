@@ -30,4 +30,13 @@
 >
   <Text>Hello World</Text>
 </Box>
+
+<Box
+  padding={5}
+  verticalMargin={5}
+  centerContent
+  dark
+>
+  <Text>Centered</Text>
+</Box>
 ```

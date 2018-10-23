@@ -96,6 +96,10 @@ const Box = props => {
     ${generateMarginString()};
     ${generatePaddingString()};
 
+    &.center-content {
+      text-align: center;
+    }
+
     &.light {
       background-color : ${({ theme }) => theme.boxBackgroundColorLight};
       color            : ${({ theme }) => theme.boxColorLight};
@@ -121,7 +125,8 @@ const Box = props => {
     dark: props.dark,
     light: props.light,
     highlight: props.highlight,
-    rounded: props.rounded
+    rounded: props.rounded,
+    'center-content': props.centerContent
   });
 
   return React.createElement(
@@ -151,6 +156,7 @@ Box.defaultProps = {
   dark: false,
   light: false,
   highlight: false,
+  centerContent: false,
   rounded: false
 };
 
@@ -208,6 +214,9 @@ Box.propTypes = {
 
   /** Whether or not the box's background color should be the highlight color */
   highlight: PropTypes.bool,
+
+  /** Whether or not the box's content should be centered */
+  centerContent: PropTypes.bool,
 
   /** Whether or not the box's border should be rounded */
   rounded: PropTypes.bool
