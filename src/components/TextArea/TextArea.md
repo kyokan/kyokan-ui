@@ -12,4 +12,12 @@
   placeholder="Enter text here"
   label="Bio (Optional)"
 />
+
+<br />
+<br />
+
+<TextArea
+  placeholder="Enter text here"
+  data-id="Test"
+/>
 ```

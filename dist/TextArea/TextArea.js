@@ -72,6 +72,7 @@ const TextArea = props => {
       defaultValue: props.children,
       disabled: props.disabled,
       id: id,
+      'data-id': props['data-id'],
       maxLength: props.maxlength,
       name: props.name,
       onKeyUp: props.onKeyUp,
@@ -87,6 +88,7 @@ TextArea.defaultProps = {
   children: '',
   className: '',
   cols: 20,
+  'data-id': '',
   disabled: false,
   label: '',
   maxlength: null,
@@ -109,6 +111,9 @@ TextArea.propTypes = {
 
   /** Specifies the visible width of a text area */
   cols: PropTypes.number,
+
+  /** A data attribute ID (used in place of refs since this is a stateless component) */
+  'data-id': PropTypes.string,
 
   /** Whether or not the textarea is disabled */
   disabled: PropTypes.bool,
