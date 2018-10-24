@@ -20,63 +20,39 @@ class Tabs extends Component {
     };
   }
 
-  handleTabListItemClick = (tabIndex) => {
+  handleTabListItemClick = (tabIndex, callback) => {
     if (tabIndex !== this.state.activeTabIndex) {
       this.setState({
         activeTabIndex: tabIndex,
-      });
+      }, callback);
+    } else {
+      callback();
     }
   }
 
-  renderVerticalTabListItems = () => {
+  renderTabListItems = () => {
     return React.Children.map(this.props.children, (child, index) => {
       return (
         <TabbedSelectorOption
           onClick={() => {
-            this.handleTabListItemClick(index);
+            this.handleTabListItemClick(index, child.props.onTabClick);
           }}
           icon={child.props.icon}
         >
           {child.props.title}
         </TabbedSelectorOption>
       );
-    })
+    });
   }
 
-  renderHorizontalTabListItems = () => {
-    return React.Children.map(this.props.children, (child, index) => {
-      return (
-        <TabbedSelectorOption
-          onClick={() => {
-            this.handleTabListItemClick(index);
-          }}
-          icon={child.props.icon}
-        >
-          {child.props.title}
-        </TabbedSelectorOption>
-      );
-    })
-  }
-
-  renderVerticalTabList = () => {
+  renderTabList = (isVertical) => {
     return (
       <TabbedSelector
         defaultSelectedIndex={this.state.activeTabIndex}
         onlyOne
-        vertical
+        vertical={isVertical}
       >
-        {this.renderVerticalTabListItems()}
-      </TabbedSelector>
-    );
-  }
-
-  renderHorizontalTabList = () => {
-    return (
-      <TabbedSelector
-        defaultSelectedIndex={this.state.activeTabIndex}
-        onlyOne
-      >
-        {this.renderHorizontalTabListItems()}
+        {this.renderTabListItems()}
       </TabbedSelector>
     );
   }
@@ -103,7 +79,7 @@ class Tabs extends Component {
           <Grid>
             <Row>
               <Column md={3} lg={3} xl={3}>
-                {this.renderVerticalTabList()}
+                {this.renderTabList(true)}
               </Column>
               <Column md={9} lg={9} xl={9}>
                 <StyledContent>
@@ -118,7 +94,7 @@ class Tabs extends Component {
           <Grid>
             <Row>
               <Column>
-                {this.renderHorizontalTabList()}
+                {this.renderTabList(false)}
               </Column>
             </Row>
             <Row>

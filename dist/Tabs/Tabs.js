@@ -15,21 +15,23 @@ class Tabs extends Component {
   constructor(props) {
     super(props);
 
-    this.handleTabListItemClick = tabIndex => {
+    this.handleTabListItemClick = (tabIndex, callback) => {
       if (tabIndex !== this.state.activeTabIndex) {
         this.setState({
           activeTabIndex: tabIndex
-        });
+        }, callback);
+      } else {
+        callback();
       }
     };
 
-    this.renderVerticalTabListItems = () => {
+    this.renderTabListItems = () => {
       return React.Children.map(this.props.children, (child, index) => {
         return React.createElement(
           TabbedSelectorOption,
           {
             onClick: () => {
-              this.handleTabListItemClick(index);
+              this.handleTabListItemClick(index, child.props.onTabClick);
             },
             icon: child.props.icon
           },
@@ -38,41 +40,15 @@ class Tabs extends Component {
       });
     };
 
-    this.renderHorizontalTabListItems = () => {
-      return React.Children.map(this.props.children, (child, index) => {
-        return React.createElement(
-          TabbedSelectorOption,
-          {
-            onClick: () => {
-              this.handleTabListItemClick(index);
-            },
-            icon: child.props.icon
-          },
-          child.props.title
-        );
-      });
-    };
-
-    this.renderVerticalTabList = () => {
+    this.renderTabList = isVertical => {
       return React.createElement(
         TabbedSelector,
         {
           defaultSelectedIndex: this.state.activeTabIndex,
           onlyOne: true,
-          vertical: true
+          vertical: isVertical
         },
-        this.renderVerticalTabListItems()
-      );
-    };
-
-    this.renderHorizontalTabList = () => {
-      return React.createElement(
-        TabbedSelector,
-        {
-          defaultSelectedIndex: this.state.activeTabIndex,
-          onlyOne: true
-        },
-        this.renderHorizontalTabListItems()
+        this.renderTabListItems()
       );
     };
 
@@ -103,7 +79,7 @@ class Tabs extends Component {
               React.createElement(
                 Column,
                 { md: 3, lg: 3, xl: 3 },
-                this.renderVerticalTabList()
+                this.renderTabList(true)
               ),
               React.createElement(
                 Column,
@@ -126,7 +102,7 @@ class Tabs extends Component {
               React.createElement(
                 Column,
                 null,
-                this.renderHorizontalTabList()
+                this.renderTabList(false)
               )
             ),
             React.createElement(

@@ -61,6 +61,8 @@ class TabbedSelector extends Component {
 
       border-radius : ${props => this.props.vertical ? '3px' : '0'};
 
+      user-select: none;
+
       // to show the rounded borders
       overflow: hidden;
     `;

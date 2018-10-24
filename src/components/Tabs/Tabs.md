@@ -11,6 +11,9 @@
   <VerticalTab
     title="Tab 1"
     icon="user"
+    onTabClick={() => {
+      console.log('Tab 1 Click');
+    }}
   >
     Tab 1 Content
   </VerticalTab>
@@ -18,6 +21,9 @@
   <VerticalTab
     title="Tab 2"
     icon="wallet"
+    onTabClick={() => {
+      console.log('Tab 2 Click');
+    }}
   >
     Tab 2 Content
   </VerticalTab>
@@ -30,6 +36,9 @@
   <HorizontalTab
     title="Tab 1"
     icon="user"
+    onTabClick={() => {
+      console.log('Tab 1 Click');
+    }}
   >
     Tab 1 Content
   </HorizontalTab>
@@ -37,6 +46,9 @@
   <HorizontalTab
     title="Tab 2"
     icon="wallet"
+    onTabClick={() => {
+      console.log('Tab 2 Click');
+    }}
   >
     Tab 2 Content
   </HorizontalTab>

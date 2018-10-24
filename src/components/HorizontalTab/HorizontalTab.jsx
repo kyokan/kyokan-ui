@@ -18,9 +18,20 @@ const HorizontalTab = (props) => {
   );
 };
 
+HorizontalTab.defaultProps = {
+  icon       : '',
+  onTabClick : () => {},
+};
+
 HorizontalTab.propTypes = {
   /** The content of the tab */
   children: PropTypes.any.isRequired,
+
+  /** The icon for the tab (rendered by `Tabs`) */
+  icon: PropTypes.string,
+
+  /** A callback that will be fired when user clicks the tab (fired by `Tabs`) */
+  onTabClick: PropTypes.func,
 
   /** The title of the tab */
   title: PropTypes.string.isRequired,
