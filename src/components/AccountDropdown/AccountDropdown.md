@@ -12,11 +12,34 @@
 </div>
 
 ```jsx
-<AccountDropdown
-  avatar=""
-  name=""
-  onChange={() => {}}
+<Box
+  padding={5}
+  dark
+  height={200}
 >
-  Children
-</AccountDropdown>
+  <AccountDropdown
+    name="Jimmy Barnes"
+    items={[
+      {
+        text    : 'Account Settings',
+        payload : 'account',
+      },
+      {
+        text    : 'Logout',
+        payload : 'logout',
+      },
+      {
+        text    : 'Google',
+        payload : 'google',
+        href    : 'https://www.google.com',
+      },
+    ]}
+    onItemClick={(item) => {
+      console.log(item);
+    }}
+    onToggleClick={(isOpen) => {
+      console.log(isOpen ? 'open' : 'closed');
+    }}
+  />
+</Box>
 ```

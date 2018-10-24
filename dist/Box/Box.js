@@ -20,6 +20,16 @@ const Box = props => {
     9: props.theme.box9value
   };
 
+  const generateDimensionString = dimension => {
+    if (props[dimension]) {
+      if (Number.isInteger(props[dimension])) {
+        return `${dimension}: ${props[dimension]}px;`;
+      } else {
+        return `${dimension}: ${props[dimension]};`;
+      }
+    }
+  };
+
   const generateMarginString = () => {
     const tokens = [];
 
@@ -93,6 +103,9 @@ const Box = props => {
   };
 
   const StyledBox = styled.div`
+    ${generateDimensionString('width')};
+    ${generateDimensionString('height')};
+
     ${generateMarginString()};
     ${generatePaddingString()};
 
@@ -219,7 +232,13 @@ Box.propTypes = {
   centerContent: PropTypes.bool,
 
   /** Whether or not the box's border should be rounded */
-  rounded: PropTypes.bool
+  rounded: PropTypes.bool,
+
+  /** The fixed width of the box (can either be an integer for pixes or a string for any CSS dimension) */
+  width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+
+  /** The fixed height of the box (can either be an integer for pixes or a string for any CSS dimension) */
+  height: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
 };
 
 /** @component */

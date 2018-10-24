@@ -39,4 +39,14 @@
 >
   <Text>Centered</Text>
 </Box>
+
+<Box
+  margin={5}
+  dark
+  height={200}
+  width={200}
+  centerContent
+>
+  <Text>Fixed Size</Text>
+</Box>
 ```
