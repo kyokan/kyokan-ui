@@ -113,6 +113,14 @@ const Box = props => {
       text-align: center;
     }
 
+    &.left-content {
+      text-align: left;
+    }
+
+    &.right-content {
+      text-align: right;
+    }
+
     &.light {
       background-color : ${({ theme }) => theme.boxBackgroundColorLight};
       color            : ${({ theme }) => theme.boxColorLight};
@@ -139,7 +147,9 @@ const Box = props => {
     light: props.light,
     highlight: props.highlight,
     rounded: props.rounded,
-    'center-content': props.centerContent
+    'center-content': props.centerContent,
+    'left-content': props.leftContent,
+    'right-content': props.rightContent
   });
 
   return React.createElement(
@@ -170,6 +180,8 @@ Box.defaultProps = {
   light: false,
   highlight: false,
   centerContent: false,
+  leftContent: false,
+  rightContent: false,
   rounded: false
 };
 
@@ -230,6 +242,12 @@ Box.propTypes = {
 
   /** Whether or not the box's content should be centered */
   centerContent: PropTypes.bool,
+
+  /** Whether or not the box's content should be aligned left */
+  leftContent: PropTypes.bool,
+
+  /** Whether or not the box's content should be aligned right */
+  rightContent: PropTypes.bool,
 
   /** Whether or not the box's border should be rounded */
   rounded: PropTypes.bool,
