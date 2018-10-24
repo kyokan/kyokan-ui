@@ -110,7 +110,7 @@ class AccountDropdown extends Component {
     };
 
     this.state = {
-      isOpen: true
+      isOpen: false
     };
   }
 

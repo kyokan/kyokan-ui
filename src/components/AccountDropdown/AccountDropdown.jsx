@@ -12,7 +12,7 @@ class AccountDropdown extends Component {
     super(props);
 
     this.state = {
-      isOpen: true,
+      isOpen: false,
     };
   }
 
