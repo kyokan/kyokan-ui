@@ -1,7 +1,8 @@
 {
   "name": "@kyokan/kyokan-ui",
-  "version": "0.1.20",
+  "version": "0.1.21",
   "main": "dist/index.js",
+  "files": ["/dist"],
   "license": "MIT",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.4",
@@ -39,6 +40,8 @@
     "import-rs": "node importFromRegionSelector.js",
     "install-with-peers": "npm install; npm run peers",
     "peers": "npm install --no-save react react-dom styled-components",
+    "postpack": "rm -rf dist",
+    "prepack": "npm run dist",
     "r-build": "react-scripts build",
     "r-eject": "react-scripts eject",
     "r-start": "react-scripts start",
