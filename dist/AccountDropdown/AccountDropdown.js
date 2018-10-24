@@ -82,6 +82,7 @@ class AccountDropdown extends Component {
       border-radius    : 5px;
       list-style       : none;
       text-align       : left;
+      z-index          : 9999;
 
       li {
         line-height : 15px;
