@@ -49,4 +49,48 @@
 >
   CHILDREN
 </Button>
+
+<br />
+<br />
+
+<Button
+  loading={false}
+  loadingText=""
+  disabled={false}
+  type=""
+  rightIcon=""
+  leftIcon=""
+  light={false}
+  onClick={() => {}}
+>
+  CHILDREN
+</Button>
+
+<br />
+<br />
+
+<Button
+  leftIcon="plusCircle"
+>
+  Create Algorithm
+</Button>
+
+<br />
+<br />
+
+<Button
+  rightIcon="plusCircle"
+>
+  Create Algorithm
+</Button>
+
+<br />
+<br />
+
+<Button
+  leftIcon="plusCircle"
+  rightIcon="plusCircle"
+>
+  Create Algorithm
+</Button>
 ```

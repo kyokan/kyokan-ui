@@ -2,6 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
+import Box from '../Box';
+import Icon from '../Icon';
+
 /**
 * A block element that fires an action on click. Loading buttons should be disabled while loading.
 */
@@ -19,10 +22,11 @@ const Button = (props) => {
     padding : ${ ({ theme }) => theme.buttonPadding };
 
     cursor           : pointer;
-    display          : flex;
+    display          : inline-flex;
     flex-flow        : row nowrap;
     justify-content  : center;
     user-select      : none;
+    white-space      : nowrap;
 
     &:hover {
       background-color: ${ ({ theme }) => theme.buttonPrimaryBackgroundColorHover };
@@ -33,12 +37,37 @@ const Button = (props) => {
     }
   `;
 
+  const renderIcon = (iconName) => {
+    let icon = null;
+
+    if (iconName.length) {
+      icon = (
+        <Icon
+          name={iconName}
+          size="lg"
+        />
+      );
+    }
+
+    return icon;
+  };
+
+  const renderContent = () => {
+    return (
+      <Box horizontalMargin={1}>
+        {props.children}
+      </Box>
+    );
+  }
+
   return (
     <StyledButton
       onClick={props.onClick}
       className={props.className}
     >
-      {props.children}
+      {renderIcon(props.leftIcon)}
+      {renderContent()}
+      {renderIcon(props.rightIcon)}
     </StyledButton>
   );
 };
@@ -46,12 +75,12 @@ const Button = (props) => {
 Button.defaultProps = {
   className : '',
   disabled  : false,
-  leftIcon  : null,
+  leftIcon  : '',
   light     : false,
   loading   : false,
   loadingText : '',
   onClick   : () => {},
-  rightIcon : null,
+  rightIcon : '',
   type      : 'brand',
 };
 
