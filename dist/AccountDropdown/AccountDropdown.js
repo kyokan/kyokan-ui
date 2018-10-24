@@ -58,10 +58,18 @@ class AccountDropdown extends Component {
     };
 
     this.renderIcon = () => {
-      return React.createElement(Icon, {
-        name: 'chevronDown',
-        size: 'sm'
-      });
+      const StyledIcon = styled.span`
+      color: rgb(108,128,160);
+    `;
+
+      return React.createElement(
+        StyledIcon,
+        null,
+        React.createElement(Icon, {
+          name: 'chevronDown',
+          size: 'sm'
+        })
+      );
     };
 
     this.renderItems = () => {

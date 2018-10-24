@@ -67,11 +67,17 @@ class AccountDropdown extends Component {
   }
 
   renderIcon = () => {
+    const StyledIcon = styled.span`
+      color: rgb(108,128,160);
+    `;
+
     return (
-      <Icon
-        name="chevronDown"
-        size="sm"
-      />
+      <StyledIcon>
+        <Icon
+          name="chevronDown"
+          size="sm"
+        />
+      </StyledIcon>
     );
   }
 
