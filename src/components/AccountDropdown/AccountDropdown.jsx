@@ -88,6 +88,7 @@ class AccountDropdown extends Component {
       li {
         line-height : 15px;
         padding     : 10px 20px;
+        white-space : nowrap;
 
         &:hover {
           color            : black;
