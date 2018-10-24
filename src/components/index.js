@@ -37,7 +37,6 @@ export { default as RadioGroup } from './RadioGroup';
 export { default as Row } from './Row';
 export { default as Search } from './Search';
 export { default as Select } from './Select';
-export { default as SiteHeader } from './SiteHeader';
 export { default as Sorter } from './Sorter';
 export { default as StarRating } from './StarRating';
 export { default as Status } from './Status';
