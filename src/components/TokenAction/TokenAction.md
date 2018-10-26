@@ -16,6 +16,8 @@
   amount={0}
   token="DML"
   buttonText="Press me"
-  onClick={() => {}}
+  onClick={() => {
+    console.log('clicked');
+  }}
 />
 ```

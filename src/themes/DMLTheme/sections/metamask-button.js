@@ -1,5 +1,5 @@
-import _FONTS  from './_fonts';
+import _TEXT   from './_text';
 
 export default {
-  metamaskButtonFontFamily : _FONTS.baseFont,
+  metamaskButtonFontFamily : _TEXT.baseFont,
 };

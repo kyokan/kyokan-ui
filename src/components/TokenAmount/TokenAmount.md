@@ -15,5 +15,14 @@
 <TokenAmount
   amount={0}
   token="DML"
+  dark
+/>
+
+<br />
+<br />
+
+<TokenAmount
+  amount={0}
+  token="DML"
 />
 ```

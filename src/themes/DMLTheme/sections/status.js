@@ -1,10 +1,10 @@
 import utils from '../../utils';
 
 import _COLORS from './_colors';
-import _FONTS  from './_fonts';
+import _TEXT   from './_text';
 
 export default {
-  statusFontFamily   : _FONTS.baseFont,
+  statusFontFamily   : _TEXT.baseFont,
   statusFontSize     : utils.pxToRem(14),
   statusBorderRadius : utils.pxToRem(3),
   statusPadding      : utils.pxToRem(12),

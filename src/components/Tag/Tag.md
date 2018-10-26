@@ -17,8 +17,20 @@
 </div>
 
 ```jsx
+<Box
+  padding={8}
+  dark
+>
+  <Tag
+    name="Tag"
+  />
+</Box>
+
+<br />
+<br />
+
 <Tag
-  name=""
-  isActive={false}
+  name="Tag"
+  isActive
 />
 ```

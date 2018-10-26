@@ -1,7 +1,7 @@
 import _COLORS from './_colors';
-import _FONTS  from './_fonts';
+import _TEXT   from './_text';
 
 export default {
-  modalFontFamily : _FONTS.baseFont,
+  modalFontFamily : _TEXT.baseFont,
   modalColor      : _COLORS.textColor,
 };

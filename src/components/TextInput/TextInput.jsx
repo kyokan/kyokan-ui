@@ -8,7 +8,6 @@ import shortID from 'shortid';
 * A text input field.
 */
 const TextInput = (props) => {
-  const id              = shortID.generate(); // to tie label to input
   const shouldShowError = props.error && props.errorMessage;
 
   const StyledTextInput = styled.div`
@@ -69,7 +68,7 @@ const TextInput = (props) => {
     if (props.label) {
       return (
         <StyledLabel
-          htmlFor={id}
+          htmlFor={props.id}
         >
           {props.label}
         </StyledLabel>
@@ -99,7 +98,7 @@ const TextInput = (props) => {
     >
       {renderLabel()}
       <StyledInput
-        id={id}
+        id={props.id}
         data-id={props['data-id']}
         type={props.type}
         placeholder={props.placeholder}
@@ -116,18 +115,22 @@ const TextInput = (props) => {
 };
 
 TextInput.defaultProps = {
+  id           : shortID.generate(), // to tie label to input
   className    : '',
   error        : false,
   errorMessage : '',
   label        : '',
   placeholder  : '',
-  onChange     : () => {},
+  onChange     : (event) => {},
   type         : 'text',
   value        : '',
   'data-id'    : '',
 };
 
 TextInput.propTypes = {
+  /** An id for the input */
+  id: PropTypes.string,
+
   /** Text to display in the text input field */
   value: PropTypes.string,
 

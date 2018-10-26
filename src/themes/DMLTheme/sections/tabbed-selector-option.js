@@ -1,8 +1,8 @@
 import _COLORS from './_colors';
-import _FONTS  from './_fonts';
+import _TEXT   from './_text';
 
 export default {
-  tabbedSelectorOptionFontFamily          : _FONTS.baseFont,
+  tabbedSelectorOptionFontFamily          : _TEXT.baseFont,
   tabbedSelectorOptionColor               : _COLORS.darkTextColor,
   tabbedSelectorOptionIconColor           : _COLORS.textColor,
   tabbedSelectorOptionIconColorSelected   : _COLORS.primaryColorActive,

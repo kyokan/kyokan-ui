@@ -1,14 +1,14 @@
 import utils from '../../utils';
 
 import _COLORS from './_colors';
-import _FONTS  from './_fonts';
+import _TEXT   from './_text';
 import _ICONS  from './_icons';
 
 const padding      = 20;
 const borderRadius = '3px';
 
 export default {
-  accordionFontFamily : _FONTS.baseFont,
+  accordionFontFamily : _TEXT.baseFont,
 
   accordionBorderWidth             : '1px',
   accordionBorderStyle             : 'solid',

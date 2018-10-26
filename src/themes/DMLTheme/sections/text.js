@@ -1,13 +1,14 @@
-import utils from '../../utils';
-
 import _COLORS from './_colors';
-import _FONTS  from './_fonts';
+import _TEXT   from './_text';
 
 export default {
-  textFontFamily  : _FONTS.baseFont,
-  textColor       : _COLORS.textColor,
-  textDarkColor   : _COLORS.darkTextColor,
-  textFontWeight  : _FONTS.mediumFontWeight,
-  textFontSize    : utils.pxToRem(16),
-  textLineHeight  : utils.pxToRem(16),
+  textFontFamily         : _TEXT.baseFont,
+  textColor              : _COLORS.textColor,
+  textDarkColor          : _COLORS.darkTextColor,
+  textFontWeight         : _TEXT.mediumFontWeight,
+  textExtraSmallFontSize : _TEXT.extraSmallFontSize,
+  textSmallFontSize      : _TEXT.smallFontSize,
+  textRegularFontSize    : _TEXT.regularFontSize,
+  textLargeFontSize      : _TEXT.largeFontSize,
+  textExtraLargeFontSize : _TEXT.extraLargeFontSize,
 };

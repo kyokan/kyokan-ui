@@ -10,6 +10,7 @@ const MAPPINGS = {
   chevronUp   : 'iconChevronUp',
   clipboard   : 'iconClipboard',
   copy        : 'iconCopy',
+  download    : 'iconDownload',
   plusCircle  : 'iconPlusCircle',
   user        : 'iconUserCircle',
   wallet      : 'iconWallet',

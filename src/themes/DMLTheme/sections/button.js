@@ -1,11 +1,10 @@
-
 import _COLORS from './_colors';
-import _FONTS  from './_fonts';
+import _TEXT   from './_text';
 
 import utils from '../../utils';
 
 export default {
-  buttonFontFamily : _FONTS.baseFont,
+  buttonFontFamily : _TEXT.baseFont,
   buttonColor      : _COLORS.darkBackgroundHighlightTextColor,
 
   buttonPrimaryBackgroundColor       : _COLORS.primaryColor,

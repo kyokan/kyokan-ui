@@ -1,7 +1,7 @@
 import _COLORS from './_colors';
-import _FONTS  from './_fonts';
+import _TEXT   from './_text';
 
 export default {
-  horizontalTabFontFamily : _FONTS.baseFont,
+  horizontalTabFontFamily : _TEXT.baseFont,
   horizontalTabColor      : _COLORS.darkTextColor,
 };

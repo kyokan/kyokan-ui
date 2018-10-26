@@ -26,9 +26,7 @@ const Link = (props) => {
       href={props.href}
       target={props.target}
       title={props.title || props.children}
-      onClick={() => {
-        props.onClick && props.onClick();
-      }}
+      onClick={props.onClick}
     >
       {props.children}
     </StyledLink>

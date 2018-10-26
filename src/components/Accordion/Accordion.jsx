@@ -118,7 +118,7 @@ Accordion.defaultProps = {
   first        : false,
   last         : false,
   middle       : false,
-  onChange     : () => {},
+  onChange     : (event, isExpanded) => {},
 };
 
 Accordion.propTypes = {

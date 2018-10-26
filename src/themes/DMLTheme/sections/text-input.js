@@ -1,14 +1,14 @@
 import utils from '../../utils';
 
 import _COLORS from './_colors';
-import _FONTS  from './_fonts';
+import _TEXT   from './_text';
 
 export default {
   // input
   textInputColor         : _COLORS.darkTextColor,
-  textInputFontFamily    : _FONTS.baseFont,
+  textInputFontFamily    : _TEXT.baseFont,
   textInputFontSize      : utils.pxToRem(15),
-  textInputFontWeight    : _FONTS.regularFontWeight,
+  textInputFontWeight    : _TEXT.regularFontWeight,
   textInputPaddingBottom : utils.pxToRem(10),
   textInputPaddingLeft   : utils.pxToRem(15),
   textInputPaddingRight  : utils.pxToRem(15),
@@ -25,7 +25,7 @@ export default {
 
   // placeholder
   textInputPlaceholderColor      : _COLORS.textInputPlaceholderColor,
-  textInputPlaceholderFontWeight : _FONTS.regularFontWeight,
+  textInputPlaceholderFontWeight : _TEXT.regularFontWeight,
 
   // label
   textInputLabelColor         : _COLORS.textColor,
@@ -36,6 +36,6 @@ export default {
   // error message
   textInputErrorMessageColor      : _COLORS.errorHighlightColor,
   textInputErrorMessageFontSize   : utils.pxToRem(13),
-  textInputErrorMessageFontWeight : _FONTS.regularFontWeight,
+  textInputErrorMessageFontWeight : _TEXT.regularFontWeight,
   textInputErrorMessageMarginTop  : utils.pxToRem(5),
 };

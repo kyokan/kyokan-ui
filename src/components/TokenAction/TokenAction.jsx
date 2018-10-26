@@ -2,18 +2,38 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
+import Box from '../Box';
+import Button from '../Button';
+import TokenAmount from '../TokenAmount';
+
 /**
 * A composed component of a TokenAmount and a Button.
 */
 const TokenAction = (props) => {
   const StyledTokenAction = styled.div`
-    font-family : ${ (props) => props.theme.textFontFamily };
-    color       : ${ (props) => props.theme.textColor };
+    display         : inline-flex;
+    justify-content : center;
+    align-items     : center;
+    flex-direction  : column;
+    border          : 1px solid rgb(227, 233, 242);
+    border-radius   : 5px;
+    overflow        : hidden;
   `;
 
   return (
     <StyledTokenAction>
-      {props.amount}
+      <Box padding={2}>
+        <TokenAmount
+          amount={props.amount}
+          token={props.token}
+        />
+      </Box>
+      <Button
+        onClick={props.onClick}
+        unrounded
+      >
+        {props.buttonText}
+      </Button>
     </StyledTokenAction>
   );
 };

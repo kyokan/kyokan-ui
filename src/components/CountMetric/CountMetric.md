@@ -9,6 +9,14 @@
 ```jsx
 <CountMetric
   metricValue={0}
-  icon=""
+  icon="download"
+/>
+
+<br />
+<br />
+
+<CountMetric
+  metricValue={28020}
+  icon="user"
 />
 ```

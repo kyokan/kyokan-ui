@@ -8,7 +8,10 @@
 
 ```jsx
 <InputButton
-  buttonText=""
-  onClick=""
+  buttonText="Update Limit"
+  placeholder="e.g. 100"
+  onClick={(value, event) => {
+    console.log('input button clicked', value);
+  }}
 />
 ```

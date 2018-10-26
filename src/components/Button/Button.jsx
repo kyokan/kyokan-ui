@@ -17,9 +17,11 @@ const Button = (props) => {
     border-width  : ${ ({ theme }) => theme.buttonBorderWidth };
     border-style  : ${ ({ theme }) => theme.buttonBorderStyle };
     border-color  : ${ ({ theme }) => theme.buttonBorderColor };
-    border-radius : ${ ({ theme }) => theme.buttonBorderRadius };
+    border-radius : ${ ({ theme }) => props.unrounded ? 0 : theme.buttonBorderRadius };
 
     padding : ${ ({ theme }) => theme.buttonPadding };
+
+    ${ props.expand ? 'width: 100%; height: 100%;' : '' }
 
     cursor           : pointer;
     display          : inline-flex;
@@ -79,9 +81,10 @@ Button.defaultProps = {
   light     : false,
   loading   : false,
   loadingText : '',
-  onClick   : () => {},
+  onClick   : (event) => {},
   rightIcon : '',
   type      : 'brand',
+  unroudned : false,
 };
 
 Button.propTypes = {
@@ -93,6 +96,9 @@ Button.propTypes = {
 
   /** Whether or not a button is disabled */
   disabled: PropTypes.bool,
+
+  /** Whether or not a button should expand to fit its container */
+  expand: PropTypes.bool,
 
   /** The icon shown to the left of the button text */
   leftIcon: PropTypes.string,
@@ -114,6 +120,9 @@ Button.propTypes = {
 
   /** One of the following: 'base', 'neutral', 'brand', 'brand-outline', 'destructive', 'success' */
   type: PropTypes.string,
+
+  /** Whether or not the button is unrounded */
+  unrounded: PropTypes.bool,
 };
 
 /** @component */

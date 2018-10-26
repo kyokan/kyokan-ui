@@ -7,15 +7,29 @@ import styled from 'styled-components';
 */
 const Tag = (props) => {
   const StyledTag = styled.div`
-    font-family: ${ (props) => props.theme.textFontFamily };
-    color: ${ (props) => props.theme.textColor };
+    font-family      : 'Barlow';
+    display          : inline-block;
+    margin           : 0 5px;
+    padding          : 6px 12px;
+    color            : ${props.isActive ? 'white' : 'gray'};
+    border-radius    : 3px;
+    background-color : ${props.isActive ? 'rgb( 60, 129, 237)' : 'white'};
+
+    &:hover {
+      color  : rgb(41, 54, 74);
+      cursor : pointer;
+    }
   `;
 
   return (
     <StyledTag>
-      
+      {props.name}
     </StyledTag>
   );
+};
+
+Tag.defaultProps = {
+  isActive: false,
 };
 
 Tag.propTypes = {

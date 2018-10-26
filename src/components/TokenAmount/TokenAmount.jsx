@@ -2,28 +2,54 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
+const StyledTokenAmount = styled.div`
+  font-family : 'Barlow';
+  display     : inline-flex;
+  align-items : center;
+`;
+
+const StyledValue = styled.div`
+  font-size: 24px;
+`;
+
 /**
 * A display with a number and a token symbol.
 */
 const TokenAmount = (props) => {
-  const StyledTokenAmount = styled.div`
-    font-family : ${ (props) => props.theme.textFontFamily };
-    color       : ${ (props) => props.theme.textColor };
+  const StyledToken = styled.div`
+    font-size        : 10px;
+    margin           : 0 8px;
+    padding          : 3px 8px;
+    color            : ${props.dark ? 'white' : 'rgb(41, 54, 74)'};
+    background-color : ${props.dark ? 'rgb(60, 129, 237)' : 'white'};
+    border-radius    : 3px;
   `;
 
   return (
     <StyledTokenAmount>
-      {props.amount}
+      <StyledValue>
+        {props.amount}
+      </StyledValue>
+      <StyledToken>
+        {props.token}
+      </StyledToken>
     </StyledTokenAmount>
   );
 };
 
+TokenAmount.defaultProps = {
+  dark: false,
+};
+
 TokenAmount.propTypes = {
   /** A number with the amount */
-  amount: PropTypes.number,
+  amount: PropTypes.number.isRequired,
 
   /** A string with the name of the token */
-  token: PropTypes.string,
+  token: PropTypes.string.isRequired,
+
+  /** Whether or not the token amount shows up with dark styles */
+  dark: PropTypes.bool,
 };
 
 /** @component */

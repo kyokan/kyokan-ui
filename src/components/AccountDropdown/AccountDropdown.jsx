@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import Icon from '../Icon';
+import Identity from '../Identity';
 
 /**
 * A module that allows the user to quickly access user/account-level options. For example: 'Sign Out', 'Settings', etc.
@@ -22,48 +23,6 @@ class AccountDropdown extends Component {
     }, () => {
       this.props.onToggleClick(this.state.isOpen);
     })
-  }
-
-  renderAvatar = () => {
-    const StyledImage = styled.img`
-      width         : 30px;
-      height        : 30px;
-      border-radius : 50%;
-    `;
-
-    const StyledPlaceholder = styled.div`
-      width               : 30px;
-      height              : 30px;
-      background-color    : lightgray;
-      border-radius       : 50%;
-    `;
-
-    if (this.props.avatar.length) {
-      return (
-        <StyledImage
-          src={this.props.avatar}
-        />
-      );
-    } else {
-      return (
-        <StyledPlaceholder />
-      );
-    }
-  }
-
-  renderName = () => {
-    const StyledAccountDropdownName = styled.span`
-      display   : inline-block;
-      margin    : 0 10px;
-      color     : white;
-      font-size : 15px;
-    `;
-
-    return (
-      <StyledAccountDropdownName>
-        {this.props.name}
-      </StyledAccountDropdownName>
-    );
   }
 
   renderIcon = () => {
@@ -148,8 +107,13 @@ class AccountDropdown extends Component {
         <StyledToggle
           onClick={this.handleToggleClick}
         >
-          {this.renderAvatar()}
-          {this.renderName()}
+          <Identity
+            name={this.props.name}
+            avatar={this.props.avatar}
+            large
+            rounded
+            dark
+          />
           {this.renderIcon()}
         </StyledToggle>
         {this.renderItems()}
@@ -162,8 +126,8 @@ AccountDropdown.defaultProps = {
   avatar        : '',
   items         : [],
   name          : 'User',
-  onItemClick   : () => {},
-  onToggleClick : () => {},
+  onItemClick   : (item) => {},
+  onToggleClick : (isOpen) => {},
 };
 
 AccountDropdown.propTypes = {

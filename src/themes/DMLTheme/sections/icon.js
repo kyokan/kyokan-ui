@@ -7,6 +7,7 @@ export default {
   iconChevronUp   : _ICONS.chevronUp,
   iconClipboard   : _ICONS.clipboard,
   iconCopy        : _ICONS.copy,
+  iconDownload    : _ICONS.download,
   iconPlusCircle  : _ICONS.plusCircle,
   iconUserCircle  : _ICONS.userCircle,
   iconUserPlus    : _ICONS.userPlus,

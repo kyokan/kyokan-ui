@@ -13,8 +13,8 @@ const Text = (props) => {
     color          : ${ (props) => props.theme.textColor };
     font-weight    : ${ (props) => props.theme.textFontWeight };
     letter-spacing : ${ (props) => props.theme.textLetterSpacing };
-    font-size      : ${ (props) => props.theme.textFontSize };
-    line-height    : ${ (props) => props.theme.textLineHeight };
+    font-size      : ${ (props) => props.theme.textRegularFontSize };
+    line-height    : ${ (props) => props.theme.textRegularFontSize };
 
     &.dark {
       color : ${ (props) => props.theme.textDarkColor };

@@ -1,5 +1,5 @@
-import _FONTS  from './_fonts';
+import _TEXT   from './_text';
 
 export default {
-  githubOAuthFontFamily : _FONTS.baseFont,
+  githubOAuthFontFamily : _TEXT.baseFont,
 };

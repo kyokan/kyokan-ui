@@ -12,7 +12,16 @@
 </div>
 
 ```jsx
-<TagsCloud
-  tags={[]}
-/>
+<Box
+  padding={5}
+  dark
+>
+  <TagsCloud
+    tags={[
+      { name: 'A' },
+      { name: 'B', isActive: true },
+      { name: 'C' },
+    ]}
+  />
+</Box>
 ```

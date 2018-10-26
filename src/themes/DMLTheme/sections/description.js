@@ -1,8 +1,13 @@
 import _COLORS from './_colors';
-import _FONTS  from './_fonts';
+import _TEXT   from './_text';
 
 export default {
-  descriptionFontFamily : _FONTS.baseFont,
-  descriptionTextColor  : _COLORS.textColor,
-  descriptionFontWeight : _FONTS.regularFontWeight,
+  descriptionFontFamily         : _TEXT.baseFont,
+  descriptionTextColor          : _COLORS.textColor,
+  descriptionFontWeight         : _TEXT.regularFontWeight,
+  descriptionExtraSmallFontSize : _TEXT.extraSmallFontSize,
+  descriptionSmallFontSize      : _TEXT.smallFontSize,
+  descriptionRegularFontSize    : _TEXT.regularFontSize,
+  descriptionLargeFontSize      : _TEXT.largeFontSize,
+  descriptionExtraLargeFontSize : _TEXT.extraLargeFontSize,
 };

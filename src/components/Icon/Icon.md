@@ -30,7 +30,7 @@
 <div>
   2x:
   <Icon
-    name="chevronUp"
+    name="download"
     size="2x"
   />
 </div>

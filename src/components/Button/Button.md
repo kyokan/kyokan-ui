@@ -90,6 +90,7 @@
 <Button
   leftIcon="plusCircle"
   rightIcon="plusCircle"
+  unrounded
 >
   Create Algorithm
 </Button>

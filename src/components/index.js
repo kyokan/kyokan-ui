@@ -21,6 +21,7 @@ export { default as Hidden } from './Hidden';
 export { default as HorizontalRule } from './HorizontalRule';
 export { default as HorizontalTab } from './HorizontalTab';
 export { default as Icon } from './Icon';
+export { default as Identity } from './Identity';
 export { default as Image } from './Image';
 export { default as InfoTooltip } from './InfoTooltip';
 export { default as InputButton } from './InputButton';
