@@ -9,7 +9,6 @@
 /styleguide
 
 # generated
-/dist
 
 # misc
 .DS_Store
